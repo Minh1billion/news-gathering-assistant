@@ -66,7 +66,7 @@ if __name__ == "__main__":
     save_json(enriched, "article-content.json")
     save_html(enriched, "article-content.html")
 
-    stats = save_articles(enriched)             # ← thêm: lưu vào DB
+    stats = save_articles(enriched)
     print(f"\n=== DB saved: {stats['inserted']} inserted / {stats['skipped']} skipped ===")
 
     success_content = sum(1 for a in enriched if a.get("content"))

@@ -3,5 +3,14 @@ beautifulsoup4
 feedparser
 lxml
 
+pandas
+numpy
+matplotlib
+seaborn
+wordcloud
+underthesea
+scikit-learn
+sentence_transformers
+
 psycopg2-binary 
 python-dotenv
