@@ -1,16 +1,18 @@
-FROM apache/airflow:2.9.1
+FROM python:3.11-slim
 
-USER root
+WORKDIR /app
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    && apt-get clean \
+    libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
-USER airflow
+COPY requirements.txt .
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install torch --index-url https://download.pytorch.org/whl/cpu
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install -r requirements.txt
 
-RUN pip install --no-cache-dir \
-    torch==2.4.0+cpu \
-    --index-url https://download.pytorch.org/whl/cpu
+COPY . .
 
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
+CMD ["python", "-m", "src.main"]

@@ -1,64 +1,22 @@
-x-airflow-common: &airflow-common
-  build: .
-  image: news-airflow:latest
-  env_file:
-    - .env
-  environment:
-    AIRFLOW__CORE__EXECUTOR: LocalExecutor
-    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres/${POSTGRES_DB}
-    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
-    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "true"
-    PYTHONPATH: /opt/airflow/project
-  volumes:
-    - ./dags:/opt/airflow/dags
-    - ./logs/airflow:/opt/airflow/logs
-    - ./notebooks/outputs:/opt/airflow/project/notebooks/outputs
-    - .:/opt/airflow/project
-  depends_on:
-    postgres:
-      condition: service_healthy
-
 services:
+  app:
+    build: .
+    env_file: .env
+    depends_on:
+      postgres:
+        condition: service_healthy
+
   postgres:
     image: postgres:15
     ports:
       - "5432:5432"
-    env_file:
-      - .env
+    env_file: .env
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 5s
       retries: 5
-
-  airflow-init:
-    <<: *airflow-common
-    command: >
-      bash -c "
-      airflow db migrate &&
-      airflow users list | grep ${AIRFLOW_ADMIN_USER} || airflow users create \
-        --username ${AIRFLOW_ADMIN_USER} \
-        --password ${AIRFLOW_ADMIN_PASSWORD} \
-        --firstname Admin \
-        --lastname User \
-        --role Admin \
-        --email ${AIRFLOW_ADMIN_EMAIL}
-      "
-    restart: "no"
-
-  airflow-webserver:
-    <<: *airflow-common
-    command: airflow webserver
-    ports:
-      - "8080:8080"
-    restart: unless-stopped
-
-  airflow-scheduler:
-    <<: *airflow-common
-    command: airflow scheduler
-    restart: unless-stopped
 
 volumes:
   pgdata:

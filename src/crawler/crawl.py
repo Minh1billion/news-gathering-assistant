@@ -4,7 +4,7 @@ from .config import SOURCES
 from .fetcher import fetch_article_detail
 from .parsers import PARSERS
 from .exporter import save_json, save_html
-from ..storage.db import init_db, save_articles
+from ..storage.db import save_articles
 
 
 def crawl_all() -> list[dict]:
@@ -47,24 +47,20 @@ def enrich_with_content(articles: list[dict]) -> list[dict]:
             elif source_type == "rss" and not article.get("published_at"):
                 article["published_at"] = detail["published_at"]
 
-        time.sleep(random.uniform(0.5, 1.5))
-
     return articles
 
 
 if __name__ == "__main__":
-    init_db()
-
     print("=== Step 1: Crawl article list ===")
     articles = crawl_all()
-    save_json(articles, "articles.json")
+    # save_json(articles, "articles.json")
     print(f"\nSaved {len(articles)} articles to articles.json")
 
     print("\n=== Step 2: Enrich with content and date ===")
     enriched = enrich_with_content(articles)
 
-    save_json(enriched, "article-content.json")
-    save_html(enriched, "article-content.html")
+    # save_json(enriched, "article-content.json")
+    # save_html(enriched, "article-content.html")
 
     stats = save_articles(enriched)
     print(f"\n=== DB saved: {stats['inserted']} inserted / {stats['skipped']} skipped ===")
@@ -84,4 +80,4 @@ if __name__ == "__main__":
         if len(no_date) > 5:
             print(f"  ... and {len(no_date) - 5} more")
 
-    print("\nSaved to article-content.json, article-content.html, and PostgreSQL")
+    print("\nSaved to PostgreSQL")
