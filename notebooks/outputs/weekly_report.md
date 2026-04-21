@@ -1,6 +1,6 @@
 # Weekly Tech News Report
 **Period:** 2026-04-14 → 2026-04-21
-**Generated:** 2026-04-21T02:36:51.285782+00:00
+**Generated:** 2026-04-21T04:09:42.625792+00:00
 
 ## Executive Summary
 Trong tuần từ **2026-04-14** đến **2026-04-21**, hệ thống thu thập được **512** bài báo, trong đó **94** bài thuộc 7 ngày gần nhất. Sau lọc semantic (threshold=0.25), còn lại **82** bài công nghệ được phân thành **5** nhóm chủ đề (coherence=0.8286).

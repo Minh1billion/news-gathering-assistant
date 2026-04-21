@@ -1,44 +1,61 @@
-import pandas as pd
+import sys
+import os
+import argparse
 from pathlib import Path
+from datetime import datetime
 
-from src.storage.db import get_connection
+sys.path.insert(0, os.getcwd())
+
+from src.storage.db import get_connection, init_db, save_articles
+from src.crawler.crawl import crawl_all, enrich_with_content
 from src.processor.pipeline import run_processor
 from src.analyzer.pipeline import run_analyzer
-from src.processor.constants import SEMANTIC_THRESHOLD
 
-OUTPUT_DIR = Path('notebooks/outputs')
+def run_crawl():
+    init_db()
+    articles = crawl_all()
+    enriched = enrich_with_content(articles)
+    stats = save_articles(enriched)
+    print(f"Crawl done: {stats['inserted']} inserted / {stats['skipped']} skipped")
+    return stats
 
-
-def run_pipeline(
-    threshold: float = SEMANTIC_THRESHOLD,
-    n_clusters: int = None,
-    min_cluster_size: int = 3,
-    output_dir: Path = OUTPUT_DIR,
-) -> dict:
-    print('=== PIPELINE START ===\n')
-
+def run_process():
     conn = get_connection()
-    df_raw = pd.read_sql('SELECT * FROM articles', conn)
+    df_raw = pd.read_sql("SELECT * FROM articles", conn)
     conn.close()
-    print(f'Total rows loaded: {len(df_raw):,}')
+    print(f"Loaded {len(df_raw):,} articles from DB")
+    output = run_processor(df_raw)
+    print(f"Processor done: {len(output['df_clean'])} clean, {len(output['df_tech'])} tech articles")
+    return output
 
-    processor_output = run_processor(df_raw, threshold=threshold)
+def run_analyze():
+    output_dir = Path("./outputs")
+    output_dir.mkdir(exist_ok=True)
+    conn = get_connection()
+    df_raw = pd.read_sql("SELECT * FROM articles", conn)
+    conn.close()
+    processor_output = run_processor(df_raw)
+    analyzer_output = run_analyzer(processor_output, output_dir=output_dir)
+    report = analyzer_output["report"]
+    stats = report["stats"]
+    print(f"Analyzer done: {stats['n_clusters']} clusters, coherence={stats['coherence']}, top keyword: {analyzer_output['top_keywords'][0]}")
+    return analyzer_output
 
-    analyzer_output = run_analyzer(
-        processor_output,
-        output_dir=output_dir,
-        n_clusters=n_clusters,
-        min_cluster_size=min_cluster_size,
-        threshold=threshold,
-    )
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--step", choices=["all", "crawl", "process", "analyze"], default="all")
+    args = parser.parse_args()
+    if args.step == "crawl":
+        run_crawl()
+    elif args.step == "process":
+        run_process()
+    elif args.step == "analyze":
+        run_analyze()
+    else:
+        run_crawl()
+        run_process()
+        run_analyze()
 
-    print('\n=== PIPELINE DONE ===')
-    print(f"Clusters: {analyzer_output['n_clusters']}")
-    print(f"Tech articles: {len(analyzer_output['df_clustered'])}")
-    print(f"Top keywords: {analyzer_output['top_keywords'][:10]}")
-
-    return {**processor_output, **analyzer_output}
-
-
-if __name__ == '__main__':
-    run_pipeline()
+if __name__ == "__main__":
+    import pandas as pd
+    main()

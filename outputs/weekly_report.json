@@ -1,0 +1,201 @@
+{
+  "generated_at": "2026-04-21T04:27:42.309819+00:00",
+  "week_range": {
+    "start": "2026-04-14",
+    "end": "2026-04-21"
+  },
+  "stats": {
+    "total_articles_crawled": 534,
+    "articles_past_7_days": 104,
+    "articles_tech_filtered": 92,
+    "threshold_used": 0.25,
+    "n_clusters": 4,
+    "coherence": 0.8316
+  },
+  "trending_keywords": [
+    "iphone",
+    "nhà_mạng",
+    "ứng_dụng",
+    "apple",
+    "điện_thoại",
+    "thuê",
+    "màn_hình",
+    "máy",
+    "dòng",
+    "ai",
+    "cập_nhật",
+    "thiết_kế",
+    "google",
+    "kết_nối",
+    "thuê di_động",
+    "ios",
+    "trí_tuệ nhân_tạo",
+    "nền_tảng",
+    "chiếc",
+    "dữ_liệu",
+    "xác_thực",
+    "ảnh",
+    "bitcoin",
+    "cũng",
+    "phần_cứng",
+    "di_động",
+    "chip",
+    "hóa",
+    "thông_minh",
+    "lên"
+  ],
+  "cluster_summary": [
+    {
+      "cluster_id": 0,
+      "label": "dòng | nhân_tạo | trí_tuệ nhân_tạo | ai | tái_chế",
+      "n_articles": 26,
+      "top_sources": {
+        "vnexpress": 10,
+        "tuoitre": 6,
+        "dantri": 5
+      },
+      "avg_tech_score": 0.3767
+    },
+    {
+      "cluster_id": 1,
+      "label": "bitcoin | tiền_mã hóa | giá bitcoin | tiền_mã | giá",
+      "n_articles": 3,
+      "top_sources": {
+        "thanhnien": 3
+      },
+      "avg_tech_score": 0.4573
+    },
+    {
+      "cluster_id": 2,
+      "label": "nhà_mạng | thuê | xác_thực thuê | xác_thực | ứng_dụng",
+      "n_articles": 26,
+      "top_sources": {
+        "vnexpress": 9,
+        "dantri": 9,
+        "tuoitre": 4
+      },
+      "avg_tech_score": 0.3399
+    },
+    {
+      "cluster_id": 3,
+      "label": "máy | cập_nhật | iphone | apple | màn_hình",
+      "n_articles": 37,
+      "top_sources": {
+        "thanhnien": 28,
+        "zingnews": 6,
+        "dantri": 3
+      },
+      "avg_tech_score": 0.3484
+    }
+  ],
+  "highlighted_news": [
+    {
+      "cluster": 0,
+      "cluster_label": "dòng | nhân_tạo | trí_tuệ nhân_tạo | ai | tái_chế",
+      "title": "Microsoft chính thức vận hành trung tâm AI mạnh nhất thế giới",
+      "source": "dantri",
+      "published_at": "2026-04-20T14:57:35+00:00",
+      "tech_score": 0.5746,
+      "url": "https://dantri.com.vn/cong-nghe/microsoft-chinh-thuc-van-hanh-trung-tam-ai-manh-nhat-the-gioi-20260420135803112.htm"
+    },
+    {
+      "cluster": 0,
+      "cluster_label": "dòng | nhân_tạo | trí_tuệ nhân_tạo | ai | tái_chế",
+      "title": "Google hợp tác Marvell phát triển chip AI giải bài toán hiệu năng suy luận",
+      "source": "dantri",
+      "published_at": "2026-04-20T14:51:47+00:00",
+      "tech_score": 0.5486,
+      "url": "https://dantri.com.vn/cong-nghe/google-hop-tac-marvell-phat-trien-chip-ai-giai-bai-toan-hieu-nang-suy-luan-20260420135948927.htm"
+    },
+    {
+      "cluster": 0,
+      "cluster_label": "dòng | nhân_tạo | trí_tuệ nhân_tạo | ai | tái_chế",
+      "title": "Xây dựng kho dữ liệu ngành Khoa học và Công nghệ",
+      "source": "vnexpress",
+      "published_at": "2026-04-19T01:00:00+00:00",
+      "tech_score": 0.5331,
+      "url": "https://vnexpress.net/xay-dung-kho-du-lieu-nganh-khoa-hoc-va-cong-nghe-5064089.html"
+    },
+    {
+      "cluster": 1,
+      "cluster_label": "bitcoin | tiền_mã hóa | giá bitcoin | tiền_mã | giá",
+      "title": "Giá Bitcoin hôm nay 21.4.2026: BTC sắp đạt đỉnh mới",
+      "source": "thanhnien",
+      "published_at": "2026-04-21T01:44:00+00:00",
+      "tech_score": 0.4852,
+      "url": "https://thanhnien.vn/gia-bitcoin-hom-nay-2142026-btc-sap-dat-dinh-moi-185260421072206223.htm"
+    },
+    {
+      "cluster": 1,
+      "cluster_label": "bitcoin | tiền_mã hóa | giá bitcoin | tiền_mã | giá",
+      "title": "Giá Bitcoin hôm nay 20.4.2026: Lao dốc sau thông báo trái ngược về eo biển Hormuz",
+      "source": "thanhnien",
+      "published_at": "2026-04-20T00:17:00+00:00",
+      "tech_score": 0.448,
+      "url": "https://thanhnien.vn/gia-bitcoin-hom-nay-2042026-lao-doc-sau-thong-bao-trai-nguoc-ve-eo-bien-hormuz-185260420061231025.htm"
+    },
+    {
+      "cluster": 1,
+      "cluster_label": "bitcoin | tiền_mã hóa | giá bitcoin | tiền_mã | giá",
+      "title": "Giá Bitcoin hôm nay 19.4.2026: Bất ngờ giảm xuống còn 75.000 USD",
+      "source": "thanhnien",
+      "published_at": "2026-04-19T03:11:00+00:00",
+      "tech_score": 0.4389,
+      "url": "https://thanhnien.vn/gia-bitcoin-hom-nay-1942026-bat-ngo-giam-xuong-con-75000-usd-185260419072804297.htm"
+    },
+    {
+      "cluster": 2,
+      "cluster_label": "nhà_mạng | thuê | xác_thực thuê | xác_thực | ứng_dụng",
+      "title": "Google triển khai tính năng trí thông minh cá nhân trên Gemini tại Việt Nam",
+      "source": "dantri",
+      "published_at": "2026-04-16T00:19:52+00:00",
+      "tech_score": 0.5349,
+      "url": "https://dantri.com.vn/cong-nghe/google-trien-khai-tinh-nang-tri-thong-minh-ca-nhan-tren-gemini-tai-viet-nam-20260415113317816.htm"
+    },
+    {
+      "cluster": 2,
+      "cluster_label": "nhà_mạng | thuê | xác_thực thuê | xác_thực | ứng_dụng",
+      "title": "Thử nghiệm đưa 100.000 USD cho AI mở cửa hàng",
+      "source": "vnexpress",
+      "published_at": "2026-04-14T07:00:00+00:00",
+      "tech_score": 0.4901,
+      "url": "https://vnexpress.net/thu-nghiem-dua-100-000-usd-cho-ai-mo-cua-hang-5061707.html"
+    },
+    {
+      "cluster": 2,
+      "cluster_label": "nhà_mạng | thuê | xác_thực thuê | xác_thực | ứng_dụng",
+      "title": "Google Maps tích hợp Gemini, tự động tạo mô tả ảnh cho người dùng",
+      "source": "tuoitre",
+      "published_at": "2026-04-14T16:50:42+00:00",
+      "tech_score": 0.4458,
+      "url": "https://tuoitre.vn/google-maps-tich-hop-gemini-tu-dong-tao-mo-ta-anh-cho-nguoi-dung-20260413160714801.htm"
+    },
+    {
+      "cluster": 3,
+      "cluster_label": "máy | cập_nhật | iphone | apple | màn_hình",
+      "title": "Lý do Chrome khiến SSD nhanh hao mòn và cách khắc phục",
+      "source": "thanhnien",
+      "published_at": "2026-04-18T12:36:00+00:00",
+      "tech_score": 0.4934,
+      "url": "https://thanhnien.vn/ly-do-chrome-khien-ssd-nhanh-hao-mon-va-cach-khac-phuc-185260418103745621.htm"
+    },
+    {
+      "cluster": 3,
+      "cluster_label": "máy | cập_nhật | iphone | apple | màn_hình",
+      "title": "Mac Studio M5 Ultra bất ngờ lùi lịch ra mắt vì khủng hoảng bộ nhớ toàn cầu",
+      "source": "dantri",
+      "published_at": "2026-04-20T21:55:00+00:00",
+      "tech_score": 0.4861,
+      "url": "https://dantri.com.vn/cong-nghe/mac-studio-m5-ultra-bat-ngo-lui-lich-ra-mat-vi-khung-hoang-bo-nho-toan-cau-20260420135357842.htm"
+    },
+    {
+      "cluster": 3,
+      "cluster_label": "máy | cập_nhật | iphone | apple | màn_hình",
+      "title": "Thay đổi nhỏ giúp Mini PC chạy nhanh như máy tính bàn",
+      "source": "thanhnien",
+      "published_at": "2026-04-20T12:08:00+00:00",
+      "tech_score": 0.4832,
+      "url": "https://thanhnien.vn/thay-doi-nho-giup-mini-pc-chay-nhanh-nhu-may-tinh-ban-185260420130943797.htm"
+    }
+  ]
+}
