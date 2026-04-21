@@ -38,31 +38,39 @@ def init_db():
 
 
 def save_articles(articles: list[dict]) -> dict:
+    if not articles:
+        return {"inserted": 0, "skipped": 0}
+
+    rows = [
+        (a.get("source"), a.get("title"), a.get("link"), a.get("image"), a.get("published_at"), a.get("content"))
+        for a in articles
+        if a.get("title") and a.get("link")
+    ]
+
     inserted = 0
     skipped = 0
+
     with get_connection() as conn:
         with conn.cursor() as cur:
-            for art in articles:
-                try:
-                    cur.execute("""
-                        INSERT INTO articles (source, title, url, image, published_at, content)
-                        VALUES (%(source)s, %(title)s, %(link)s, %(image)s, %(published_at)s, %(content)s)
-                        ON CONFLICT (url) DO UPDATE SET
-                            content      = EXCLUDED.content,
-                            published_at = COALESCE(articles.published_at, EXCLUDED.published_at),
-                            image        = COALESCE(articles.image, EXCLUDED.image)
-                        RETURNING (xmax = 0) AS is_inserted
-                    """, art)
-                    row = cur.fetchone()
-                    if row and row[0]:
-                        inserted += 1
-                    else:
-                        skipped += 1
-                except Exception as e:
-                    print(f"DB error [{art.get('source')}] {art.get('link')}: {e}")
-                    conn.rollback()
-                    continue
+            psycopg2.extras.execute_values(
+                cur,
+                """
+                INSERT INTO articles (source, title, url, image, published_at, content)
+                VALUES %s
+                ON CONFLICT (url) DO UPDATE SET
+                    content      = EXCLUDED.content,
+                    published_at = COALESCE(articles.published_at, EXCLUDED.published_at),
+                    image        = COALESCE(articles.image, EXCLUDED.image)
+                RETURNING (xmax = 0) AS is_inserted
+                """,
+                rows,
+                fetch=True,
+            )
+            results = cur.fetchall()
+            inserted = sum(1 for r in results if r[0])
+            skipped = len(results) - inserted
         conn.commit()
+
     return {"inserted": inserted, "skipped": skipped}
 
 
