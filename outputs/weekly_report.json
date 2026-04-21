@@ -1,63 +1,96 @@
 {
-  "generated_at": "2026-04-21T04:27:42.309819+00:00",
+  "generated_at": "2026-04-21T05:50:40.142652+00:00",
   "week_range": {
     "start": "2026-04-14",
     "end": "2026-04-21"
   },
   "stats": {
-    "total_articles_crawled": 534,
-    "articles_past_7_days": 104,
-    "articles_tech_filtered": 92,
+    "total_articles_crawled": 495,
+    "articles_past_7_days": 95,
+    "articles_tech_filtered": 84,
     "threshold_used": 0.25,
-    "n_clusters": 4,
-    "coherence": 0.8316
+    "n_clusters": 7,
+    "coherence": 0.8272
   },
   "trending_keywords": [
-    "iphone",
     "nhà_mạng",
-    "ứng_dụng",
+    "iphone",
     "apple",
-    "điện_thoại",
     "thuê",
+    "ứng_dụng",
     "màn_hình",
     "máy",
-    "dòng",
-    "ai",
+    "điện_thoại",
     "cập_nhật",
-    "thiết_kế",
+    "ai",
+    "dòng",
     "google",
-    "kết_nối",
     "thuê di_động",
-    "ios",
-    "trí_tuệ nhân_tạo",
-    "nền_tảng",
-    "chiếc",
-    "dữ_liệu",
-    "xác_thực",
-    "ảnh",
-    "bitcoin",
-    "cũng",
+    "thiết_kế",
+    "kết_nối",
     "phần_cứng",
-    "di_động",
+    "trí_tuệ nhân_tạo",
+    "xác_thực",
+    "bitcoin",
+    "nền_tảng",
     "chip",
+    "ảnh",
+    "di_động",
     "hóa",
+    "cũng",
+    "dữ_liệu",
+    "lên",
     "thông_minh",
-    "lên"
+    "nền",
+    "điều_hành"
   ],
   "cluster_summary": [
     {
       "cluster_id": 0,
-      "label": "dòng | nhân_tạo | trí_tuệ nhân_tạo | ai | tái_chế",
-      "n_articles": 26,
+      "label": "apple | ông | sa_thải | chuyển_giao | vị_trí",
+      "n_articles": 5,
       "top_sources": {
-        "vnexpress": 10,
-        "tuoitre": 6,
-        "dantri": 5
+        "zingnews": 3,
+        "vnexpress": 1,
+        "tuoitre": 1
       },
-      "avg_tech_score": 0.3767
+      "avg_tech_score": 0.2801
     },
     {
       "cluster_id": 1,
+      "label": "máy | cập_nhật | màn_hình | dung_lượng | s27",
+      "n_articles": 27,
+      "top_sources": {
+        "thanhnien": 21,
+        "vnexpress": 2,
+        "zingnews": 2
+      },
+      "avg_tech_score": 0.3654
+    },
+    {
+      "cluster_id": 2,
+      "label": "tăng_trưởng | ai | công_cụ | ảnh | hình_ảnh",
+      "n_articles": 7,
+      "top_sources": {
+        "tuoitre": 2,
+        "zingnews": 2,
+        "vnexpress": 1
+      },
+      "avg_tech_score": 0.3186
+    },
+    {
+      "cluster_id": 3,
+      "label": "triển_khai | tái_chế | ai | nhân_tạo | apple",
+      "n_articles": 16,
+      "top_sources": {
+        "vnexpress": 6,
+        "dantri": 5,
+        "tuoitre": 4
+      },
+      "avg_tech_score": 0.4066
+    },
+    {
+      "cluster_id": 4,
       "label": "bitcoin | tiền_mã hóa | giá bitcoin | tiền_mã | giá",
       "n_articles": 3,
       "top_sources": {
@@ -66,32 +99,113 @@
       "avg_tech_score": 0.4573
     },
     {
-      "cluster_id": 2,
-      "label": "nhà_mạng | thuê | xác_thực thuê | xác_thực | ứng_dụng",
-      "n_articles": 26,
+      "cluster_id": 5,
+      "label": "tối_giản | dòng | sang_trọng | sang_trọng tối_giản | samsung",
+      "n_articles": 4,
       "top_sources": {
-        "vnexpress": 9,
-        "dantri": 9,
-        "tuoitre": 4
+        "trainghiemso": 2,
+        "vnexpress": 1,
+        "dantri": 1
       },
-      "avg_tech_score": 0.3399
+      "avg_tech_score": 0.3554
     },
     {
-      "cluster_id": 3,
-      "label": "máy | cập_nhật | iphone | apple | màn_hình",
-      "n_articles": 37,
+      "cluster_id": 6,
+      "label": "thuê | nhà_mạng | xác_thực thuê | xác_thực | xác_nhận",
+      "n_articles": 22,
       "top_sources": {
-        "thanhnien": 28,
-        "zingnews": 6,
-        "dantri": 3
+        "vnexpress": 9,
+        "dantri": 7,
+        "tuoitre": 4
       },
-      "avg_tech_score": 0.3484
+      "avg_tech_score": 0.3252
     }
   ],
   "highlighted_news": [
     {
       "cluster": 0,
-      "cluster_label": "dòng | nhân_tạo | trí_tuệ nhân_tạo | ai | tái_chế",
+      "cluster_label": "apple | ông | sa_thải | chuyển_giao | vị_trí",
+      "title": "CEO mới của Apple là ai?",
+      "source": "zingnews",
+      "published_at": "2026-04-21T05:15:09+00:00",
+      "tech_score": 0.3223,
+      "url": "https://znews.vn/ceo-moi-cua-apple-la-ai-post1645407.html"
+    },
+    {
+      "cluster": 0,
+      "cluster_label": "apple | ông | sa_thải | chuyển_giao | vị_trí",
+      "title": "Meta sắp sa thải hàng nghìn người",
+      "source": "vnexpress",
+      "published_at": "2026-04-19T07:18:32+00:00",
+      "tech_score": 0.2963,
+      "url": "https://vnexpress.net/meta-sap-sa-thai-hang-nghin-nguoi-5064171.html"
+    },
+    {
+      "cluster": 0,
+      "cluster_label": "apple | ông | sa_thải | chuyển_giao | vị_trí",
+      "title": "Ông Tim Cook sẽ rời ghế CEO sau hơn 15 năm dẫn dắt Apple",
+      "source": "tuoitre",
+      "published_at": "2026-04-21T16:35:26+00:00",
+      "tech_score": 0.2649,
+      "url": "https://tuoitre.vn/ong-tim-cook-se-roi-ghe-ceo-sau-hon-15-nam-dan-dat-apple-2026042109291369.htm"
+    },
+    {
+      "cluster": 1,
+      "cluster_label": "máy | cập_nhật | màn_hình | dung_lượng | s27",
+      "title": "Mac Studio M5 Ultra bất ngờ lùi lịch ra mắt vì khủng hoảng bộ nhớ toàn cầu",
+      "source": "dantri",
+      "published_at": "2026-04-20T21:55:00+00:00",
+      "tech_score": 0.4861,
+      "url": "https://dantri.com.vn/cong-nghe/mac-studio-m5-ultra-bat-ngo-lui-lich-ra-mat-vi-khung-hoang-bo-nho-toan-cau-20260420135357842.htm"
+    },
+    {
+      "cluster": 1,
+      "cluster_label": "máy | cập_nhật | màn_hình | dung_lượng | s27",
+      "title": "Thay đổi nhỏ giúp Mini PC chạy nhanh như máy tính bàn",
+      "source": "thanhnien",
+      "published_at": "2026-04-20T12:08:00+00:00",
+      "tech_score": 0.4832,
+      "url": "https://thanhnien.vn/thay-doi-nho-giup-mini-pc-chay-nhanh-nhu-may-tinh-ban-185260420130943797.htm"
+    },
+    {
+      "cluster": 1,
+      "cluster_label": "máy | cập_nhật | màn_hình | dung_lượng | s27",
+      "title": "Microsoft 'mở khóa' giới hạn chuẩn FAT32, hỗ trợ lên đến 2 TB",
+      "source": "thanhnien",
+      "published_at": "2026-04-19T03:14:00+00:00",
+      "tech_score": 0.4822,
+      "url": "https://thanhnien.vn/microsoft-mo-khoa-gioi-han-chuan-fat32-ho-tro-len-den-2-tb-185260415161459859.htm"
+    },
+    {
+      "cluster": 2,
+      "cluster_label": "tăng_trưởng | ai | công_cụ | ảnh | hình_ảnh",
+      "title": "Lý do ảnh Elon Musk livestream bán tương ớt gây tranh cãi",
+      "source": "zingnews",
+      "published_at": "2026-04-21T03:13:42+00:00",
+      "tech_score": 0.3933,
+      "url": "https://znews.vn/anh-elon-musk-ban-tuong-ot-gay-sot-post1645127.html"
+    },
+    {
+      "cluster": 2,
+      "cluster_label": "tăng_trưởng | ai | công_cụ | ảnh | hình_ảnh",
+      "title": "Những chủ đề nhiều người Việt quan tâm trên Internet trong quý I/2026",
+      "source": "dantri",
+      "published_at": "2026-04-15T09:41:47+00:00",
+      "tech_score": 0.3548,
+      "url": "https://dantri.com.vn/cong-nghe/nhung-chu-de-nhieu-nguoi-viet-quan-tam-tren-internet-trong-quy-i2026-20260415160713524.htm"
+    },
+    {
+      "cluster": 2,
+      "cluster_label": "tăng_trưởng | ai | công_cụ | ảnh | hình_ảnh",
+      "title": "Sàn thương mại điện tử Việt tích hợp trong gần 20 ứng dụng ngân hàng",
+      "source": "vnexpress",
+      "published_at": "2026-04-16T08:39:09+00:00",
+      "tech_score": 0.3346,
+      "url": "https://vnexpress.net/san-thuong-mai-dien-tu-viet-tich-hop-trong-gan-20-ung-dung-ngan-hang-5062977.html"
+    },
+    {
+      "cluster": 3,
+      "cluster_label": "triển_khai | tái_chế | ai | nhân_tạo | apple",
       "title": "Microsoft chính thức vận hành trung tâm AI mạnh nhất thế giới",
       "source": "dantri",
       "published_at": "2026-04-20T14:57:35+00:00",
@@ -99,8 +213,8 @@
       "url": "https://dantri.com.vn/cong-nghe/microsoft-chinh-thuc-van-hanh-trung-tam-ai-manh-nhat-the-gioi-20260420135803112.htm"
     },
     {
-      "cluster": 0,
-      "cluster_label": "dòng | nhân_tạo | trí_tuệ nhân_tạo | ai | tái_chế",
+      "cluster": 3,
+      "cluster_label": "triển_khai | tái_chế | ai | nhân_tạo | apple",
       "title": "Google hợp tác Marvell phát triển chip AI giải bài toán hiệu năng suy luận",
       "source": "dantri",
       "published_at": "2026-04-20T14:51:47+00:00",
@@ -108,16 +222,16 @@
       "url": "https://dantri.com.vn/cong-nghe/google-hop-tac-marvell-phat-trien-chip-ai-giai-bai-toan-hieu-nang-suy-luan-20260420135948927.htm"
     },
     {
-      "cluster": 0,
-      "cluster_label": "dòng | nhân_tạo | trí_tuệ nhân_tạo | ai | tái_chế",
-      "title": "Xây dựng kho dữ liệu ngành Khoa học và Công nghệ",
-      "source": "vnexpress",
-      "published_at": "2026-04-19T01:00:00+00:00",
-      "tech_score": 0.5331,
-      "url": "https://vnexpress.net/xay-dung-kho-du-lieu-nganh-khoa-hoc-va-cong-nghe-5064089.html"
+      "cluster": 3,
+      "cluster_label": "triển_khai | tái_chế | ai | nhân_tạo | apple",
+      "title": "Google triển khai tính năng trí thông minh cá nhân trên Gemini tại Việt Nam",
+      "source": "dantri",
+      "published_at": "2026-04-16T00:19:52+00:00",
+      "tech_score": 0.5349,
+      "url": "https://dantri.com.vn/cong-nghe/google-trien-khai-tinh-nang-tri-thong-minh-ca-nhan-tren-gemini-tai-viet-nam-20260415113317816.htm"
     },
     {
-      "cluster": 1,
+      "cluster": 4,
       "cluster_label": "bitcoin | tiền_mã hóa | giá bitcoin | tiền_mã | giá",
       "title": "Giá Bitcoin hôm nay 21.4.2026: BTC sắp đạt đỉnh mới",
       "source": "thanhnien",
@@ -126,7 +240,7 @@
       "url": "https://thanhnien.vn/gia-bitcoin-hom-nay-2142026-btc-sap-dat-dinh-moi-185260421072206223.htm"
     },
     {
-      "cluster": 1,
+      "cluster": 4,
       "cluster_label": "bitcoin | tiền_mã hóa | giá bitcoin | tiền_mã | giá",
       "title": "Giá Bitcoin hôm nay 20.4.2026: Lao dốc sau thông báo trái ngược về eo biển Hormuz",
       "source": "thanhnien",
@@ -135,7 +249,7 @@
       "url": "https://thanhnien.vn/gia-bitcoin-hom-nay-2042026-lao-doc-sau-thong-bao-trai-nguoc-ve-eo-bien-hormuz-185260420061231025.htm"
     },
     {
-      "cluster": 1,
+      "cluster": 4,
       "cluster_label": "bitcoin | tiền_mã hóa | giá bitcoin | tiền_mã | giá",
       "title": "Giá Bitcoin hôm nay 19.4.2026: Bất ngờ giảm xuống còn 75.000 USD",
       "source": "thanhnien",
@@ -144,26 +258,35 @@
       "url": "https://thanhnien.vn/gia-bitcoin-hom-nay-1942026-bat-ngo-giam-xuong-con-75000-usd-185260419072804297.htm"
     },
     {
-      "cluster": 2,
-      "cluster_label": "nhà_mạng | thuê | xác_thực thuê | xác_thực | ứng_dụng",
-      "title": "Google triển khai tính năng trí thông minh cá nhân trên Gemini tại Việt Nam",
-      "source": "dantri",
-      "published_at": "2026-04-16T00:19:52+00:00",
-      "tech_score": 0.5349,
-      "url": "https://dantri.com.vn/cong-nghe/google-trien-khai-tinh-nang-tri-thong-minh-ca-nhan-tren-gemini-tai-viet-nam-20260415113317816.htm"
+      "cluster": 5,
+      "cluster_label": "tối_giản | dòng | sang_trọng | sang_trọng tối_giản | samsung",
+      "title": "TCL giới thiệu loạt TV Mini LED cùng hệ sinh thái thiết bị thông minh 2026",
+      "source": "trainghiemso",
+      "published_at": "2026-04-19T02:56:50+00:00",
+      "tech_score": 0.4156,
+      "url": "https://trainghiemso.vn/tcl-gioi-thieu-loat-tv-mini-led-cung-he-sinh-thai-thiet-bi-thong-minh-2026/"
     },
     {
-      "cluster": 2,
-      "cluster_label": "nhà_mạng | thuê | xác_thực thuê | xác_thực | ứng_dụng",
-      "title": "Thử nghiệm đưa 100.000 USD cho AI mở cửa hàng",
+      "cluster": 5,
+      "cluster_label": "tối_giản | dòng | sang_trọng | sang_trọng tối_giản | samsung",
+      "title": "TCL mang TV công nghệ RGB và SQD-Mini LED về Việt Nam",
       "source": "vnexpress",
-      "published_at": "2026-04-14T07:00:00+00:00",
-      "tech_score": 0.4901,
-      "url": "https://vnexpress.net/thu-nghiem-dua-100-000-usd-cho-ai-mo-cua-hang-5061707.html"
+      "published_at": "2026-04-20T04:31:24+00:00",
+      "tech_score": 0.3565,
+      "url": "https://vnexpress.net/tcl-mang-tv-cong-nghe-rgb-va-sqd-mini-led-ve-viet-nam-5064526.html"
     },
     {
-      "cluster": 2,
-      "cluster_label": "nhà_mạng | thuê | xác_thực thuê | xác_thực | ứng_dụng",
+      "cluster": 5,
+      "cluster_label": "tối_giản | dòng | sang_trọng | sang_trọng tối_giản | samsung",
+      "title": "LG định hình phong cách “sang trọng tối giản” trong ngành điện tử gia dụng",
+      "source": "dantri",
+      "published_at": "2026-04-17T12:30:00+00:00",
+      "tech_score": 0.3414,
+      "url": "https://dantri.com.vn/cong-nghe/lg-dinh-hinh-phong-cach-sang-trong-toi-gian-trong-nganh-dien-tu-gia-dung-20260417141608407.htm"
+    },
+    {
+      "cluster": 6,
+      "cluster_label": "thuê | nhà_mạng | xác_thực thuê | xác_thực | xác_nhận",
       "title": "Google Maps tích hợp Gemini, tự động tạo mô tả ảnh cho người dùng",
       "source": "tuoitre",
       "published_at": "2026-04-14T16:50:42+00:00",
@@ -171,31 +294,22 @@
       "url": "https://tuoitre.vn/google-maps-tich-hop-gemini-tu-dong-tao-mo-ta-anh-cho-nguoi-dung-20260413160714801.htm"
     },
     {
-      "cluster": 3,
-      "cluster_label": "máy | cập_nhật | iphone | apple | màn_hình",
-      "title": "Lý do Chrome khiến SSD nhanh hao mòn và cách khắc phục",
-      "source": "thanhnien",
-      "published_at": "2026-04-18T12:36:00+00:00",
-      "tech_score": 0.4934,
-      "url": "https://thanhnien.vn/ly-do-chrome-khien-ssd-nhanh-hao-mon-va-cach-khac-phuc-185260418103745621.htm"
+      "cluster": 6,
+      "cluster_label": "thuê | nhà_mạng | xác_thực thuê | xác_thực | xác_nhận",
+      "title": "Người Việt có thể kết nối dữ liệu Gmail, YouTube để cá nhân hóa Gemini",
+      "source": "vnexpress",
+      "published_at": "2026-04-15T10:08:23+00:00",
+      "tech_score": 0.4298,
+      "url": "https://vnexpress.net/nguoi-viet-co-the-ket-noi-du-lieu-gmail-youtube-de-ca-nhan-hoa-gemini-5062631.html"
     },
     {
-      "cluster": 3,
-      "cluster_label": "máy | cập_nhật | iphone | apple | màn_hình",
-      "title": "Mac Studio M5 Ultra bất ngờ lùi lịch ra mắt vì khủng hoảng bộ nhớ toàn cầu",
-      "source": "dantri",
-      "published_at": "2026-04-20T21:55:00+00:00",
-      "tech_score": 0.4861,
-      "url": "https://dantri.com.vn/cong-nghe/mac-studio-m5-ultra-bat-ngo-lui-lich-ra-mat-vi-khung-hoang-bo-nho-toan-cau-20260420135357842.htm"
-    },
-    {
-      "cluster": 3,
-      "cluster_label": "máy | cập_nhật | iphone | apple | màn_hình",
-      "title": "Thay đổi nhỏ giúp Mini PC chạy nhanh như máy tính bàn",
-      "source": "thanhnien",
-      "published_at": "2026-04-20T12:08:00+00:00",
-      "tech_score": 0.4832,
-      "url": "https://thanhnien.vn/thay-doi-nho-giup-mini-pc-chay-nhanh-nhu-may-tinh-ban-185260420130943797.htm"
+      "cluster": 6,
+      "cluster_label": "thuê | nhà_mạng | xác_thực thuê | xác_thực | xác_nhận",
+      "title": "Khánh Hòa triển khai ứng dụng để dân phản ánh hiện trường, tra cứu dịch vụ công",
+      "source": "tuoitre",
+      "published_at": "2026-04-15T18:14:29+00:00",
+      "tech_score": 0.3905,
+      "url": "https://tuoitre.vn/khanh-hoa-trien-khai-ung-dung-de-dan-phan-anh-hien-truong-tra-cuu-dich-vu-cong-20260415093301147.htm"
     }
   ]
 }

@@ -12,7 +12,7 @@ def get_connection():
         port=os.getenv("POSTGRES_PORT", 5432),
         dbname=os.getenv("POSTGRES_DB", "newsdb"),
         user=os.getenv("POSTGRES_USER", "admin"),
-        password=os.getenv("POSTGRES_PASSWORD", ""),
+        password=os.getenv("POSTGRES_PASSWORD", "supersecretpassword123"),
     )
 
 
