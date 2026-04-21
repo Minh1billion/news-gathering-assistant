@@ -30,7 +30,7 @@ class Crawler:
 
         return articles
 
-    def run(self) -> dict:
+    async def run(self) -> dict:
         total_inserted = 0
         total_skipped = 0
 

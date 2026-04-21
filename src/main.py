@@ -2,18 +2,32 @@ import logging
 from contextlib import asynccontextmanager
 from typing import Any
 
+import asyncio
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
+from qdrant_client import QdrantClient
 
 from src.storage.db import init_db
+from src.storage.qdrant_store import QdrantStore
 from src.crawler.crawl import Crawler
-from src.analyzer.analyze import Analyzer
-from src.analyzer.constants import WINDOW_DAYS
+from src.processor.preprocess import Preprocessor, PreprocessStats
+from src.analyzer.analyze import (
+    Analyzer,
+    AnalysisReport,
+    KeywordEntry,
+    ClusterInfo,
+    HighlightedArticle,
+    TopicDistribution,
+    DailyCount,
+    ClusterQuality,
+)
 
 log = logging.getLogger(__name__)
 
 SBERT_MODEL_NAME = "keepitreal/vietnamese-sbert"
+QDRANT_HOST = "qdrant"
+QDRANT_PORT = 6333
 
 _state: dict[str, Any] = {}
 
@@ -26,7 +40,14 @@ async def lifespan(app: FastAPI):
     )
     init_db()
     sbert = SentenceTransformer(SBERT_MODEL_NAME)
-    _state["analyzer"] = Analyzer(sbert)
+    qdrant = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+    qdrant_store = QdrantStore(qdrant)
+
+    _state["sbert"] = sbert
+    _state["qdrant"] = qdrant
+    _state["analyzer"] = Analyzer(sbert=sbert, qdrant=qdrant)
+    _state["preprocessor"] = Preprocessor(sbert=sbert, qdrant_store=qdrant_store)
+    log.info("App ready: SBERT + Qdrant initialized")
     yield
     _state.clear()
 
@@ -35,48 +56,221 @@ app = FastAPI(title="News Gathering Assistant", lifespan=lifespan)
 
 
 class CrawlResult(BaseModel):
-    inserted: int
-    skipped: int
+    crawled: int
+    saved: int
+    sources: list[str]
+
+
+class PreprocessResult(BaseModel):
+    raw_total: int
+    past_window: int
+    after_filter: int
+    after_token_filter: int
+    tech_articles: int
+    upserted_qdrant: int
+
+
+class KeywordResponse(BaseModel):
+    rank: int
+    keyword: str
+    tfidf_score: float
+    semantic_score: float
+    combined_score: float
+
+
+class ClusterKeyword(BaseModel):
+    keyword: str
+    score: float
+
+
+class ClusterResponse(BaseModel):
+    cluster_id: int
+    topic: str
+    article_count: int
+    top_keywords: list[ClusterKeyword]
+
+
+class ClusterQualityResponse(BaseModel):
+    k: int
+    inertia: float
+    silhouette: float
+    chosen: bool
+
+
+class HighlightResponse(BaseModel):
+    rank: int
+    title: str
+    source: str
+    url: str
+    published_at: str
+    topic: str
+    tech_score: float
+    content_snippet: str
+
+
+class TopicDistributionResponse(BaseModel):
+    topic: str
+    count: int
+    percentage: float
+
+
+class DailyCountResponse(BaseModel):
+    date: str
+    count: int
 
 
 class ReportResponse(BaseModel):
-    week: str
     generated_at: str
+    week_start: str
+    week_end: str
     stats: dict
     executive_summary: dict
-    trending_keywords: list[dict]
-    highlighted_news: list[dict]
+    trending_keywords: list[KeywordResponse]
+    topic_distribution: list[TopicDistributionResponse]
+    daily_counts: list[DailyCountResponse]
+    clusters: list[ClusterResponse]
+    cluster_quality: list[ClusterQualityResponse]
+    highlighted_articles: list[HighlightResponse]
 
 
-def _get_analyzer() -> Analyzer:
-    analyzer = _state.get("analyzer")
-    if analyzer is None:
-        raise HTTPException(status_code=503, detail="Service not ready")
-    return analyzer
+def _report_to_response(report: AnalysisReport) -> ReportResponse:
+    return ReportResponse(
+        generated_at=report.generated_at,
+        week_start=report.week_start,
+        week_end=report.week_end,
+        stats=report.stats,
+        executive_summary=report.executive_summary,
+        trending_keywords=[
+            KeywordResponse(
+                rank=k.rank,
+                keyword=k.keyword,
+                tfidf_score=k.tfidf_score,
+                semantic_score=k.semantic_score,
+                combined_score=k.combined_score,
+            )
+            for k in report.trending_keywords
+        ],
+        topic_distribution=[
+            TopicDistributionResponse(topic=t.topic, count=t.count, percentage=t.percentage)
+            for t in report.topic_distribution
+        ],
+        daily_counts=[
+            DailyCountResponse(date=d.date, count=d.count)
+            for d in report.daily_counts
+        ],
+        clusters=[
+            ClusterResponse(
+                cluster_id=c.cluster_id,
+                topic=c.topic,
+                article_count=c.article_count,
+                top_keywords=[
+                    ClusterKeyword(keyword=kw, score=sc)
+                    for kw, sc in c.top_keywords
+                ],
+            )
+            for c in report.clusters
+        ],
+        cluster_quality=[
+            ClusterQualityResponse(k=q.k, inertia=q.inertia, silhouette=q.silhouette, chosen=q.chosen)
+            for q in report.cluster_quality
+        ],
+        highlighted_articles=[
+            HighlightResponse(
+                rank=a.rank,
+                title=a.title,
+                source=a.source,
+                url=a.url,
+                published_at=a.published_at,
+                topic=a.topic,
+                tech_score=a.tech_score,
+                content_snippet=a.content_snippet,
+            )
+            for a in report.highlighted_articles
+        ],
+    )
 
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "model_loaded": "analyzer" in _state}
+    return {
+        "status": "ok",
+        "sbert_loaded": "sbert" in _state,
+        "qdrant_connected": "qdrant" in _state,
+    }
 
 
 @app.post("/crawl", response_model=CrawlResult)
-def crawl():
-    return Crawler().run()
+async def crawl():
+    try:
+        crawler: Crawler = Crawler()
+        result = await crawler.run()
+
+        return CrawlResult(
+            crawled=result["inserted"],
+            saved=result["inserted"],
+            sources=list(crawler.sources.keys())
+        )
+    except Exception as e:
+        log.exception("Crawl failed")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/preprocess", response_model=PreprocessResult)
+async def preprocess():
+    try:
+        preprocessor: Preprocessor = _state["preprocessor"]
+
+        stats: PreprocessStats = await asyncio.to_thread(preprocessor.run)
+
+        return PreprocessResult(
+            raw_total=stats.raw_total,
+            past_window=stats.past_window,
+            after_filter=stats.after_filter,
+            after_token_filter=stats.after_token_filter,
+            tech_articles=stats.tech_articles,
+            upserted_qdrant=stats.upserted_qdrant,
+        )
+
+    except Exception as e:
+        log.exception("Preprocess failed")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.get("/report", response_model=ReportResponse)
-def get_report(window_days: int = WINDOW_DAYS):
+async def report():
     try:
-        return _get_analyzer().run(window_days)
-    except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e))
+        analyzer: Analyzer = _state["analyzer"]
+
+        result: AnalysisReport = await asyncio.to_thread(analyzer.run)
+
+        return _report_to_response(result)
+
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        log.exception("Report generation failed")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.post("/pipeline", response_model=ReportResponse)
-def pipeline(window_days: int = WINDOW_DAYS):
-    Crawler().run()
+async def pipeline(skip_crawl: bool = False):
     try:
-        return _get_analyzer().run(window_days)
-    except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e))
+        if not skip_crawl:
+            crawler: Crawler = Crawler()
+            await crawler.run()
+            log.info("Pipeline: crawl done")
+
+        preprocessor: Preprocessor = _state["preprocessor"]
+        preprocessor.run()
+        log.info("Pipeline: preprocess done")
+
+        analyzer: Analyzer = _state["analyzer"]
+        result: AnalysisReport = analyzer.run()
+        log.info("Pipeline: analysis done")
+
+        return _report_to_response(result)
+    except RuntimeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        log.exception("Pipeline failed")
+        raise HTTPException(status_code=500, detail=str(e))
