@@ -1,0 +1,273 @@
+{
+  "week": "14/04/2026 - 21/04/2026",
+  "generated_at": "2026-04-21T12:02:21.167080+00:00",
+  "stats": {
+    "total_tech_articles": 133,
+    "sources": 6,
+    "dominant_topic": "Phần mềm / Dev",
+    "dominant_topic_pct": 27.8
+  },
+  "executive_summary": {
+    "landscape": "133 bài viết công nghệ từ 6 nguồn trong tuần 14/04/2026 - 21/04/2026.",
+    "dominant_topic": "Phần mềm / Dev",
+    "top_keywords": [
+      "hệ_thống",
+      "apple",
+      "iphone"
+    ]
+  },
+  "trending_keywords": [
+    {
+      "rank": 1,
+      "keyword": "hệ_thống",
+      "score": 0.01617
+    },
+    {
+      "rank": 2,
+      "keyword": "apple",
+      "score": 0.01575
+    },
+    {
+      "rank": 3,
+      "keyword": "iphone",
+      "score": 0.01519
+    },
+    {
+      "rank": 4,
+      "keyword": "thiết_bị",
+      "score": 0.01419
+    },
+    {
+      "rank": 5,
+      "keyword": "nhà_mạng",
+      "score": 0.01328
+    },
+    {
+      "rank": 6,
+      "keyword": "ứng_dụng",
+      "score": 0.01269
+    },
+    {
+      "rank": 7,
+      "keyword": "sản_phẩm",
+      "score": 0.01092
+    },
+    {
+      "rank": 8,
+      "keyword": "màn_hình",
+      "score": 0.0104
+    },
+    {
+      "rank": 9,
+      "keyword": "máy",
+      "score": 0.01
+    },
+    {
+      "rank": 10,
+      "keyword": "thuê",
+      "score": 0.00993
+    },
+    {
+      "rank": 11,
+      "keyword": "ai",
+      "score": 0.00947
+    },
+    {
+      "rank": 12,
+      "keyword": "thiết_kế",
+      "score": 0.00912
+    },
+    {
+      "rank": 13,
+      "keyword": "chip",
+      "score": 0.00881
+    },
+    {
+      "rank": 14,
+      "keyword": "nền_tảng",
+      "score": 0.0088
+    },
+    {
+      "rank": 15,
+      "keyword": "điện_thoại",
+      "score": 0.00852
+    },
+    {
+      "rank": 16,
+      "keyword": "dòng",
+      "score": 0.00842
+    },
+    {
+      "rank": 17,
+      "keyword": "ios",
+      "score": 0.00809
+    },
+    {
+      "rank": 18,
+      "keyword": "tính_năng",
+      "score": 0.00795
+    },
+    {
+      "rank": 19,
+      "keyword": "năng_lượng",
+      "score": 0.00775
+    },
+    {
+      "rank": 20,
+      "keyword": "google",
+      "score": 0.00767
+    },
+    {
+      "rank": 21,
+      "keyword": "trí_tuệ nhân_tạo",
+      "score": 0.00767
+    },
+    {
+      "rank": 22,
+      "keyword": "lên",
+      "score": 0.0071
+    },
+    {
+      "rank": 23,
+      "keyword": "cập_nhật",
+      "score": 0.00708
+    },
+    {
+      "rank": 24,
+      "keyword": "doanh_nghiệp",
+      "score": 0.00695
+    },
+    {
+      "rank": 25,
+      "keyword": "dữ_liệu",
+      "score": 0.00677
+    },
+    {
+      "rank": 26,
+      "keyword": "hóa",
+      "score": 0.00673
+    },
+    {
+      "rank": 27,
+      "keyword": "vận_hành",
+      "score": 0.00672
+    },
+    {
+      "rank": 28,
+      "keyword": "điện",
+      "score": 0.00654
+    },
+    {
+      "rank": 29,
+      "keyword": "công_ty",
+      "score": 0.00638
+    },
+    {
+      "rank": 30,
+      "keyword": "đổi_mới sáng_tạo",
+      "score": 0.00638
+    }
+  ],
+  "highlighted_news": [
+    {
+      "rank": 1,
+      "title": "Microsoft chính thức vận hành trung tâm AI mạnh nhất thế giới",
+      "source": "dantri",
+      "url": "https://dantri.com.vn/cong-nghe/microsoft-chinh-thuc-van-hanh-trung-tam-ai-manh-nhat-the-gioi-20260420135803112.htm",
+      "published_at": "2026-04-20 14:57:35+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5746,
+      "summary": "(Dân trí) - Một bước tiến mới trong cuộc đua trí tuệ nhân tạo vừa được xác lập khi Microsoft đưa vào vận hành siêu trung tâm dữ liệu Fairwater, nơi quy tụ hàng trăm nghìn GPU và dùng hoàn toàn năng lượng tái tạo."
+    },
+    {
+      "rank": 2,
+      "title": "ROG Flow Z13-KJP và TUF Gaming A14 2026 trang bị AMD Ryzen AI Max+ ra mắt tại Việt Nam",
+      "source": "trainghiemso",
+      "url": "https://trainghiemso.vn/rog-flow-z13-kjp-va-tuf-gaming-a14-2026-trang-bi-amd-ryzen-ai-max-ra-mat-tai-viet-nam/",
+      "published_at": "2026-04-15 03:40:43+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.568,
+      "summary": "Điểm chung nổi bật của bộ đôi ROG Flow Z13-KJP và TUF Gaming A14 2026 (FA401EA) nằm ở vi xử lý AMD Ryzen AI Max+ – nền tảng xử lý thế hệ mới được AMD phát triển theo hướng hợp nhất, tích hợp CPU, GPU và NPU trong cùng một kiến trúc nhằm tối ưu hiệu năng tổng thể và thời lượng pin. Dựa trên thiết kế "
+    },
+    {
+      "rank": 3,
+      "title": "Lợi thế khi OpenClaw triển khai trên Cloud",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/loi-the-khi-openclaw-trien-khai-tren-cloud-5063333.html",
+      "published_at": "2026-04-20 07:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5572,
+      "summary": "Trí tuệ nhân tạo đang dần thay đổi cách con người làm việc, nhưng việc đưa AI vào vận hành thực tế vẫn là bài toán khó với nhiều doanh nghiệp. TheoMcKinsey, phần lớn tổ chức mới dừng ở giai đoạn thử nghiệm và chưa tích hợp sâu vào quy trình, trong khi các nghiên cứu khác cho thấy rào cản chính không"
+    },
+    {
+      "rank": 4,
+      "title": "Google tích hợp AI vào Chrome, tìm kiếm không cần mở trang",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/google-tich-hop-ai-vao-chrome-tim-kiem-khong-can-mo-trang-20260418162644167.htm",
+      "published_at": "2026-04-19 17:40:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.55,
+      "summary": "Google tích hợp AI vào thanh địa chỉ Chrome, biến trình duyệt thành trợ lý thông minh - Ảnh: Google Mới đây,Googletích hợp trí tuệ nhân tạo trực tiếp vào thanh địa chỉ Chrome, đánh dấu thay đổi đáng chú ý trong cách trình duyệt vận hành. Thanh địa chỉ không còn chỉ để nhập URL hay từ khóa mà trở thà"
+    },
+    {
+      "rank": 5,
+      "title": "Google hợp tác Marvell phát triển chip AI giải bài toán hiệu năng suy luận",
+      "source": "dantri",
+      "url": "https://dantri.com.vn/cong-nghe/google-hop-tac-marvell-phat-trien-chip-ai-giai-bai-toan-hieu-nang-suy-luan-20260420135948927.htm",
+      "published_at": "2026-04-20 14:51:47+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5486,
+      "summary": "(Dân trí) - Động thái mới của Google cho thấy cuộc đua phần cứng AI đang bước sang giai đoạn tối ưu chuyên sâu, khi các tập đoàn công nghệ tìm cách tách riêng từng tác vụ để nâng cao hiệu suất toàn hệ thống."
+    },
+    {
+      "rank": 6,
+      "title": "Xây dựng kho dữ liệu ngành Khoa học và Công nghệ",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/xay-dung-kho-du-lieu-nganh-khoa-hoc-va-cong-nghe-5064089.html",
+      "published_at": "2026-04-19 01:00:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.5331,
+      "summary": "Theo Kế hoạch chuyển đổi số ban hành kèm Quyết định 2100, Bộ Khoa học và Công nghệ dự định hình thành một hạ tầng số đồng nhất, đảm bảo an toàn, tin cậy. Theo kế hoạch này Bộ sẽ nâng cấp trung tâm dữ liệu theo chuẩn Tier 3 hoặc tương đương, phát triển hạ tầng điện toán đám mây riêng và nâng cấp mạng"
+    },
+    {
+      "rank": 7,
+      "title": "AI có thể rút ngắn 10 tháng làm việc của kỹ sư Nvidia 'còn một đêm'",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/ai-co-the-rut-ngan-10-thang-lam-viec-cua-ky-su-nvidia-con-mot-dem-5062418.html",
+      "published_at": "2026-04-15 02:10:21+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5318,
+      "summary": "Trong video trò chuyện với Jeff Dean, nhà khoa học trưởng tại Google, mới được đăng trên website của Nvidia, William Dally, Giám đốc khoa học Nvidia, tiết lộ cách hãng đưa AI vào mọi giai đoạn thiết kế chip để cắt giảm tối đa thời gian phát triển sản phẩm. Cụ thể, trước đây việc chuyển đổi (porting)"
+    },
+    {
+      "rank": 8,
+      "title": "Giá Bitcoin hôm nay 21.4.2026: BTC sắp đạt đỉnh mới",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/gia-bitcoin-hom-nay-2142026-btc-sap-dat-dinh-moi-185260421072206223.htm",
+      "published_at": "2026-04-21 01:44:00+00:00",
+      "topic": "Crypto / Blockchain",
+      "tech_score": 0.4852,
+      "summary": "Dữ liệu từ CoinMarketCap và TradingView cho thấygiá Bitcoin hôm naytăng 2,63% trong vòng 24 giờ qua. Tính đến 7 giờ ngày 21.4 (giờ Việt Nam), mỗiBitcoin(BTC) được giao dịch quanh mốc 75.878 USD, vốn hóa ước đạt 1.519 tỉ USD. Đà tăng của Bitcoin cũng khiến cả thị trường tiền mã hóa phục hồi. Vốn hóa "
+    },
+    {
+      "rank": 9,
+      "title": "Thay đổi nhỏ giúp Mini PC chạy nhanh như máy tính bàn",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/thay-doi-nho-giup-mini-pc-chay-nhanh-nhu-may-tinh-ban-185260420130943797.htm",
+      "published_at": "2026-04-20 12:08:00+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.4832,
+      "summary": "Nhiều người dùng phàn nàn về việc chiếcMini PCcủa họ nhanh chóng xuống cấp và chạy chậm đi sau một thời gian sử dụng. Tuy nhiên, các chuyên gia công nghệ khẳng định thủ phạm thường không nằm ở phần cứng bên trong mà ở chính không gian xung quanh máy. Về bản chất, Mini PC giống như những chiếc laptop"
+    },
+    {
+      "rank": 10,
+      "title": "Trình duyệt Chrome ở Việt Nam được tích hợp chatbot Gemini",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/trinh-duyet-chrome-o-viet-nam-duoc-tich-hop-chatbot-gemini-5064827.html",
+      "published_at": "2026-04-21 08:00:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.4804,
+      "summary": "Trong thông báo hôm 21/4, Google cho biết đã triển khai Gemini trên Chrome tới người dùng tại một số thị trường châu Á - Thái Bình Dương, gồm Việt Nam, Australia, Indonesia, Nhật Bản, Philippines, Singapore, Hàn Quốc. Tính năng này sẽ xuất hiện trên trình duyệt cả ở phiên bản máy tính Mac, Windows v"
+    }
+  ]
+}

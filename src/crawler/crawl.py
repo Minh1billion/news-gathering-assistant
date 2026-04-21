@@ -3,81 +3,55 @@ import random
 from .config import SOURCES
 from .fetcher import fetch_article_detail
 from .parsers import PARSERS
-from .exporter import save_json, save_html
 from ..storage.db import save_articles
 
 
-def crawl_all() -> list[dict]:
-    all_results = []
+class Crawler:
+    def __init__(self, sources: dict = None, delay: tuple[float, float] = (1.0, 2.0)):
+        self.sources = sources or SOURCES
+        self.delay = delay
 
-    for source_name, config in SOURCES.items():
-        mode = config["type"]
-        display_url = config["rss_url"] if mode == "rss" else config["url"]
-        print(f"\nFetching [{mode.upper()}]: {display_url}")
-        try:
-            parser_fn = PARSERS[mode]
-            data = parser_fn(config, source_name)
-            print(f" -> Found {len(data)} articles")
-            all_results.extend(data)
-        except Exception as e:
-            print(f" -> Error: {e}")
+    def crawl_all(self) -> list[dict]:
+        results = []
+        for source_name, config in self.sources.items():
+            mode = config["type"]
+            display_url = config.get("rss_url") or config.get("url", "")
+            print(f"\nFetching [{mode.upper()}]: {display_url}")
+            try:
+                parser_fn = PARSERS[mode]
+                data = parser_fn(config, source_name)
+                print(f" -> Found {len(data)} articles")
+                results.extend(data)
+            except Exception as e:
+                print(f" -> Error: {e}")
+            time.sleep(random.uniform(*self.delay))
+        return results
 
-        time.sleep(random.uniform(1, 2))
+    def enrich_with_content(self, articles: list[dict]) -> list[dict]:
+        total = len(articles)
+        for i, article in enumerate(articles):
+            config = self.sources.get(article["source"], {})
+            content_selector = config.get("content_selector")
+            date_selector = config.get("date_selector")
+            source_type = config.get("type")
+            print(f"[{i+1}/{total}] {article['title'][:70]}...")
+            if content_selector and article.get("link"):
+                detail = fetch_article_detail(article["link"], content_selector, date_selector)
+                article["content"] = detail["content"]
+                if source_type == "html":
+                    article["published_at"] = detail["published_at"]
+                elif source_type == "rss" and not article.get("published_at"):
+                    article["published_at"] = detail["published_at"]
+        return articles
 
-    return all_results
+    def run(self) -> dict:
+        print("=== Step 1: Crawl article list ===")
+        articles = self.crawl_all()
+        print(f"\nFound {len(articles)} articles")
 
+        print("\n=== Step 2: Enrich with content and date ===")
+        enriched = self.enrich_with_content(articles)
 
-def enrich_with_content(articles: list[dict]) -> list[dict]:
-    total = len(articles)
-
-    for i, article in enumerate(articles):
-        config = SOURCES.get(article["source"], {})
-        content_selector = config.get("content_selector")
-        date_selector = config.get("date_selector")
-        source_type = config.get("type")
-
-        print(f"[{i+1}/{total}] {article['title'][:70]}...")
-
-        if content_selector and article.get("link"):
-            detail = fetch_article_detail(article["link"], content_selector, date_selector)
-            article["content"] = detail["content"]
-
-            if source_type == "html":
-                article["published_at"] = detail["published_at"]
-            elif source_type == "rss" and not article.get("published_at"):
-                article["published_at"] = detail["published_at"]
-
-    return articles
-
-
-if __name__ == "__main__":
-    print("=== Step 1: Crawl article list ===")
-    articles = crawl_all()
-    # save_json(articles, "articles.json")
-    print(f"\nSaved {len(articles)} articles to articles.json")
-
-    print("\n=== Step 2: Enrich with content and date ===")
-    enriched = enrich_with_content(articles)
-
-    # save_json(enriched, "article-content.json")
-    # save_html(enriched, "article-content.html")
-
-    stats = save_articles(enriched)
-    print(f"\n=== DB saved: {stats['inserted']} inserted / {stats['skipped']} skipped ===")
-
-    success_content = sum(1 for a in enriched if a.get("content"))
-    success_date = sum(1 for a in enriched if a.get("published_at"))
-    no_date = [a for a in enriched if not a.get("published_at")]
-
-    print(f"\nDone!")
-    print(f" -> Content : {success_content}/{len(enriched)}")
-    print(f" -> Date    : {success_date}/{len(enriched)}")
-
-    if no_date:
-        print(f"\nArticles with no date ({len(no_date)}):")
-        for a in no_date[:5]:
-            print(f"  [{a['source']}] {a['title'][:60]}")
-        if len(no_date) > 5:
-            print(f"  ... and {len(no_date) - 5} more")
-
-    print("\nSaved to PostgreSQL")
+        stats = save_articles(enriched)
+        print(f"\n=== DB saved: {stats['inserted']} inserted / {stats['skipped']} skipped ===")
+        return stats

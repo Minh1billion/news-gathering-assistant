@@ -23,3 +23,8 @@ psycopg2-binary
 
 # --- Config ---
 python-dotenv
+
+# --- App ---
+fastapi
+uvicorn[standard] 
+pydantic
