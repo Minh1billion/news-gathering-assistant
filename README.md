@@ -462,7 +462,7 @@ Uses Swagger UI for testing endpoints directly from the browser.
 
 ## Support
 
-For issues, questions, or suggestions, please [add your contact information or support channel].
+For issues, questions, or suggestions, please email to minh01212929979@gmail.com.
 
 ---
 
