@@ -1,5 +1,5 @@
 import json
-from .config import SOURCES
+from .sources import SOURCES
 
 
 def save_json(data: list[dict], path: str) -> None:

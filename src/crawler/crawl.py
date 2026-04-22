@@ -1,6 +1,6 @@
 import time
 import random
-from .config import SOURCES
+from .sources import SOURCES
 from .fetcher import fetch_article_detail
 from .parsers import PARSERS
 from ..storage.db import save_articles

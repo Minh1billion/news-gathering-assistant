@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from .config import HEADERS
+from .sources import HEADERS
 
 
 def fetch_html(url: str) -> BeautifulSoup:
