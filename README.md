@@ -1,5 +1,13 @@
 # News Gathering Assistant
 
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-Container-2496ED?logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-DB-4169E1?logo=postgresql&logoColor=white)
+![Qdrant](https://img.shields.io/badge/Qdrant-VectorDB-FF4F8B)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 A comprehensive news aggregation and analysis platform that automatically crawls Vietnamese tech news from multiple sources, processes articles with NLP, clusters them by topic, and generates interactive weekly intelligence reports.
 
 ## Overview
