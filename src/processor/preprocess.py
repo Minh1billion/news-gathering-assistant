@@ -160,16 +160,6 @@ def _remove_stopwords(tokenized_text: str) -> str:
     return " ".join(filtered)
 
 
-# def _ensure_qdrant_collection(client: QdrantClient, vector_size: int) -> None:
-#     existing = {c.name for c in client.get_collections().collections}
-#     if QDRANT_COLLECTION not in existing:
-#         client.create_collection(
-#             collection_name=QDRANT_COLLECTION,
-#             vectors_config=VectorParams(size=vector_size, distance=Distance.COSINE),
-#         )
-#         log.info("Created Qdrant collection '%s'", QDRANT_COLLECTION)
-
-
 def _save_processed_postgres(df: pd.DataFrame) -> None:
     conn = get_connection()
     try:
@@ -202,38 +192,6 @@ def _save_processed_postgres(df: pd.DataFrame) -> None:
         conn.commit()
     finally:
         conn.close()
-
-
-# def _upsert_qdrant(
-#     client: QdrantClient,
-#     df: pd.DataFrame,
-#     embeddings: np.ndarray,
-# ) -> int:
-#     points = []
-#     for i, (_, row) in enumerate(df.iterrows()):
-#         points.append(PointStruct(
-#             id=int(row["id"]),
-#             vector=embeddings[i].tolist(),
-#             payload={
-#                 "title": row["title"],
-#                 "source": row["source"],
-#                 "url": row["url"],
-#                 "published_at": str(row["published_at"]),
-#                 "tech_score": float(row["tech_score"]),
-#                 "tech_topic": row["tech_topic"],
-#                 "tokenized": row["tokenized"],
-#                 "content_snippet": row["content"][:300],
-#             },
-#         ))
-
-#     batch_size = 256
-#     for start in range(0, len(points), batch_size):
-#         client.upsert(
-#             collection_name=QDRANT_COLLECTION,
-#             points=points[start : start + batch_size],
-#         )
-
-#     return len(points)
 
 
 class Preprocessor:

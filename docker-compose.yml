@@ -2,7 +2,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.app
+      dockerfile: Dockerfile
     container_name: news_app
     env_file: .env
     ports:
@@ -24,13 +24,11 @@ services:
 
   dashboard:
     build:
-      context: .
-      dockerfile: Dockerfile.dashboard
+      context: ./dashboard
+      dockerfile: Dockerfile
     container_name: news_dashboard
-    environment:
-      - API_BASE_URL=http://app:8000
     ports:
-      - "8501:8501"
+      - "3000:80"
     depends_on:
       app:
         condition: service_healthy

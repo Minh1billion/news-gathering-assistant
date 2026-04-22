@@ -1,0 +1,41 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f4f0;
+  --surface: #ffffff;
+  --ink: #1a1a1a;
+  --ink-2: #3a3835;
+  --ink-3: #5a5855;
+  --ink-4: #9b9890;
+  --border: #e0ddd6;
+  --border-2: #c8c5be;
+  --sidebar-bg: #1a1a1a;
+  --sidebar-text: #d4d0c8;
+  --sidebar-muted: #9b9890;
+  --accent: #c0392b;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+}
+
+html { font-size: 16px; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ink); text-underline-offset: 2px; }
+a:hover { color: var(--accent); }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-2); }
+
+@media print {
+  .no-print { display: none !important; }
+  @page { margin: 16mm 14mm; size: A4 portrait; }
+  body { background: #fff !important; }
+  .sidebar { display: none !important; }
+  .main-content { margin-left: 0 !important; }
+}

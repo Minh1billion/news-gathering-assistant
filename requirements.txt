@@ -13,3 +13,4 @@ python-dotenv
 fastapi
 uvicorn[standard]
 pydantic
+groq
