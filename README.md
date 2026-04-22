@@ -460,20 +460,6 @@ Full interactive API documentation is available at: **http://localhost:8000/docs
 
 Uses Swagger UI for testing endpoints directly from the browser.
 
-## Contributing
-
-To extend this project:
-
-1. Add new news sources in `src/crawler/config.py`
-2. Create custom parsers in `src/crawler/parsers.py` for special cases
-3. Modify analysis parameters in `src/analyzer/analyze.py`
-4. Add new dashboard components in `dashboard/src/components/`
-5. Extend API endpoints in `src/main.py`
-
-## License
-
-[Specify your license here]
-
 ## Support
 
 For issues, questions, or suggestions, please [add your contact information or support channel].
