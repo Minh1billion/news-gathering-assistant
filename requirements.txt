@@ -12,11 +12,16 @@ numpy
 scikit-learn
 sentence-transformers
 underthesea
+bertopic
+hdbscan
+umap-learn
 
 # --- Visualization ---
 matplotlib
 seaborn
 wordcloud
+plotly
+streamlit
 
 # --- Database ---
 psycopg2-binary

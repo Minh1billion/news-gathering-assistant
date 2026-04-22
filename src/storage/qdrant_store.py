@@ -18,7 +18,6 @@ class QdrantStore:
 
     def upsert_articles(self, df, embeddings):
         points = []
-
         for i, (_, row) in enumerate(df.iterrows()):
             points.append(PointStruct(
                 id=int(row["id"]),
@@ -43,3 +42,24 @@ class QdrantStore:
             )
 
         return len(points)
+
+    def scroll_all(self) -> tuple[list[dict], list[list[float]]]:
+        payloads, vectors = [], []
+        offset = None
+        while True:
+            result, next_offset = self.client.scroll(
+                collection_name=QDRANT_COLLECTION,
+                limit=256,
+                offset=offset,
+                with_payload=True,
+                with_vectors=True,
+            )
+            if not result:
+                break
+            for point in result:
+                payloads.append(point.payload)
+                vectors.append(point.vector)
+            offset = next_offset
+            if offset is None:
+                break
+        return payloads, vectors

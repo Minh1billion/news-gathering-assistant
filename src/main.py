@@ -16,11 +16,11 @@ from src.analyzer.analyze import (
     Analyzer,
     AnalysisReport,
     KeywordEntry,
-    ClusterInfo,
+    ClusterReport,
+    ClusterArticle,
     HighlightedArticle,
     TopicDistribution,
     DailyCount,
-    ClusterQuality,
 )
 
 log = logging.getLogger(__name__)
@@ -45,7 +45,8 @@ async def lifespan(app: FastAPI):
 
     _state["sbert"] = sbert
     _state["qdrant"] = qdrant
-    _state["analyzer"] = Analyzer(sbert=sbert, qdrant=qdrant)
+    _state["qdrant_store"] = qdrant_store
+    _state["analyzer"] = Analyzer(sbert=sbert, qdrant_store=qdrant_store)
     _state["preprocessor"] = Preprocessor(sbert=sbert, qdrant_store=qdrant_store)
     log.info("App ready: SBERT + Qdrant initialized")
     yield
@@ -83,18 +84,25 @@ class ClusterKeyword(BaseModel):
     score: float
 
 
+class ClusterArticleResponse(BaseModel):
+    rank: int
+    title: str
+    source: str
+    url: str
+    published_at: str
+    tech_score: float
+    content_snippet: str
+
+
 class ClusterResponse(BaseModel):
     cluster_id: int
     topic: str
     article_count: int
+    avg_tech_score: float
+    cohesion_score: float
+    combined_score: float
     top_keywords: list[ClusterKeyword]
-
-
-class ClusterQualityResponse(BaseModel):
-    k: int
-    inertia: float
-    silhouette: float
-    chosen: bool
+    top_articles: list[ClusterArticleResponse]
 
 
 class HighlightResponse(BaseModel):
@@ -129,7 +137,6 @@ class ReportResponse(BaseModel):
     topic_distribution: list[TopicDistributionResponse]
     daily_counts: list[DailyCountResponse]
     clusters: list[ClusterResponse]
-    cluster_quality: list[ClusterQualityResponse]
     highlighted_articles: list[HighlightResponse]
 
 
@@ -163,16 +170,27 @@ def _report_to_response(report: AnalysisReport) -> ReportResponse:
                 cluster_id=c.cluster_id,
                 topic=c.topic,
                 article_count=c.article_count,
+                avg_tech_score=c.avg_tech_score,
+                cohesion_score=c.cohesion_score,
+                combined_score=c.combined_score,
                 top_keywords=[
                     ClusterKeyword(keyword=kw, score=sc)
                     for kw, sc in c.top_keywords
                 ],
+                top_articles=[
+                    ClusterArticleResponse(
+                        rank=a.rank,
+                        title=a.title,
+                        source=a.source,
+                        url=a.url,
+                        published_at=a.published_at,
+                        tech_score=a.tech_score,
+                        content_snippet=a.content_snippet,
+                    )
+                    for a in c.top_articles
+                ],
             )
             for c in report.clusters
-        ],
-        cluster_quality=[
-            ClusterQualityResponse(k=q.k, inertia=q.inertia, silhouette=q.silhouette, chosen=q.chosen)
-            for q in report.cluster_quality
         ],
         highlighted_articles=[
             HighlightResponse(
@@ -202,13 +220,12 @@ def health():
 @app.post("/crawl", response_model=CrawlResult)
 async def crawl():
     try:
-        crawler: Crawler = Crawler()
+        crawler = Crawler()
         result = await crawler.run()
-
         return CrawlResult(
             crawled=result["inserted"],
             saved=result["inserted"],
-            sources=list(crawler.sources.keys())
+            sources=list(crawler.sources.keys()),
         )
     except Exception as e:
         log.exception("Crawl failed")
@@ -219,9 +236,7 @@ async def crawl():
 async def preprocess():
     try:
         preprocessor: Preprocessor = _state["preprocessor"]
-
         stats: PreprocessStats = await asyncio.to_thread(preprocessor.run)
-
         return PreprocessResult(
             raw_total=stats.raw_total,
             past_window=stats.past_window,
@@ -230,7 +245,6 @@ async def preprocess():
             tech_articles=stats.tech_articles,
             upserted_qdrant=stats.upserted_qdrant,
         )
-
     except Exception as e:
         log.exception("Preprocess failed")
         raise HTTPException(status_code=500, detail=str(e))
@@ -240,11 +254,8 @@ async def preprocess():
 async def report():
     try:
         analyzer: Analyzer = _state["analyzer"]
-
         result: AnalysisReport = await asyncio.to_thread(analyzer.run)
-
         return _report_to_response(result)
-
     except RuntimeError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
@@ -256,16 +267,16 @@ async def report():
 async def pipeline(skip_crawl: bool = False):
     try:
         if not skip_crawl:
-            crawler: Crawler = Crawler()
+            crawler = Crawler()
             await crawler.run()
             log.info("Pipeline: crawl done")
 
         preprocessor: Preprocessor = _state["preprocessor"]
-        preprocessor.run()
+        await asyncio.to_thread(preprocessor.run)
         log.info("Pipeline: preprocess done")
 
         analyzer: Analyzer = _state["analyzer"]
-        result: AnalysisReport = analyzer.run()
+        result: AnalysisReport = await asyncio.to_thread(analyzer.run)
         log.info("Pipeline: analysis done")
 
         return _report_to_response(result)
