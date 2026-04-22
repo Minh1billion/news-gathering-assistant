@@ -1,0 +1,15 @@
+requests
+beautifulsoup4
+feedparser
+lxml
+pandas
+numpy
+scikit-learn
+sentence-transformers
+underthesea
+psycopg2-binary
+qdrant-client
+python-dotenv
+fastapi
+uvicorn[standard]
+pydantic

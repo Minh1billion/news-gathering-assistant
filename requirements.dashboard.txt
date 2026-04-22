@@ -1,0 +1,11 @@
+requests
+pandas
+numpy
+matplotlib
+seaborn
+wordcloud
+plotly
+streamlit
+weasyprint
+kaleido
+python-dotenv

@@ -47,9 +47,6 @@ def save_articles(articles: list[dict]) -> dict:
         if a.get("title") and a.get("link")
     ]
 
-    inserted = 0
-    skipped = 0
-
     with get_connection() as conn:
         with conn.cursor() as cur:
             psycopg2.extras.execute_values(
@@ -57,18 +54,15 @@ def save_articles(articles: list[dict]) -> dict:
                 """
                 INSERT INTO articles (source, title, url, image, published_at, content)
                 VALUES %s
-                ON CONFLICT (url) DO UPDATE SET
-                    content      = EXCLUDED.content,
-                    published_at = COALESCE(articles.published_at, EXCLUDED.published_at),
-                    image        = COALESCE(articles.image, EXCLUDED.image)
-                RETURNING (xmax = 0) AS is_inserted
+                ON CONFLICT (url) DO NOTHING
+                RETURNING id
                 """,
                 rows,
                 fetch=True,
             )
             results = cur.fetchall()
-            inserted = sum(1 for r in results if r[0])
-            skipped = len(results) - inserted
+            inserted = len(results)
+            skipped = len(rows) - inserted
         conn.commit()
 
     return {"inserted": inserted, "skipped": skipped}

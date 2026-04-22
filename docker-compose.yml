@@ -1,6 +1,8 @@
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.app
     container_name: news_app
     env_file: .env
     ports:
@@ -10,6 +12,28 @@ services:
         condition: service_healthy
       qdrant:
         condition: service_started
+    volumes:
+      - ./reports:/reports
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:8000/health | python3 -c \"import sys,json; d=json.load(sys.stdin); sys.exit(0 if d.get('ready') else 1)\""]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 60s
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: news_dashboard
+    environment:
+      - API_BASE_URL=http://app:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      app:
+        condition: service_healthy
     restart: unless-stopped
 
   postgres:
