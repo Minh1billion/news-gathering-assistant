@@ -1,10 +1,12 @@
 import logging
-import time
 import random
 import threading
+import time
+from urllib.parse import urljoin
+
 import feedparser
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
+
 from .fetcher import fetch_html
 
 log = logging.getLogger(__name__)
@@ -23,26 +25,23 @@ def parse_html_source(
     cancel_event: threading.Event | None = None,
 ) -> list[dict]:
     urls = [config["url"]]
-
     pagination = config.get("pagination")
     if pagination:
         for page in range(pagination["start"], pagination["start"] + pagination["max_pages"]):
             urls.append(pagination["pattern"].format(page=page))
 
-    results = []
-    seen_links = set()
+    results: list[dict] = []
+    seen_links: set[str] = set()
 
     for url in urls:
         if cancel_event and cancel_event.is_set():
-            log.info("   [%s] HTML parse cancelled", source_name)
+            log.info("[%s] HTML parse cancelled", source_name)
             break
 
-        log.info("   Fetching page: %s", url)
+        log.info("Fetching page: %s", url)
         try:
             soup = fetch_html(url)
-            articles = soup.select(config["article_selector"])
-
-            for art in articles:
+            for art in soup.select(config["article_selector"]):
                 a_tag = art.select_one(config["a_selector"])
                 if not a_tag:
                     continue
@@ -52,7 +51,6 @@ def parse_html_source(
 
                 if not title or not link or link in seen_links:
                     continue
-
                 seen_links.add(link)
 
                 img = art.select_one("img")
@@ -67,10 +65,12 @@ def parse_html_source(
                     "source": source_name,
                 })
 
+                _interruptible_sleep(random.uniform(0.3, 0.7), cancel_event)
+
             _interruptible_sleep(random.uniform(1, 2), cancel_event)
 
         except Exception as e:
-            log.error("   -> Page error %s: %s", url, e)
+            log.error("Page error [%s]: %s", url, e)
 
     return results
 
@@ -90,25 +90,24 @@ def parse_rss_source(
 ) -> list[dict]:
     feed = feedparser.parse(config["rss_url"])
     if feed.bozo:
-        log.warning("   -> RSS feed may be malformed: %s", feed.bozo_exception)
+        log.warning("RSS feed may be malformed [%s]: %s", source_name, feed.bozo_exception)
 
-    results = []
     use_description_as_content = not config.get("content_selector")
 
-    for entry in feed.entries:
-        results.append({
+    return [
+        {
             "title": entry.get("title"),
             "link": entry.get("link"),
             "image": None,
             "published_at": entry.get("published"),
             "content": _extract_rss_description(entry) if use_description_as_content else None,
             "source": source_name,
-        })
+        }
+        for entry in feed.entries
+    ]
 
-    return results
 
-
-PARSERS = {
+PARSERS: dict[str, callable] = {
     "html": parse_html_source,
     "rss": parse_rss_source,
 }

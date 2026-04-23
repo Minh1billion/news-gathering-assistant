@@ -6,17 +6,17 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import silhouette_score
 from sklearn.metrics.pairwise import cosine_similarity
 
-from .models import ClusterArticle, ClusterQuality, ClusterReport
+from src.models.report import ClusterArticle, ClusterQuality, ClusterReport
+from .config import TFIDF_MAX_FEATURES, TFIDF_NGRAM, TOP_CLUSTER_KEYWORDS, TOP_NEWS_PER_CLUSTER
 
 log = logging.getLogger(__name__)
 
-TFIDF_MAX_FEATURES = 300
-TFIDF_NGRAM = (1, 2)
-TOP_CLUSTER_KEYWORDS = 10
-TOP_NEWS_PER_CLUSTER = 2
 
-
-def pick_best_k(embeddings: np.ndarray, chosen_k: int, radius: int) -> tuple[int, list[ClusterQuality]]:
+def pick_best_k(
+    embeddings: np.ndarray,
+    chosen_k: int,
+    radius: int,
+) -> tuple[int, list[ClusterQuality]]:
     k_min = max(2, chosen_k - radius)
     k_max = chosen_k + radius
     quality_list: list[ClusterQuality] = []
@@ -26,7 +26,8 @@ def pick_best_k(embeddings: np.ndarray, chosen_k: int, radius: int) -> tuple[int
         km = KMeans(n_clusters=k, random_state=42, n_init="auto")
         labels = km.fit_predict(embeddings)
         sil = float(silhouette_score(
-            embeddings, labels,
+            embeddings,
+            labels,
             sample_size=min(2000, len(embeddings)),
             random_state=42,
         ))
@@ -42,7 +43,11 @@ def pick_best_k(embeddings: np.ndarray, chosen_k: int, radius: int) -> tuple[int
     return best_k, quality_list
 
 
-def build_cluster_keywords(df, cluster_labels: np.ndarray, n_clusters: int) -> dict[int, list[tuple[str, float]]]:
+def build_cluster_keywords(
+    df,
+    cluster_labels: np.ndarray,
+    n_clusters: int,
+) -> dict[int, list[tuple[str, float]]]:
     result: dict[int, list[tuple[str, float]]] = {}
     for c in range(n_clusters):
         docs = df.loc[cluster_labels == c, "tokenized"].tolist()
@@ -77,11 +82,10 @@ def build_clusters(
         mask = cluster_labels == c
         if not mask.any():
             continue
-        avg_tech = float(df[mask]["tech_score"].mean())
         sims = cosine_similarity(embeddings[mask], cluster_centers[c].reshape(1, -1)).flatten()
         cluster_stats.append({
             "cluster_id": c,
-            "avg_tech": avg_tech,
+            "avg_tech": float(df[mask]["tech_score"].mean()),
             "cohesion": float(sims.mean()),
             "mask": mask,
             "sims": sims,

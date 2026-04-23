@@ -1,8 +1,10 @@
 import logging
 import threading
+
 import requests
 from bs4 import BeautifulSoup
-from .sources import HEADERS
+
+from .config import HEADERS
 
 log = logging.getLogger(__name__)
 
@@ -23,12 +25,13 @@ def fetch_article_detail(
         return {"content": None, "published_at": None}
 
     try:
-        soup = fetch_html(url, timeout=8)
+        soup = fetch_html(url)
 
         paragraphs = soup.select(content_selector)
-        content = "\n".join(
-            p.get_text(strip=True) for p in paragraphs if p.get_text(strip=True)
-        ) or None
+        content = (
+            "\n".join(p.get_text(strip=True) for p in paragraphs if p.get_text(strip=True))
+            or None
+        )
 
         published_at = None
         if date_selector:
@@ -39,5 +42,5 @@ def fetch_article_detail(
         return {"content": content, "published_at": published_at}
 
     except Exception as e:
-        log.warning("   -> Detail error: %s", e)
+        log.warning("Detail fetch error [%s]: %s", url, e)
         return {"content": None, "published_at": None}

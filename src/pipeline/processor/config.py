@@ -1,4 +1,4 @@
-TECH_QUERIES = [
+TECH_QUERIES: list[str] = [
     "trí tuệ nhân tạo AI machine learning deep learning mô hình chatgpt openai gemini",
     "điện thoại smartphone iphone samsung chip vi xử lý màn hình camera",
     "phần mềm ứng dụng lập trình code backend frontend framework",
@@ -10,7 +10,7 @@ TECH_QUERIES = [
     "blockchain bitcoin ethereum tiền mã hóa crypto",
 ]
 
-TOPIC_LABELS = [
+TOPIC_LABELS: list[str] = [
     "AI / ML",
     "Thiết bị di động",
     "Phần mềm / Dev",
@@ -22,7 +22,7 @@ TOPIC_LABELS = [
     "Crypto / Blockchain",
 ]
 
-IMPORTANT_ENGLISH_KEYWORDS = {
+IMPORTANT_ENGLISH_KEYWORDS: set[str] = {
     "ai", "ml", "llm", "gpt", "openai", "chatgpt", "github", "python", "java",
     "javascript", "typescript", "sql", "api", "web", "app", "ios", "android",
     "cloud", "aws", "azure", "google", "meta", "nvidia", "tesla", "apple",
@@ -36,7 +36,7 @@ IMPORTANT_ENGLISH_KEYWORDS = {
     "deepseek", "gemini", "claude", "copilot", "sora", "mistral", "llama",
 }
 
-STOPWORDS = {
+STOPWORDS: set[str] = {
     "một_số", "tuy_nhiên", "đồng_thời", "không_chỉ", "thay_vì",
     "trong_khi", "bên_cạnh", "ngoài_ra", "theo_đó", "do_đó",
     "vì_vậy", "mặc_dù", "bởi_vì", "chẳng_hạn", "hay_là",
@@ -69,7 +69,14 @@ STOPWORDS = {
     "đạt", "đưa",
 }
 
-MOJIBAKE_PATTERNS = [
+MOJIBAKE_PATTERNS: list[tuple[str, str]] = [
     ("latin1_as_utf8", r"Ã©|Ã |Ã¢|Æ°|Ã´|Ã³|Ã¹|Ã"),
     ("broken_sequences", r"â€™|â€œ|â€|â€˜|â€¦"),
 ]
+
+WINDOW_DAYS: int = 7
+MIN_CONTENT_LEN: int = 200
+MIN_TOKEN_LEN: int = 20
+SBERT_CONTENT_CHARS: int = 512
+SBERT_BATCH_SIZE: int = 64
+SEMANTIC_THRESHOLD: float = 0.25

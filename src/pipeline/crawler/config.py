@@ -11,7 +11,7 @@ HEADERS = {
     "Cache-Control": "no-cache",
 }
 
-SOURCES = {
+SOURCES: dict[str, dict] = {
     "vnexpress": {
         "type": "html",
         "url": "https://vnexpress.net/khoa-hoc-cong-nghe",

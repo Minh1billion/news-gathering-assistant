@@ -9,25 +9,28 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from underthesea import word_tokenize
 
+from src.pipeline.base import PipelineStep
 from src.storage.db import get_connection
-from src.storage.qdrant_store import QdrantStore
-from .constants import (
-    IMPORTANT_ENGLISH_KEYWORDS, MOJIBAKE_PATTERNS,
-    STOPWORDS, TECH_QUERIES, TOPIC_LABELS,
+from src.storage.vector_db import QdrantStore
+from .config import (
+    IMPORTANT_ENGLISH_KEYWORDS,
+    MIN_CONTENT_LEN,
+    MIN_TOKEN_LEN,
+    MOJIBAKE_PATTERNS,
+    SBERT_BATCH_SIZE,
+    SBERT_CONTENT_CHARS,
+    SEMANTIC_THRESHOLD,
+    STOPWORDS,
+    TECH_QUERIES,
+    TOPIC_LABELS,
+    WINDOW_DAYS,
 )
 
 log = logging.getLogger(__name__)
 
-WINDOW_DAYS = 7
-MIN_CONTENT_LEN = 200
-MIN_TOKEN_LEN = 20
-SBERT_CONTENT_CHARS = 512
-SBERT_BATCH_SIZE = 64
-SEMANTIC_THRESHOLD = 0.25
-
 
 @dataclass
-class PreprocessStats:
+class ProcessResult:
     raw_total: int
     past_window: int
     after_filter: int
@@ -65,15 +68,14 @@ def _clean_text(text: str) -> str:
 
 
 def _remove_stopwords(tokenized_text: str) -> str:
-    tokens = tokenized_text.split()
     filtered = []
-    for t in tokens:
-        is_english = t.isascii() and t.isalpha()
-        is_important_english = t.lower() in IMPORTANT_ENGLISH_KEYWORDS
-        if is_important_english:
-            filtered.append(t)
-        elif t not in STOPWORDS and len(t) > 2 and not t.isnumeric() and not is_english:
-            filtered.append(t)
+    for token in tokenized_text.split():
+        is_english = token.isascii() and token.isalpha()
+        is_important = token.lower() in IMPORTANT_ENGLISH_KEYWORDS
+        if is_important:
+            filtered.append(token)
+        elif token not in STOPWORDS and len(token) > 2 and not token.isnumeric() and not is_english:
+            filtered.append(token)
     return " ".join(filtered)
 
 
@@ -105,16 +107,16 @@ def _save_processed_postgres(df: pd.DataFrame) -> None:
         conn.close()
 
 
-class Preprocessor:
+class ProcessRunner(PipelineStep):
     def __init__(self, sbert: SentenceTransformer, qdrant_store: QdrantStore) -> None:
         self.sbert = sbert
         self.qdrant_store = qdrant_store
 
-    def run(self, cancel_event: threading.Event | None = None) -> PreprocessStats:
+    def run(self, cancel_event: threading.Event | None = None) -> ProcessResult:
         def cancelled() -> bool:
             return cancel_event is not None and cancel_event.is_set()
 
-        log.info("Preprocessor: loading articles from Postgres")
+        log.info("ProcessRunner: loading articles from Postgres")
         conn = get_connection()
         df_raw = pd.read_sql("SELECT * FROM articles ORDER BY id", conn)
         conn.close()
@@ -144,8 +146,10 @@ class Preprocessor:
             .pipe(lambda d: d[d["content_len"] >= MIN_CONTENT_LEN])
             .reset_index(drop=True)
         )
-        log.info("Raw: %d | Past %d days: %d | After filter: %d",
-                 len(df_raw), WINDOW_DAYS, len(df_week), len(df_clean))
+        log.info(
+            "Raw: %d | Past %d days: %d | After filter: %d",
+            len(df_raw), WINDOW_DAYS, len(df_week), len(df_clean),
+        )
 
         if cancelled():
             raise InterruptedError("Cancelled after filter")
@@ -189,8 +193,10 @@ class Preprocessor:
         tech_mask = df_filtered["tech_score"] >= SEMANTIC_THRESHOLD
         df_tech = df_filtered[tech_mask].reset_index(drop=True)
         tech_embeddings = article_embeddings[tech_mask.values]
-        log.info("Tech articles (threshold=%.2f): %d / %d",
-                 SEMANTIC_THRESHOLD, len(df_tech), len(df_filtered))
+        log.info(
+            "Tech articles (threshold=%.2f): %d / %d",
+            SEMANTIC_THRESHOLD, len(df_tech), len(df_filtered),
+        )
 
         if cancelled():
             raise InterruptedError("Cancelled after scoring")
@@ -200,7 +206,7 @@ class Preprocessor:
         upserted = self.qdrant_store.upsert_articles(df_tech, tech_embeddings)
         log.info("Upserted %d vectors to Qdrant", upserted)
 
-        return PreprocessStats(
+        return ProcessResult(
             raw_total=len(df_raw),
             past_window=len(df_week),
             after_filter=len(df_clean),

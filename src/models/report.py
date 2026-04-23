@@ -1,8 +1,7 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass
-class KeywordEntry:
+class KeywordEntry(BaseModel):
     rank: int
     keyword: str
     tfidf_score: float
@@ -10,8 +9,7 @@ class KeywordEntry:
     combined_score: float
 
 
-@dataclass
-class ClusterArticle:
+class ClusterArticle(BaseModel):
     rank: int
     title: str
     source: str
@@ -21,8 +19,7 @@ class ClusterArticle:
     content_snippet: str
 
 
-@dataclass
-class ClusterReport:
+class ClusterReport(BaseModel):
     cluster_id: int
     topic: str
     article_count: int
@@ -33,8 +30,7 @@ class ClusterReport:
     top_articles: list[ClusterArticle]
 
 
-@dataclass
-class HighlightedArticle:
+class HighlightedArticle(BaseModel):
     rank: int
     title: str
     source: str
@@ -45,29 +41,25 @@ class HighlightedArticle:
     content_snippet: str
 
 
-@dataclass
-class TopicDistribution:
+class TopicDistribution(BaseModel):
     topic: str
     count: int
     percentage: float
 
 
-@dataclass
-class DailyCount:
+class DailyCount(BaseModel):
     date: str
     count: int
 
 
-@dataclass
-class ClusterQuality:
+class ClusterQuality(BaseModel):
     k: int
     inertia: float
     silhouette: float
     chosen: bool
 
 
-@dataclass
-class AnalysisReport:
+class AnalysisReport(BaseModel):
     generated_at: str
     week_start: str
     week_end: str

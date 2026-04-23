@@ -6,62 +6,44 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import normalize
-from sentence_transformers import SentenceTransformer
 
-from src.processor.constants import TECH_QUERIES, TOPIC_LABELS
-from src.storage.qdrant_store import QdrantStore
-from .clustering import pick_best_k, build_cluster_keywords, build_clusters
-from .models import (
-    AnalysisReport, DailyCount, HighlightedArticle,
-    KeywordEntry, TopicDistribution,
+from src.models.report import (
+    AnalysisReport,
+    DailyCount,
+    HighlightedArticle,
+    KeywordEntry,
+    TopicDistribution,
+)
+from src.pipeline.base import PipelineStep
+from src.pipeline.processor.config import TECH_QUERIES, TOPIC_LABELS
+from src.storage.vector_db import QdrantStore
+from .clustering import build_cluster_keywords, build_clusters, pick_best_k
+from .config import (
+    CLUSTER_EXPLORE_RADIUS,
+    HIGHLIGHT_TOP_N,
+    N_CLUSTERS_DEFAULT,
+    REPORTS_DIR,
+    TFIDF_MAX_FEATURES,
+    TFIDF_MIN_DF,
+    TFIDF_NGRAM,
+    TOP_KEYWORDS,
+    TOP_NEWS_GLOBAL,
+    TOP_NEWS_PER_CLUSTER,
 )
 
 log = logging.getLogger(__name__)
 
-TFIDF_MAX_FEATURES = 300
-TFIDF_MIN_DF = 2
-TFIDF_NGRAM = (1, 2)
-TOP_KEYWORDS = 30
-TOP_NEWS_PER_CLUSTER = 2
-TOP_NEWS_GLOBAL = 15
-HIGHLIGHT_TOP_N = 10
-N_CLUSTERS_DEFAULT = 6
-CLUSTER_EXPLORE_RADIUS = 3
-REPORTS_DIR = Path("/reports")
 
-
-def _report_to_dict(report: AnalysisReport) -> dict:
-    return {
-        "generated_at": report.generated_at,
-        "week_start": report.week_start,
-        "week_end": report.week_end,
-        "stats": report.stats,
-        "executive_summary": report.executive_summary,
-        "trending_keywords": [vars(k) for k in report.trending_keywords],
-        "topic_distribution": [vars(t) for t in report.topic_distribution],
-        "daily_counts": [vars(d) for d in report.daily_counts],
-        "clusters": [
-            {
-                **{k: v for k, v in vars(c).items() if k not in ("top_keywords", "top_articles")},
-                "top_keywords": c.top_keywords,
-                "top_articles": [vars(a) for a in c.top_articles],
-            }
-            for c in report.clusters
-        ],
-        "highlighted_articles": [vars(a) for a in report.highlighted_articles],
-    }
-
-
-def _save_report(report: AnalysisReport) -> Path:
+def save_report(report: AnalysisReport) -> Path:
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     path = REPORTS_DIR / f"report_{ts}.json"
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(json.dumps(_report_to_dict(report), ensure_ascii=False, indent=2))
+    path.write_text(report.model_dump_json(indent=2), encoding="utf-8")
     log.info("Report saved to %s", path)
     return path
 
@@ -81,7 +63,7 @@ def load_latest_report() -> dict | None:
     return None
 
 
-class Analyzer:
+class AnalyzeRunner(PipelineStep):
     def __init__(self, sbert: SentenceTransformer, qdrant_store: QdrantStore) -> None:
         self.sbert = sbert
         self.qdrant_store = qdrant_store
@@ -90,7 +72,7 @@ class Analyzer:
         def cancelled() -> bool:
             return cancel_event is not None and cancel_event.is_set()
 
-        log.info("Analyzer: loading processed articles from Qdrant")
+        log.info("AnalyzeRunner: loading articles from Qdrant")
         payloads, vectors = self.qdrant_store.scroll_all()
         if not payloads:
             raise RuntimeError("No processed articles found in Qdrant. Run /preprocess first.")
@@ -147,7 +129,7 @@ class Analyzer:
         cluster_centers = kmeans.cluster_centers_
         cluster_topic_idx = cosine_similarity(cluster_centers, query_embeddings).argmax(axis=1)
         cluster_topic_name = [TOPIC_LABELS[i] for i in cluster_topic_idx]
-        df["cluster_topic"] = df["cluster"].map({i: cluster_topic_name[i] for i in range(best_k)})
+        df["cluster_topic"] = df["cluster"].map(dict(enumerate(cluster_topic_name)))
 
         ckw = build_cluster_keywords(df, cluster_labels, best_k)
         all_clusters = build_clusters(
@@ -236,5 +218,5 @@ class Analyzer:
             ],
         )
 
-        _save_report(report)
+        save_report(report)
         return report
