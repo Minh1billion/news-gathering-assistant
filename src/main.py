@@ -1,5 +1,6 @@
 import json
 import logging
+import threading
 from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any
@@ -15,11 +16,7 @@ from src.storage.db import init_db
 from src.storage.qdrant_store import QdrantStore
 from src.crawler.crawl import Crawler
 from src.processor.preprocess import Preprocessor, PreprocessStats
-from src.analyzer.analyze import (
-    Analyzer,
-    AnalysisReport,
-    load_latest_report,
-)
+from src.analyzer.analyze import Analyzer, AnalysisReport, load_latest_report
 
 log = logging.getLogger(__name__)
 
@@ -31,11 +28,39 @@ REPORTS_DIR = Path("/reports")
 _state: dict[str, Any] = {}
 _ready: bool = False
 
+_pipeline_lock = asyncio.Lock()
+_pipeline_cancel = threading.Event()
+_pipeline_running = False
+
+_crawl_lock = asyncio.Lock()
+_crawl_cancel = threading.Event()
+_crawl_running = False
+
+_preprocess_lock = asyncio.Lock()
+_preprocess_cancel = threading.Event()
+_preprocess_running = False
+
+_analyze_lock = asyncio.Lock()
+_analyze_cancel = threading.Event()
+_analyze_running = False
+
+
+def _setup_logging() -> None:
+    fmt = logging.Formatter("%(asctime)s [%(levelname)s] %(name)s - %(message)s")
+    root = logging.getLogger()
+    if not any(isinstance(h, logging.StreamHandler) for h in root.handlers):
+        handler = logging.StreamHandler()
+        handler.setFormatter(fmt)
+        root.addHandler(handler)
+    root.setLevel(logging.INFO)
+    for noisy in ("httpx", "httpcore", "urllib3", "multipart"):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global _ready
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s - %(message)s")
+    _setup_logging()
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     init_db()
     sbert = SentenceTransformer(SBERT_MODEL_NAME)
@@ -148,6 +173,11 @@ class ReportMeta(BaseModel):
     total_articles: int
 
 
+class StepStatus(BaseModel):
+    running: bool
+    cancelled: bool
+
+
 def _report_to_response(report: AnalysisReport) -> ReportResponse:
     return ReportResponse(
         generated_at=report.generated_at,
@@ -211,6 +241,58 @@ def health():
             "sbert_loaded": "sbert" in _state, "qdrant_connected": "qdrant" in _state}
 
 
+@app.get("/pipeline/status", response_model=StepStatus)
+def pipeline_status():
+    return StepStatus(running=_pipeline_running, cancelled=_pipeline_cancel.is_set())
+
+
+@app.post("/pipeline/cancel", response_model=StepStatus)
+def pipeline_cancel():
+    if not _pipeline_running:
+        raise HTTPException(status_code=400, detail="No pipeline is running")
+    _pipeline_cancel.set()
+    return StepStatus(running=_pipeline_running, cancelled=True)
+
+
+@app.get("/crawl/status", response_model=StepStatus)
+def crawl_status():
+    return StepStatus(running=_crawl_running, cancelled=_crawl_cancel.is_set())
+
+
+@app.post("/crawl/cancel", response_model=StepStatus)
+def crawl_cancel():
+    if not _crawl_running:
+        raise HTTPException(status_code=400, detail="No crawl is running")
+    _crawl_cancel.set()
+    return StepStatus(running=_crawl_running, cancelled=True)
+
+
+@app.get("/preprocess/status", response_model=StepStatus)
+def preprocess_status():
+    return StepStatus(running=_preprocess_running, cancelled=_preprocess_cancel.is_set())
+
+
+@app.post("/preprocess/cancel", response_model=StepStatus)
+def preprocess_cancel():
+    if not _preprocess_running:
+        raise HTTPException(status_code=400, detail="No preprocess is running")
+    _preprocess_cancel.set()
+    return StepStatus(running=_preprocess_running, cancelled=True)
+
+
+@app.get("/analyze/status", response_model=StepStatus)
+def analyze_status():
+    return StepStatus(running=_analyze_running, cancelled=_analyze_cancel.is_set())
+
+
+@app.post("/analyze/cancel", response_model=StepStatus)
+def analyze_cancel():
+    if not _analyze_running:
+        raise HTTPException(status_code=400, detail="No analyze is running")
+    _analyze_cancel.set()
+    return StepStatus(running=_analyze_running, cancelled=True)
+
+
 @app.get("/reports", response_model=list[ReportMeta])
 def list_reports():
     files = sorted(REPORTS_DIR.glob("report_*.json"), reverse=True)
@@ -245,60 +327,111 @@ async def report():
     raise HTTPException(status_code=404, detail="no_report")
 
 
-@app.post("/analyze", response_model=ReportResponse)
-async def analyze():
-    try:
-        analyzer: Analyzer = _state["analyzer"]
-        result: AnalysisReport = await asyncio.to_thread(analyzer.run)
-        return _report_to_response(result)
-    except RuntimeError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        log.exception("Analysis failed")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
 @app.post("/crawl", response_model=CrawlResult)
 async def crawl():
-    try:
-        crawler = Crawler()
-        result = await crawler.run()
-        return CrawlResult(crawled=result["inserted"], saved=result["inserted"],
-                           sources=list(crawler.sources.keys()))
-    except Exception as e:
-        log.exception("Crawl failed")
-        raise HTTPException(status_code=500, detail=str(e))
+    global _crawl_running
+    if _crawl_lock.locked():
+        raise HTTPException(status_code=409, detail="Crawl is already running")
+    async with _crawl_lock:
+        _crawl_running = True
+        _crawl_cancel.clear()
+        try:
+            crawler = Crawler(cancel_event=_crawl_cancel)
+            result = await asyncio.to_thread(crawler.run)
+            return CrawlResult(crawled=result["inserted"], saved=result["inserted"],
+                               sources=list(crawler.sources.keys()))
+        except InterruptedError:
+            raise HTTPException(status_code=499, detail="Crawl cancelled")
+        except Exception as e:
+            log.exception("Crawl failed")
+            raise HTTPException(status_code=500, detail=str(e))
+        finally:
+            _crawl_running = False
 
 
 @app.post("/preprocess", response_model=PreprocessResult)
 async def preprocess():
-    try:
-        preprocessor: Preprocessor = _state["preprocessor"]
-        stats: PreprocessStats = await asyncio.to_thread(preprocessor.run)
-        return PreprocessResult(raw_total=stats.raw_total, past_window=stats.past_window,
-                                after_filter=stats.after_filter, after_token_filter=stats.after_token_filter,
-                                tech_articles=stats.tech_articles, upserted_qdrant=stats.upserted_qdrant)
-    except Exception as e:
-        log.exception("Preprocess failed")
-        raise HTTPException(status_code=500, detail=str(e))
+    global _preprocess_running
+    if _preprocess_lock.locked():
+        raise HTTPException(status_code=409, detail="Preprocess is already running")
+    async with _preprocess_lock:
+        _preprocess_running = True
+        _preprocess_cancel.clear()
+        try:
+            preprocessor: Preprocessor = _state["preprocessor"]
+            stats: PreprocessStats = await asyncio.to_thread(preprocessor.run, _preprocess_cancel)
+            return PreprocessResult(raw_total=stats.raw_total, past_window=stats.past_window,
+                                    after_filter=stats.after_filter, after_token_filter=stats.after_token_filter,
+                                    tech_articles=stats.tech_articles, upserted_qdrant=stats.upserted_qdrant)
+        except InterruptedError:
+            raise HTTPException(status_code=499, detail="Preprocess cancelled")
+        except Exception as e:
+            log.exception("Preprocess failed")
+            raise HTTPException(status_code=500, detail=str(e))
+        finally:
+            _preprocess_running = False
+
+
+@app.post("/analyze", response_model=ReportResponse)
+async def analyze():
+    global _analyze_running
+    if _analyze_lock.locked():
+        raise HTTPException(status_code=409, detail="Analyze is already running")
+    async with _analyze_lock:
+        _analyze_running = True
+        _analyze_cancel.clear()
+        try:
+            analyzer: Analyzer = _state["analyzer"]
+            result: AnalysisReport = await asyncio.to_thread(analyzer.run, _analyze_cancel)
+            return _report_to_response(result)
+        except InterruptedError:
+            raise HTTPException(status_code=499, detail="Analyze cancelled")
+        except RuntimeError as e:
+            raise HTTPException(status_code=400, detail=str(e))
+        except Exception as e:
+            log.exception("Analysis failed")
+            raise HTTPException(status_code=500, detail=str(e))
+        finally:
+            _analyze_running = False
 
 
 @app.post("/pipeline", response_model=ReportResponse)
 async def pipeline(skip_crawl: bool = False):
-    try:
-        if not skip_crawl:
-            crawler = Crawler()
-            await crawler.run()
-            log.info("Pipeline: crawl done")
-        preprocessor: Preprocessor = _state["preprocessor"]
-        await asyncio.to_thread(preprocessor.run)
-        log.info("Pipeline: preprocess done")
-        analyzer: Analyzer = _state["analyzer"]
-        result: AnalysisReport = await asyncio.to_thread(analyzer.run)
-        log.info("Pipeline: analysis done")
-        return _report_to_response(result)
-    except RuntimeError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        log.exception("Pipeline failed")
-        raise HTTPException(status_code=500, detail=str(e))
+    global _pipeline_running
+    if _pipeline_lock.locked():
+        raise HTTPException(status_code=409, detail="Pipeline is already running")
+    async with _pipeline_lock:
+        _pipeline_running = True
+        _pipeline_cancel.clear()
+        try:
+            if not skip_crawl:
+                crawler = Crawler(cancel_event=_pipeline_cancel)
+                await asyncio.to_thread(crawler.run)
+                if _pipeline_cancel.is_set():
+                    raise HTTPException(status_code=499, detail="Pipeline cancelled during crawl")
+                log.info("Pipeline: crawl done")
+
+            preprocessor: Preprocessor = _state["preprocessor"]
+            await asyncio.to_thread(preprocessor.run, _pipeline_cancel)
+            if _pipeline_cancel.is_set():
+                raise HTTPException(status_code=499, detail="Pipeline cancelled during preprocess")
+            log.info("Pipeline: preprocess done")
+
+            analyzer: Analyzer = _state["analyzer"]
+            result: AnalysisReport = await asyncio.to_thread(analyzer.run, _pipeline_cancel)
+            if _pipeline_cancel.is_set():
+                raise HTTPException(status_code=499, detail="Pipeline cancelled during analyze")
+            log.info("Pipeline: analysis done")
+            return _report_to_response(result)
+
+        except HTTPException:
+            raise
+        except InterruptedError:
+            raise HTTPException(status_code=499, detail="Pipeline cancelled")
+        except RuntimeError as e:
+            raise HTTPException(status_code=400, detail=str(e))
+        except Exception as e:
+            log.exception("Pipeline failed")
+            raise HTTPException(status_code=500, detail=str(e))
+        finally:
+            _pipeline_running = False

@@ -1,5 +1,6 @@
 import json
 import logging
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -85,11 +86,17 @@ class Analyzer:
         self.sbert = sbert
         self.qdrant_store = qdrant_store
 
-    def run(self) -> AnalysisReport:
+    def run(self, cancel_event: threading.Event | None = None) -> AnalysisReport:
+        def cancelled() -> bool:
+            return cancel_event is not None and cancel_event.is_set()
+
         log.info("Analyzer: loading processed articles from Qdrant")
         payloads, vectors = self.qdrant_store.scroll_all()
         if not payloads:
             raise RuntimeError("No processed articles found in Qdrant. Run /preprocess first.")
+
+        if cancelled():
+            raise InterruptedError("Cancelled after load")
 
         df = pd.DataFrame(payloads)
         embeddings = np.array(vectors, dtype=np.float32)
@@ -105,6 +112,9 @@ class Analyzer:
         )
         tfidf_matrix = tfidf.fit_transform(df["tokenized"])
         tfidf_scores = dict(zip(tfidf.get_feature_names_out(), tfidf_matrix.mean(axis=0).A1))
+
+        if cancelled():
+            raise InterruptedError("Cancelled after TF-IDF")
 
         query_embeddings = self.sbert.encode(TECH_QUERIES, normalize_embeddings=True)
         keyword_embeds = self.sbert.encode(
@@ -122,11 +132,17 @@ class Analyzer:
         kw_df = kw_df.sort_values("combined", ascending=False).reset_index(drop=True)
         top_kw = kw_df.head(TOP_KEYWORDS)
 
+        if cancelled():
+            raise InterruptedError("Cancelled after keyword scoring")
+
         best_k, _ = pick_best_k(embeddings, N_CLUSTERS_DEFAULT, CLUSTER_EXPLORE_RADIUS)
         kmeans = KMeans(n_clusters=best_k, random_state=42, n_init="auto")
         cluster_labels = kmeans.fit_predict(embeddings)
         df = df.copy()
         df["cluster"] = cluster_labels
+
+        if cancelled():
+            raise InterruptedError("Cancelled after clustering")
 
         cluster_centers = kmeans.cluster_centers_
         cluster_topic_idx = cosine_similarity(cluster_centers, query_embeddings).argmax(axis=1)
@@ -137,6 +153,9 @@ class Analyzer:
         all_clusters = build_clusters(
             df, embeddings, cluster_labels, cluster_centers, cluster_topic_name, ckw, best_k
         )
+
+        if cancelled():
+            raise InterruptedError("Cancelled after building clusters")
 
         df_highlights = (
             pd.concat([

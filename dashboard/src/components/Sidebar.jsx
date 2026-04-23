@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { topicColor } from '../lib/utils'
 import { Btn, Spinner } from './ui'
 import { api } from '../lib/api'
@@ -11,20 +11,70 @@ function Divider() {
   return <div style={{ height: 1, background: '#2a2a2a', margin: '16px 0' }} />
 }
 
+const CANCEL_API = {
+  pipeline:   api.pipelineCancel,
+  crawl:      api.crawlCancel,
+  preprocess: api.preprocessCancel,
+  analyze:    api.analyzeCancel,
+}
+
+const STATUS_API = {
+  pipeline:   api.pipelineStatus,
+  crawl:      api.crawlStatus,
+  preprocess: api.preprocessStatus,
+  analyze:    api.analyzeStatus,
+}
+
+const LABEL = {
+  pipeline:   'Pipeline',
+  crawl:      'Crawl',
+  preprocess: 'Preprocess',
+  analyze:    'Analyze',
+}
+
 export function Sidebar({ report, reports, onReload }) {
   const [running, setRunning] = useState(null)
+  const [cancelling, setCancelling] = useState(false)
+
+  useEffect(() => {
+    Promise.allSettled(
+      Object.entries(STATUS_API).map(([key, fn]) => fn().then(s => ({ key, running: s.running })))
+    ).then(results => {
+      for (const r of results) {
+        if (r.status === 'fulfilled' && r.value.running) {
+          setRunning(r.value.key)
+          break
+        }
+      }
+    })
+  }, [])
 
   async function run(action, label) {
     setRunning(label)
+    setCancelling(false)
     try {
       await action()
       onReload()
     } catch (e) {
-      alert(e.message)
+      if (!e.message.startsWith('499')) alert(e.message)
     } finally {
       setRunning(null)
+      setCancelling(false)
     }
   }
+
+  async function handleCancel() {
+    if (!running || !CANCEL_API[running]) return
+    setCancelling(true)
+    try {
+      await CANCEL_API[running]()
+    } catch (e) {
+      alert(e.message)
+      setCancelling(false)
+    }
+  }
+
+  const canCancel = running && !!CANCEL_API[running]
 
   return (
     <aside className="sidebar" style={{ position: 'fixed', top: 0, left: 0, height: '100vh', width: 240, background: 'var(--sidebar-bg)', padding: '24px 20px', overflowY: 'auto', zIndex: 100, display: 'flex', flexDirection: 'column', gap: 0 }}>
@@ -38,30 +88,53 @@ export function Sidebar({ report, reports, onReload }) {
       <NavLabel>Pipeline Control</NavLabel>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <Btn
-          variant="ghost"
-          onClick={() => run(api.pipeline, 'pipeline')}
-          disabled={!!running}
-          style={{ width: '100%', background: running === 'pipeline' ? 'rgba(240,237,232,0.1)' : undefined }}
-        >
-          {running === 'pipeline' ? '⟳ Running...' : 'Run Full Pipeline'}
-        </Btn>
+        {canCancel ? (
+          <Btn
+            variant="ghost"
+            onClick={handleCancel}
+            disabled={cancelling}
+            style={{
+              width: '100%',
+              background: 'rgba(220,60,60,0.15)',
+              color: cancelling ? 'var(--sidebar-muted)' : '#e07070',
+              border: '1px solid rgba(220,60,60,0.3)',
+            }}
+          >
+            {cancelling ? '⟳ Cancelling...' : `✕ Cancel ${LABEL[running]}`}
+          </Btn>
+        ) : (
+          <Btn
+            variant="ghost"
+            onClick={() => run(api.pipeline, 'pipeline')}
+            disabled={!!running}
+            style={{ width: '100%' }}
+          >
+            Run Full Pipeline
+          </Btn>
+        )}
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6 }}>
           {[
-            ['Crawl', 'crawl', api.crawl],
+            ['Crawl',      'crawl',      api.crawl],
             ['Preprocess', 'preprocess', api.preprocess],
-            ['Analyze', 'analyze', api.analyze],
-            ['Refresh', 'refresh', async () => {}],
+            ['Analyze',    'analyze',    api.analyze],
+            ['Refresh',    'refresh',    async () => {}],
           ].map(([label, key, action]) => (
-            <Btn key={key} variant="ghost" disabled={!!running} onClick={() => run(action, key)} style={{ fontSize: '0.65rem', padding: '6px 8px' }}>
+            <Btn
+              key={key}
+              variant="ghost"
+              disabled={!!running}
+              onClick={() => run(action, key)}
+              style={{ fontSize: '0.65rem', padding: '6px 8px' }}
+            >
               {running === key ? '⟳' : label}
             </Btn>
           ))}
         </div>
       </div>
 
-      {running && <Spinner text={running} />}
+      {running && !cancelling && <Spinner text={`${LABEL[running] ?? running} running…`} />}
+      {cancelling && <Spinner text="stopping…" />}
 
       <Divider />
 

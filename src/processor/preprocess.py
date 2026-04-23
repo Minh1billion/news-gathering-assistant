@@ -1,5 +1,6 @@
 import logging
 import re
+import threading
 from dataclasses import dataclass
 
 import numpy as np
@@ -33,7 +34,7 @@ class PreprocessStats:
     after_token_filter: int
     tech_articles: int
     upserted_qdrant: int
-    
+
 
 def _fix_text(x: str) -> str:
     if not isinstance(x, str):
@@ -109,11 +110,17 @@ class Preprocessor:
         self.sbert = sbert
         self.qdrant_store = qdrant_store
 
-    def run(self) -> PreprocessStats:
+    def run(self, cancel_event: threading.Event | None = None) -> PreprocessStats:
+        def cancelled() -> bool:
+            return cancel_event is not None and cancel_event.is_set()
+
         log.info("Preprocessor: loading articles from Postgres")
         conn = get_connection()
         df_raw = pd.read_sql("SELECT * FROM articles ORDER BY id", conn)
         conn.close()
+
+        if cancelled():
+            raise InterruptedError("Cancelled after load")
 
         for col in ["title", "content", "url"]:
             if col in df_raw.columns:
@@ -140,6 +147,9 @@ class Preprocessor:
         log.info("Raw: %d | Past %d days: %d | After filter: %d",
                  len(df_raw), WINDOW_DAYS, len(df_week), len(df_clean))
 
+        if cancelled():
+            raise InterruptedError("Cancelled after filter")
+
         df_clean["text_raw"] = (df_clean["title"] + " " + df_clean["content"]).str.lower()
         df_clean["text_clean"] = df_clean["text_raw"].apply(_clean_text)
         df_clean["tokenized_raw"] = df_clean["text_clean"].apply(
@@ -150,6 +160,9 @@ class Preprocessor:
 
         df_filtered = df_clean[df_clean["token_count_after"] >= MIN_TOKEN_LEN].reset_index(drop=True)
         log.info("After token filter: %d articles", len(df_filtered))
+
+        if cancelled():
+            raise InterruptedError("Cancelled after tokenize")
 
         texts_for_embed = (
             df_filtered["title"] + ". " + df_filtered["content"].str[:SBERT_CONTENT_CHARS]
@@ -162,8 +175,11 @@ class Preprocessor:
             show_progress_bar=False,
             normalize_embeddings=True,
         )
-        query_embeddings = self.sbert.encode(TECH_QUERIES, normalize_embeddings=True)
 
+        if cancelled():
+            raise InterruptedError("Cancelled after encode")
+
+        query_embeddings = self.sbert.encode(TECH_QUERIES, normalize_embeddings=True)
         sim_matrix = cosine_similarity(article_embeddings, query_embeddings)
         df_filtered = df_filtered.copy()
         df_filtered["tech_score"] = sim_matrix.max(axis=1)
@@ -176,8 +192,10 @@ class Preprocessor:
         log.info("Tech articles (threshold=%.2f): %d / %d",
                  SEMANTIC_THRESHOLD, len(df_tech), len(df_filtered))
 
-        _save_processed_postgres(df_tech)
+        if cancelled():
+            raise InterruptedError("Cancelled after scoring")
 
+        _save_processed_postgres(df_tech)
         self.qdrant_store.ensure_collection(tech_embeddings.shape[1])
         upserted = self.qdrant_store.upsert_articles(df_tech, tech_embeddings)
         log.info("Upserted %d vectors to Qdrant", upserted)

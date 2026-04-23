@@ -1,5 +1,14 @@
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Cache-Control": "no-cache",
 }
 
 SOURCES = {
@@ -10,7 +19,7 @@ SOURCES = {
         "article_selector": "article.item-news",
         "a_selector": "h3.title-news a, h4.title-news a",
         "date_selector": "meta[name='pubdate']",
-        "content_selector": "article.fck_detail p",
+        "content_selector": "article.fck_detail p, div.fck_detail p",
         "rss_url": "https://vnexpress.net/rss/khoa-hoc-cong-nghe.rss",
         "pagination": {
             "pattern": "https://vnexpress.net/khoa-hoc-cong-nghe-p{page}",
@@ -25,7 +34,12 @@ SOURCES = {
         "article_selector": "div.box-category-item",
         "a_selector": "a.box-category-link-with-avatar",
         "date_selector": "meta[property='article:published_time']",
-        "content_selector": "div.detail-content--mainContent p, div[class*='mainContent'] p, div.detail-content p",
+        "content_selector": (
+            "div.detail-content p, "
+            "div[class*='detail-content'] p, "
+            "div.cms-body p, "
+            "div[class*='cms-body'] p"
+        ),
         "rss_url": "https://thanhnien.vn/rss/cong-nghe.rss",
         "pagination": {
             "pattern": "https://thanhnien.vn/cong-nghe/trang-{page}.htm",
@@ -51,7 +65,7 @@ SOURCES = {
         "a_selector": "p.article-title a",
         "date_selector": "meta[property='article:published_time']",
         "content_selector": "div.the-article-body p, p.article-sapo",
-        "rss_url": "https://zingnews.vn/rss/cong-nghe.rss",
+        "rss_url": "https://znews.vn/rss/cong-nghe.rss",
     },
     "cafebiz": {
         "type": "rss",
@@ -90,7 +104,7 @@ SOURCES = {
         "article_selector": "article.article-item",
         "a_selector": "h3.article-title a",
         "date_selector": "meta[property='article:published_time']",
-        "content_selector": "",
+        "content_selector": "div.singular-content p, div[class*='article-content'] p, div.detail-content p",
         "rss_url": "https://dantri.com.vn/rss/cong-nghe.rss",
     },
     "soha": {

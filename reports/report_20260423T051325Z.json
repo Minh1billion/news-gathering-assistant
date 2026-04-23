@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-04-23T02:51:17.466272+00:00",
+  "generated_at": "2026-04-23T05:13:25.548164+00:00",
   "week_start": "16/04/2026",
   "week_end": "23/04/2026",
   "stats": {
-    "total_tech_articles": 243,
+    "total_tech_articles": 270,
     "sources": 8,
     "dominant_topic": "Phần mềm / Dev",
-    "dominant_topic_pct": 28.0,
-    "n_clusters": 9,
+    "dominant_topic_pct": 29.6,
+    "n_clusters": 7,
     "date_range": "16/04/2026 - 23/04/2026"
   },
   "executive_summary": {
-    "landscape": "243 bài viết công nghệ từ 8 nguồn trong tuần 16/04/2026 - 23/04/2026.",
+    "landscape": "270 bài viết công nghệ từ 8 nguồn trong tuần 16/04/2026 - 23/04/2026.",
     "dominant_topic": "Phần mềm / Dev",
-    "dominant_topic_pct": 28.0,
+    "dominant_topic_pct": 29.6,
     "top_keywords": [
       "hệ_thống",
       "apple",
@@ -25,254 +25,254 @@
     {
       "rank": 1,
       "keyword": "hệ_thống",
-      "tfidf_score": 0.04287,
+      "tfidf_score": 0.04286,
       "semantic_score": 0.41251,
       "combined_score": 0.01768
     },
     {
       "rank": 2,
       "keyword": "apple",
-      "tfidf_score": 0.07944,
+      "tfidf_score": 0.08169,
       "semantic_score": 0.21121,
-      "combined_score": 0.01678
+      "combined_score": 0.01725
     },
     {
       "rank": 3,
       "keyword": "thiết_bị",
-      "tfidf_score": 0.04896,
+      "tfidf_score": 0.04838,
       "semantic_score": 0.33237,
-      "combined_score": 0.01627
+      "combined_score": 0.01608
     },
     {
       "rank": 4,
       "keyword": "iphone",
-      "tfidf_score": 0.04599,
+      "tfidf_score": 0.04428,
       "semantic_score": 0.30689,
-      "combined_score": 0.01411
+      "combined_score": 0.01359
     },
     {
       "rank": 5,
-      "keyword": "ứng_dụng",
-      "tfidf_score": 0.03876,
-      "semantic_score": 0.33932,
-      "combined_score": 0.01315
+      "keyword": "máy",
+      "tfidf_score": 0.03153,
+      "semantic_score": 0.40269,
+      "combined_score": 0.0127
     },
     {
       "rank": 6,
-      "keyword": "máy",
-      "tfidf_score": 0.03188,
-      "semantic_score": 0.40269,
-      "combined_score": 0.01284
+      "keyword": "ứng_dụng",
+      "tfidf_score": 0.03741,
+      "semantic_score": 0.33932,
+      "combined_score": 0.01269
     },
     {
       "rank": 7,
       "keyword": "màn_hình",
-      "tfidf_score": 0.03193,
+      "tfidf_score": 0.03217,
       "semantic_score": 0.34473,
-      "combined_score": 0.01101
+      "combined_score": 0.01109
     },
     {
       "rank": 8,
       "keyword": "ai",
-      "tfidf_score": 0.07821,
+      "tfidf_score": 0.07551,
       "semantic_score": 0.13399,
-      "combined_score": 0.01048
+      "combined_score": 0.01012
     },
     {
       "rank": 9,
       "keyword": "năng_lượng",
-      "tfidf_score": 0.03099,
+      "tfidf_score": 0.03094,
       "semantic_score": 0.32186,
-      "combined_score": 0.00997
+      "combined_score": 0.00996
     },
     {
       "rank": 10,
       "keyword": "sản_phẩm",
-      "tfidf_score": 0.0465,
+      "tfidf_score": 0.04614,
       "semantic_score": 0.21332,
-      "combined_score": 0.00992
+      "combined_score": 0.00984
     },
     {
       "rank": 11,
-      "keyword": "nhà_mạng",
-      "tfidf_score": 0.01864,
-      "semantic_score": 0.51502,
-      "combined_score": 0.0096
+      "keyword": "điện_thoại",
+      "tfidf_score": 0.0474,
+      "semantic_score": 0.20446,
+      "combined_score": 0.00969
     },
     {
       "rank": 12,
-      "keyword": "điện_thoại",
-      "tfidf_score": 0.04527,
-      "semantic_score": 0.20446,
-      "combined_score": 0.00926
+      "keyword": "nhà_mạng",
+      "tfidf_score": 0.01773,
+      "semantic_score": 0.51502,
+      "combined_score": 0.00913
     },
     {
       "rank": 13,
       "keyword": "chip",
-      "tfidf_score": 0.02435,
+      "tfidf_score": 0.02323,
       "semantic_score": 0.36954,
-      "combined_score": 0.009
+      "combined_score": 0.00858
     },
     {
       "rank": 14,
       "keyword": "công_ty",
-      "tfidf_score": 0.04122,
+      "tfidf_score": 0.04144,
       "semantic_score": 0.20424,
-      "combined_score": 0.00842
+      "combined_score": 0.00846
     },
     {
       "rank": 15,
-      "keyword": "tính_năng",
-      "tfidf_score": 0.03375,
-      "semantic_score": 0.24496,
-      "combined_score": 0.00827
+      "keyword": "nền_tảng",
+      "tfidf_score": 0.02479,
+      "semantic_score": 0.3326,
+      "combined_score": 0.00825
     },
     {
       "rank": 16,
-      "keyword": "nền_tảng",
-      "tfidf_score": 0.02428,
-      "semantic_score": 0.3326,
-      "combined_score": 0.00808
+      "keyword": "tính_năng",
+      "tfidf_score": 0.03343,
+      "semantic_score": 0.24496,
+      "combined_score": 0.00819
     },
     {
       "rank": 17,
-      "keyword": "máy_tính",
-      "tfidf_score": 0.01743,
-      "semantic_score": 0.45804,
-      "combined_score": 0.00798
+      "keyword": "lên",
+      "tfidf_score": 0.03392,
+      "semantic_score": 0.23036,
+      "combined_score": 0.00781
     },
     {
       "rank": 18,
       "keyword": "thiết_kế",
-      "tfidf_score": 0.0379,
+      "tfidf_score": 0.0373,
       "semantic_score": 0.20944,
-      "combined_score": 0.00794
+      "combined_score": 0.00781
     },
     {
       "rank": 19,
-      "keyword": "lên",
-      "tfidf_score": 0.03387,
-      "semantic_score": 0.23036,
-      "combined_score": 0.0078
+      "keyword": "máy_tính",
+      "tfidf_score": 0.01698,
+      "semantic_score": 0.45804,
+      "combined_score": 0.00778
     },
     {
       "rank": 20,
-      "keyword": "dòng",
-      "tfidf_score": 0.03033,
-      "semantic_score": 0.249,
-      "combined_score": 0.00755
+      "keyword": "doanh_nghiệp",
+      "tfidf_score": 0.0382,
+      "semantic_score": 0.19709,
+      "combined_score": 0.00753
     },
     {
       "rank": 21,
-      "keyword": "điện",
-      "tfidf_score": 0.02941,
-      "semantic_score": 0.2517,
-      "combined_score": 0.0074
+      "keyword": "vận_hành",
+      "tfidf_score": 0.02333,
+      "semantic_score": 0.30993,
+      "combined_score": 0.00723
     },
     {
       "rank": 22,
-      "keyword": "thuê",
-      "tfidf_score": 0.03262,
-      "semantic_score": 0.22479,
-      "combined_score": 0.00733
+      "keyword": "hóa",
+      "tfidf_score": 0.02525,
+      "semantic_score": 0.28587,
+      "combined_score": 0.00722
     },
     {
       "rank": 23,
-      "keyword": "hóa",
-      "tfidf_score": 0.02556,
-      "semantic_score": 0.28587,
-      "combined_score": 0.00731
+      "keyword": "dòng",
+      "tfidf_score": 0.02892,
+      "semantic_score": 0.249,
+      "combined_score": 0.0072
     },
     {
       "rank": 24,
-      "keyword": "doanh_nghiệp",
-      "tfidf_score": 0.03671,
-      "semantic_score": 0.19709,
-      "combined_score": 0.00724
+      "keyword": "điện",
+      "tfidf_score": 0.02838,
+      "semantic_score": 0.2517,
+      "combined_score": 0.00714
     },
     {
       "rank": 25,
-      "keyword": "sản_xuất",
-      "tfidf_score": 0.02781,
-      "semantic_score": 0.2543,
-      "combined_score": 0.00707
-    },
-    {
-      "rank": 26,
       "keyword": "dữ_liệu",
       "tfidf_score": 0.03543,
       "semantic_score": 0.19753,
       "combined_score": 0.007
     },
     {
-      "rank": 27,
-      "keyword": "trí_tuệ nhân_tạo",
-      "tfidf_score": 0.01428,
-      "semantic_score": 0.48495,
-      "combined_score": 0.00692
+      "rank": 26,
+      "keyword": "sản_xuất",
+      "tfidf_score": 0.02743,
+      "semantic_score": 0.2543,
+      "combined_score": 0.00697
     },
     {
-      "rank": 28,
-      "keyword": "google",
-      "tfidf_score": 0.02626,
-      "semantic_score": 0.2621,
+      "rank": 27,
+      "keyword": "thuê",
+      "tfidf_score": 0.03059,
+      "semantic_score": 0.22479,
       "combined_score": 0.00688
     },
     {
+      "rank": 28,
+      "keyword": "trí_tuệ nhân_tạo",
+      "tfidf_score": 0.0138,
+      "semantic_score": 0.48495,
+      "combined_score": 0.00669
+    },
+    {
       "rank": 29,
-      "keyword": "vận_hành",
-      "tfidf_score": 0.02205,
-      "semantic_score": 0.30993,
-      "combined_score": 0.00683
+      "keyword": "cập_nhật",
+      "tfidf_score": 0.02688,
+      "semantic_score": 0.24802,
+      "combined_score": 0.00667
     },
     {
       "rank": 30,
       "keyword": "mô_hình",
-      "tfidf_score": 0.02639,
+      "tfidf_score": 0.02576,
       "semantic_score": 0.25432,
-      "combined_score": 0.00671
+      "combined_score": 0.00655
     }
   ],
   "topic_distribution": [
     {
       "topic": "Phần mềm / Dev",
-      "count": 68,
-      "percentage": 28.0
+      "count": 80,
+      "percentage": 29.6
     },
     {
       "topic": "AI / ML",
-      "count": 63,
-      "percentage": 25.9
+      "count": 69,
+      "percentage": 25.6
     },
     {
       "topic": "An ninh mạng",
-      "count": 40,
-      "percentage": 16.5
+      "count": 41,
+      "percentage": 15.2
     },
     {
       "topic": "Thiết bị di động",
-      "count": 30,
-      "percentage": 12.3
+      "count": 31,
+      "percentage": 11.5
     },
     {
       "topic": "Phần cứng / Server",
-      "count": 23,
-      "percentage": 9.5
+      "count": 26,
+      "percentage": 9.6
     },
     {
       "topic": "Xe điện / Năng lượng",
-      "count": 8,
-      "percentage": 3.3
+      "count": 11,
+      "percentage": 4.1
     },
     {
       "topic": "Startup / Đầu tư",
-      "count": 6,
-      "percentage": 2.5
+      "count": 7,
+      "percentage": 2.6
     },
     {
       "topic": "Crypto / Blockchain",
       "count": 4,
-      "percentage": 1.6
+      "percentage": 1.5
     },
     {
       "topic": "Mạng xã hội",
@@ -311,72 +311,72 @@
     },
     {
       "date": "2026-04-22",
-      "count": 66
+      "count": 67
     },
     {
       "date": "2026-04-23",
-      "count": 18
+      "count": 44
     }
   ],
   "clusters": [
     {
-      "cluster_id": 1,
+      "cluster_id": 5,
       "topic": "AI / ML",
-      "article_count": 38,
-      "avg_tech_score": 0.4646,
-      "cohesion_score": 0.7569,
-      "combined_score": 1.4671,
+      "article_count": 40,
+      "avg_tech_score": 0.4613,
+      "cohesion_score": 0.7441,
+      "combined_score": 1.4035,
       "top_keywords": [
         [
           "ai",
-          0.15366
+          0.12603
         ],
         [
           "gemini",
-          0.0824
+          0.07671
         ],
         [
           "google",
-          0.07872
-        ],
-        [
-          "ảnh",
-          0.0742
+          0.0752
         ],
         [
           "tính_năng",
-          0.06377
+          0.07205
+        ],
+        [
+          "ảnh",
+          0.06911
         ],
         [
           "mô_hình",
-          0.06351
-        ],
-        [
-          "công_ty",
-          0.0594
+          0.05536
         ],
         [
           "dữ_liệu",
-          0.05891
+          0.0539
+        ],
+        [
+          "openai",
+          0.05376
         ],
         [
           "công_cụ",
-          0.0523
+          0.04801
         ],
         [
           "hệ_thống",
-          0.0516
+          0.04719
         ]
       ],
       "top_articles": [
         {
           "rank": 1,
-          "title": "AI TOP 100 Z890 - Khi doanh nghiệp muốn làm chủ hạ tầng AI",
-          "source": "thanhnien",
-          "url": "https://thanhnien.vn/ai-top-100-z890-khi-doanh-nghiep-muon-lam-chu-ha-tang-ai-185260421160043988.htm",
-          "published_at": "2026-04-22 01:00:00+00:00",
-          "tech_score": 0.537,
-          "content_snippet": "Trí tuệ nhân tạo (AI) không còn là câu chuyện thử nghiệm trong phòng lab. Với nhiều doanh nghiệp, AI đã trở thành công cụ sản xuất thực tế: phân tích dữ liệu khách hàng, tự động hóa quy trình, xây dựng mô hình ngôn ngữ nội bộ hay xử lý hình ảnh, video quy mô lớn. Khi khối lượng công việc tăng lên, b"
+          "title": "Tin vui cho người dùng AI Gemini tại Việt Nam: Có nhiều cải tiến đột phá từ hôm nay!",
+          "source": "soha",
+          "url": "https://soha.vn/tin-vui-cho-nguoi-dung-ai-gemini-tai-viet-nam-co-nhieu-cai-tien-dot-pha-tu-hom-nay-198260421143524353.htm",
+          "published_at": "2026-04-21 15:24:00+00:00",
+          "tech_score": 0.5056,
+          "content_snippet": "Trình duyệt chính là nơi chúng ta làm việc, học hỏi những điều mới và kết nối vớithế giới. Tuy nhiên, đôi khi những tác vụ trực tuyến như đọc một bài nghiên cứu hóa học dài hay tìm ý tưởng nhanh cho bữa tối có thể mang lại cảm giác tẻ nhạt và làm chậm tiến độ của bạn. Đó là lý do Google cải tiến Chr"
         },
         {
           "rank": 2,
@@ -390,122 +390,192 @@
       ]
     },
     {
-      "cluster_id": 4,
+      "cluster_id": 1,
       "topic": "Phần cứng / Server",
-      "article_count": 16,
-      "avg_tech_score": 0.3087,
-      "cohesion_score": 0.872,
-      "combined_score": 1.0019,
+      "article_count": 18,
+      "avg_tech_score": 0.311,
+      "cohesion_score": 0.8717,
+      "combined_score": 1.0485,
       "top_keywords": [
         [
           "apple",
-          0.45964
+          0.46606
         ],
         [
           "sản_phẩm",
-          0.12327
+          0.12358
         ],
         [
           "công_ty",
-          0.10504
+          0.11266
         ],
         [
           "nhất",
-          0.0877
+          0.08324
         ],
         [
           "kỹ_thuật",
-          0.08278
-        ],
-        [
-          "chủ_tịch",
-          0.0716
-        ],
-        [
-          "iphone",
-          0.07124
-        ],
-        [
-          "phần_cứng",
-          0.06786
+          0.07929
         ],
         [
           "ai",
-          0.06338
+          0.07783
+        ],
+        [
+          "phần_cứng",
+          0.06844
+        ],
+        [
+          "iphone",
+          0.0679
+        ],
+        [
+          "chủ_tịch",
+          0.06785
         ],
         [
           "lãnh_đạo",
-          0.06003
+          0.06179
         ]
       ],
       "top_articles": [
         {
           "rank": 1,
-          "title": "Tim Cook làm được gì tại Apple",
-          "source": "zingnews",
-          "url": "https://znews.vn/tim-cook-lam-duoc-gi-tai-apple-post1645588.html",
-          "published_at": "2026-04-22 05:07:30+00:00",
-          "tech_score": 0.279,
-          "content_snippet": "Apple vừa xác nhận Tim Cook sẽ rời chức vụ CEO công ty vào ngày 1/9. Người thay thế ông là John Ternus, hiện là Phó chủ tịch cấp cao phụ trách kỹ thuật phần cứng. Tim Cook, 65 tuổi, sẽ tiếp tục giữ chức CEO cho đến cuối tháng 8 để hỗ trợ giai đoạn chuyển giao, diễn ra sau một \"quá trình lập kế hoạch"
-        },
-        {
-          "rank": 2,
           "title": "CEO mới của Apple là ai?",
           "source": "zingnews",
           "url": "https://znews.vn/ceo-moi-cua-apple-la-ai-post1645407.html",
           "published_at": "2026-04-21 05:15:09+00:00",
           "tech_score": 0.3223,
           "content_snippet": "John Ternus hiện 51 tuổi, bằng chính Tim Cook khi nhận chức CEO hồi 2011. Ảnh:Reuters. Applevừa chính thức công bố đợt chuyển giao lãnh đạo quan trọng nhất trong hơn một thập kỷ qua. John Ternus, Phó chủ tịch cấp cao phụ trách kỹ thuật phần cứng 51 tuổi, trở thành người kế nhiệm CEO Tim Cook. Quyết "
+        },
+        {
+          "rank": 2,
+          "title": "Tim Cook làm được gì tại Apple",
+          "source": "zingnews",
+          "url": "https://znews.vn/tim-cook-lam-duoc-gi-tai-apple-post1645588.html",
+          "published_at": "2026-04-22 05:07:30+00:00",
+          "tech_score": 0.279,
+          "content_snippet": "Apple vừa xác nhận Tim Cook sẽ rời chức vụ CEO công ty vào ngày 1/9. Người thay thế ông là John Ternus, hiện là Phó chủ tịch cấp cao phụ trách kỹ thuật phần cứng. Tim Cook, 65 tuổi, sẽ tiếp tục giữ chức CEO cho đến cuối tháng 8 để hỗ trợ giai đoạn chuyển giao, diễn ra sau một \"quá trình lập kế hoạch"
         }
       ]
     },
     {
-      "cluster_id": 2,
-      "topic": "Thiết bị di động",
-      "article_count": 36,
-      "avg_tech_score": 0.3567,
-      "cohesion_score": 0.7168,
-      "combined_score": 0.5899,
+      "cluster_id": 4,
+      "topic": "An ninh mạng",
+      "article_count": 47,
+      "avg_tech_score": 0.3396,
+      "cohesion_score": 0.7264,
+      "combined_score": 0.5508,
       "top_keywords": [
         [
-          "iphone",
-          0.10658
-        ],
-        [
-          "apple",
-          0.08544
-        ],
-        [
-          "samsung",
-          0.0768
-        ],
-        [
-          "thiết_kế",
-          0.07199
+          "thuê",
+          0.10209
         ],
         [
           "điện_thoại",
-          0.07109
+          0.08088
         ],
         [
-          "dòng",
-          0.06963
+          "ứng_dụng",
+          0.06441
+        ],
+        [
+          "xác_thực",
+          0.06267
+        ],
+        [
+          "iphone",
+          0.05809
+        ],
+        [
+          "nhà_mạng",
+          0.05756
+        ],
+        [
+          "xác_nhận",
+          0.05494
+        ],
+        [
+          "ai",
+          0.0515
+        ],
+        [
+          "thiết_bị",
+          0.04972
+        ],
+        [
+          "di_động",
+          0.04481
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Xác thực SIM qua VNeID: Bước ngoặt dẹp SIM rác, mở đường định danh số",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/xac-thuc-sim-qua-vneid-buoc-ngoat-dep-sim-rac-mo-duong-dinh-danh-so-20260417162756213.htm",
+          "published_at": "2026-04-18 15:44:42+00:00",
+          "tech_score": 0.318,
+          "content_snippet": "Giờ đây số điện thoại sẽ được xác minh thông qua VNeID để tránh tình trạng sử dụng sim rác. Trong nhiều năm, SIM rác không chỉ gây phiền toái mà còn trở thành điểm khởi phát cho các hành vi lừa đảo, mạo danh. Việc đưaVNeIDvào xác thực thuê bao phản ánh một cách tiếp cận mới, nơi danh tính số dần trở"
+        },
+        {
+          "rank": 2,
+          "title": "Hai cách tra cứu các số điện thoại đang đứng tên",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/hai-cach-tra-cuu-cac-so-dien-thoai-dang-dung-ten-5062887.html",
+          "published_at": "2026-04-16 00:00:00+00:00",
+          "tech_score": 0.3373,
+          "content_snippet": "Kể từ ngày 15/4, người dùng di động có thể tự tra cứu các số điện thoại đang đứng tên mình qua ứng dụng VNeID, khi Thông tư 08/2026 của Bộ Khoa học và Công nghệ có hiệu lực, cho phép người dân tra cứu toàn bộ số thuê bao di động đang sở hữu qua ứng dụng, loại bỏ số không phải do mình đăng ký hoặc kh"
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "topic": "Thiết bị di động",
+      "article_count": 50,
+      "avg_tech_score": 0.3592,
+      "cohesion_score": 0.6892,
+      "combined_score": 0.5009,
+      "top_keywords": [
+        [
+          "iphone",
+          0.09249
+        ],
+        [
+          "samsung",
+          0.07933
+        ],
+        [
+          "apple",
+          0.07044
+        ],
+        [
+          "điện_thoại",
+          0.06942
+        ],
+        [
+          "thiết_kế",
+          0.06483
         ],
         [
           "màn_hình",
-          0.06709
+          0.06328
+        ],
+        [
+          "dòng",
+          0.06083
+        ],
+        [
+          "thiết_bị",
+          0.05839
         ],
         [
           "sản_phẩm",
-          0.06244
-        ],
-        [
-          "nhất",
-          0.0604
+          0.05643
         ],
         [
           "máy",
-          0.05864
+          0.05555
         ]
       ],
       "top_articles": [
@@ -530,192 +600,52 @@
       ]
     },
     {
-      "cluster_id": 0,
-      "topic": "An ninh mạng",
-      "article_count": 37,
-      "avg_tech_score": 0.336,
-      "cohesion_score": 0.7367,
-      "combined_score": 0.5503,
-      "top_keywords": [
-        [
-          "thuê",
-          0.11988
-        ],
-        [
-          "điện_thoại",
-          0.09224
-        ],
-        [
-          "ứng_dụng",
-          0.08008
-        ],
-        [
-          "xác_thực",
-          0.07604
-        ],
-        [
-          "nhà_mạng",
-          0.07068
-        ],
-        [
-          "xác_nhận",
-          0.06187
-        ],
-        [
-          "di_động",
-          0.05628
-        ],
-        [
-          "người_dân",
-          0.05264
-        ],
-        [
-          "chính",
-          0.04576
-        ],
-        [
-          "tặng",
-          0.04539
-        ]
-      ],
-      "top_articles": [
-        {
-          "rank": 1,
-          "title": "Xác thực SIM qua VNeID: Bước ngoặt dẹp SIM rác, mở đường định danh số",
-          "source": "tuoitre",
-          "url": "https://tuoitre.vn/xac-thuc-sim-qua-vneid-buoc-ngoat-dep-sim-rac-mo-duong-dinh-danh-so-20260417162756213.htm",
-          "published_at": "2026-04-18 15:44:42+00:00",
-          "tech_score": 0.318,
-          "content_snippet": "Giờ đây số điện thoại sẽ được xác minh thông qua VNeID để tránh tình trạng sử dụng sim rác. Trong nhiều năm, SIM rác không chỉ gây phiền toái mà còn trở thành điểm khởi phát cho các hành vi lừa đảo, mạo danh. Việc đưaVNeIDvào xác thực thuê bao phản ánh một cách tiếp cận mới, nơi danh tính số dần trở"
-        },
-        {
-          "rank": 2,
-          "title": "Kiểm tra ngay VNeID để tránh bị khóa SIM",
-          "source": "soha",
-          "url": "https://soha.vn/kiem-tra-ngay-vneid-de-tranh-bi-khoa-sim-198260418113402595.htm",
-          "published_at": "2026-04-22 23:26:00+00:00",
-          "tech_score": 0.3955,
-          "content_snippet": "Từ ngày 15/4, các nhà mạng lớn như Viettel, VinaPhone, MobiFone... triển khai xác thực thông tin thuê bao theo quy định tại Thông tư 08/2026/TT-BKHCN của Bộ Khoa học và Công nghệ. Theo quy định mới, người dùng di động lần đầu được phép tự xác nhận thông tin thuê bao trực tuyến thông qua ứng dụng VNe"
-        }
-      ]
-    },
-    {
-      "cluster_id": 5,
-      "topic": "Phần mềm / Dev",
-      "article_count": 20,
-      "avg_tech_score": 0.3463,
-      "cohesion_score": 0.7203,
-      "combined_score": 0.5398,
-      "top_keywords": [
-        [
-          "iphone",
-          0.08878
-        ],
-        [
-          "cập_nhật",
-          0.07227
-        ],
-        [
-          "thiết_bị",
-          0.06193
-        ],
-        [
-          "ios",
-          0.06053
-        ],
-        [
-          "tốc_độ",
-          0.05496
-        ],
-        [
-          "máy",
-          0.04798
-        ],
-        [
-          "cắm",
-          0.0464
-        ],
-        [
-          "kết_nối",
-          0.04482
-        ],
-        [
-          "chiếc",
-          0.04417
-        ],
-        [
-          "usb",
-          0.04278
-        ]
-      ],
-      "top_articles": [
-        {
-          "rank": 1,
-          "title": "Nguyên nhân khiến SSD chậm chạp sau khi nâng cấp lên Windows 11",
-          "source": "thanhnien",
-          "url": "https://thanhnien.vn/nguyen-nhan-khien-ssd-cham-chap-sau-khi-nang-cap-len-windows-11-185260420090740517.htm",
-          "published_at": "2026-04-20 04:54:00+00:00",
-          "tech_score": 0.4262,
-          "content_snippet": "Việc nâng cấp lên Windows 11 để nhận các bản vá bảo mật mới nhất là điềuMicrosoftluôn khuyến khích. Tuy nhiên, sau khi quá trình cài đặt hoàn tất, không ít người dùng đã phải đối mặt với tình trạng máy tính chạy chậm đi rõ rệt. Một phát hiện mới đây từ người dùng trên mạng xã hội Facebook đã chỉ ra "
-        },
-        {
-          "rank": 2,
-          "title": "Hai kiểu cập nhật thiết bị điện tử nhiều người vẫn nhầm lẫn",
-          "source": "thanhnien",
-          "url": "https://thanhnien.vn/hai-kieu-cap-nhat-thiet-bi-dien-tu-nhieu-nguoi-van-nham-lan-185260419113518397.htm",
-          "published_at": "2026-04-19 08:07:00+00:00",
-          "tech_score": 0.4701,
-          "content_snippet": "Smartphone, laptop đến các thiết bị smarthome như công tắc hay bóng đèn thông minh,… đều cần đượccập nhậtthường xuyên. Tuy nhiên, nhiều người thường bỏ qua hoặc quên việc cập nhật cho thiết bị của mình, mở ra những cánh cửa bảo mật. Tùy thuộc thiết bị mà người dùng có thể nhận bản cập nhật phần mềm "
-        }
-      ]
-    },
-    {
       "cluster_id": 6,
       "topic": "Phần mềm / Dev",
-      "article_count": 39,
-      "avg_tech_score": 0.35,
-      "cohesion_score": 0.7011,
-      "combined_score": 0.4745,
+      "article_count": 66,
+      "avg_tech_score": 0.3345,
+      "cohesion_score": 0.6868,
+      "combined_score": 0.3334,
       "top_keywords": [
         [
           "ai",
-          0.09074
-        ],
-        [
-          "sáng_tạo",
-          0.08421
-        ],
-        [
-          "đổi_mới",
-          0.07965
+          0.08854
         ],
         [
           "việt_nam",
-          0.0756
+          0.08057
         ],
         [
           "doanh_nghiệp",
-          0.07278
+          0.07111
+        ],
+        [
+          "sáng_tạo",
+          0.06041
+        ],
+        [
+          "đổi_mới",
+          0.06011
         ],
         [
           "đổi_mới sáng_tạo",
-          0.07179
+          0.05394
         ],
         [
           "sản_phẩm",
-          0.06741
-        ],
-        [
-          "tặng",
-          0.05756
+          0.05231
         ],
         [
           "khoa_học",
-          0.057
+          0.05163
         ],
         [
           "hệ_thống",
-          0.05085
+          0.04738
+        ],
+        [
+          "việt",
+          0.04727
         ]
       ],
       "top_articles": [
@@ -730,132 +660,132 @@
         },
         {
           "rank": 2,
-          "title": "Lấy ý kiến dự thảo danh mục 12 công nghệ chiến lược",
+          "title": "Thủ tướng yêu cầu tăng tỷ trọng chi phát triển công nghệ lõi",
           "source": "vnexpress",
-          "url": "https://vnexpress.net/lay-y-kien-du-thao-danh-muc-12-cong-nghe-chien-luoc-5063779.html",
-          "published_at": "2026-04-17 09:00:00+00:00",
-          "tech_score": 0.4371,
-          "content_snippet": "Theo dự thảo, danh mục được chia thành hai nhóm với định hướng rõ ràng: một nhóm là các công nghệ đã có thị trường, có thể triển khai và tạo giá trị ngay; nhóm còn lại là các công nghệ nền tảng, cần đầu tư dài hạn để tạo động lực phát triển mới. Nhóm thứ nhất gồm 7 công nghệ, gồm: Trí tuệ nhân tạo v"
+          "url": "https://vnexpress.net/thu-tuong-yeu-cau-tang-ty-trong-chi-phat-trien-cong-nghe-loi-5065878.html",
+          "published_at": "2026-04-22 12:43:42+00:00",
+          "tech_score": 0.3652,
+          "content_snippet": "Ngày 22/4,Thủ tướng Lê Minh Hưngchủ trì buổi làm việc với Bộ Khoa học và Công nghệ về thực hiện các nhiệm vụ khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số. Ông đánh giá cao nỗ lực của bộ trong tham mưu, triển khai Nghị quyết 57, hoàn thiện thể chế, cơ chế chính sách; thúc đẩy phát triển hạ "
         }
       ]
     },
     {
-      "cluster_id": 8,
-      "topic": "An ninh mạng",
-      "article_count": 6,
-      "avg_tech_score": 0.3291,
-      "cohesion_score": 0.7267,
-      "combined_score": 0.4594,
+      "cluster_id": 0,
+      "topic": "Phần mềm / Dev",
+      "article_count": 16,
+      "avg_tech_score": 0.3277,
+      "cohesion_score": 0.6578,
+      "combined_score": 0.154,
       "top_keywords": [
         [
-          "openai",
-          0.10237
+          "bitcoin",
+          0.09781
         ],
         [
-          "samsung",
-          0.10208
+          "giao_dịch",
+          0.086
         ],
         [
-          "súng",
-          0.10017
+          "tiền",
+          0.0854
         ],
         [
-          "chatgpt",
-          0.08912
+          "đồng",
+          0.07521
         ],
         [
-          "khu_vực",
-          0.08601
+          "chuyển",
+          0.07284
+        ],
+        [
+          "nước",
+          0.07225
+        ],
+        [
+          "giá",
+          0.06674
+        ],
+        [
+          "luật",
+          0.06609
+        ],
+        [
+          "thuế",
+          0.06549
         ],
         [
           "triệu",
-          0.08484
-        ],
-        [
-          "tấn_công",
-          0.08404
-        ],
-        [
-          "biết",
-          0.0809
-        ],
-        [
-          "rò_rỉ",
-          0.08002
-        ],
-        [
-          "hình_sự",
-          0.06977
+          0.06213
         ]
       ],
       "top_articles": [
         {
           "rank": 1,
-          "title": "OpenAI bị điều tra hình sự",
-          "source": "zingnews",
-          "url": "https://znews.vn/openai-bi-dieu-tra-hinh-su-post1645562.html",
-          "published_at": "2026-04-22 00:23:32+00:00",
-          "tech_score": 0.3544,
-          "content_snippet": "Tổng chưởng lý bang Florida James Uthmeier ngày 22/4 thông báo mở cuộc điều tra hình sự đối với OpenAI và ChatGPT, dựa trên các tin nhắn giữa chatbot này và Phoenix Ikner, nghi phạm vụ xả súng tại Đại học Bang Florida vào tháng 4/2025. Đây là lần đầu tiên một cơ quan công tố Mỹ khởi xướng điều tra h"
+          "title": "Trường hợp chuyển tiền, chuyển khoản có thay đổi lớn mà hàng triệu người cần biết",
+          "source": "soha",
+          "url": "https://soha.vn/truong-hop-chuyen-tien-chuyen-khoan-co-thay-doi-lon-ma-hang-trieu-nguoi-can-biet-198260421100336467.htm",
+          "published_at": "2026-04-21 08:00:00+00:00",
+          "tech_score": 0.3119,
+          "content_snippet": "Động thái siết chặt dòng tiền giá trị lớn của cơ quan quản lý không chỉ dừng lại ở yêu cầu khai báo mà còn tác động trực tiếp đến thói quen giao dịch hàng ngày của người dân. Căn cứ theo Thông tư 40/2024 và các văn bản liên quan, kể từ ngày 21/4 tới đây, các giao dịch chuyển khoản liên ngân hàng có "
         },
         {
           "rank": 2,
-          "title": "ChatGPT có thể bị coi là ‘đồng phạm’ trong vụ xả súng ở Florida",
-          "source": "tuoitre",
-          "url": "https://tuoitre.vn/chatgpt-co-the-bi-coi-la-dong-pham-trong-vu-xa-sung-o-florida-20260422160213521.htm",
-          "published_at": "2026-04-22 23:12:26+00:00",
-          "tech_score": 0.3389,
-          "content_snippet": "Cảnh sát có mặt tại nơi xảy ra vụ xả súng - Ảnh: Wfmynews2 Ngày 21-4, chính quyền bang Florida (Mỹ) thông báo mở cuộc điều tra hình sự nhằm xác định liệu trí tuệ nhân tạo (AI) có đóng vai trò trong vụxả súnghàng loạt gây chết người tại Đại học bang Florida hồi năm ngoái hay không. Theo người đứng đầ"
+          "title": "Thông báo quan trọng từ BIDV: Chuyển tiền tối đa 499.999.999 đồng",
+          "source": "soha",
+          "url": "https://soha.vn/thong-bao-quan-trong-tu-bidv-chuyen-tien-toi-da-499999999-dong-198260423090748433.htm",
+          "published_at": "2026-04-23 02:37:00+00:00",
+          "tech_score": 0.2948,
+          "content_snippet": "Mới đây, Ngân hàng TMCP Đầu tư và Phát triển Việt Nam (BIDV) vừa chính thức phát đi thông báo quan trọng về việc điều chỉnh hạn mức giao dịch nhằm tuân thủ các quy định mới nhất của Ngân hàng Nhà nước. Theo đó, bắt đầu từ ngày 21/4/2026, toàn bộ các giao dịch chuyển tiền trên hệ thống sẽ được áp dụn"
         }
       ]
     },
     {
-      "cluster_id": 7,
-      "topic": "AI / ML",
-      "article_count": 24,
-      "avg_tech_score": 0.3084,
-      "cohesion_score": 0.7008,
-      "combined_score": 0.2072,
+      "cluster_id": 2,
+      "topic": "Phần mềm / Dev",
+      "article_count": 33,
+      "avg_tech_score": 0.3033,
+      "cohesion_score": 0.6788,
+      "combined_score": 0.0982,
       "top_keywords": [
         [
           "trung_quốc",
-          0.11809
+          0.10246
         ],
         [
           "năng_lượng",
-          0.07841
+          0.07486
         ],
         [
           "hệ_thống",
-          0.07614
+          0.06702
         ],
         [
           "điện",
-          0.06565
-        ],
-        [
-          "tên_lửa",
-          0.05968
+          0.06207
         ],
         [
           "thiết_bị",
-          0.05857
-        ],
-        [
-          "phóng",
-          0.05519
-        ],
-        [
-          "quỹ_đạo",
-          0.05113
-        ],
-        [
-          "công_ty",
-          0.05098
+          0.05399
         ],
         [
           "không_gian",
-          0.05033
+          0.05107
+        ],
+        [
+          "phóng",
+          0.05038
+        ],
+        [
+          "thị_trường",
+          0.04807
+        ],
+        [
+          "thử_nghiệm",
+          0.0477
+        ],
+        [
+          "tên_lửa",
+          0.04667
         ]
       ],
       "top_articles": [
@@ -876,76 +806,6 @@
           "published_at": "2026-04-22 08:00:00+00:00",
           "tech_score": 0.3772,
           "content_snippet": "Trung Quốc đã phát triển một thiết bị bù đồng bộ cao áp đầu tiên trênthế giới, đánh dấu sự hồi sinh công nghệ ổn định lưới điện có tuổi đời hàng thế kỷ để hỗ trợ quá trình chuyển đổi sang năng lượng tái tạo. Mới đây, hãng tin Electric Power News (Trung Quốc) đưa tin rằng một quay kết nối trực tiếp ở"
-        }
-      ]
-    },
-    {
-      "cluster_id": 3,
-      "topic": "Phần mềm / Dev",
-      "article_count": 27,
-      "avg_tech_score": 0.3196,
-      "cohesion_score": 0.6561,
-      "combined_score": 0.0715,
-      "top_keywords": [
-        [
-          "ai",
-          0.06465
-        ],
-        [
-          "bitcoin",
-          0.06204
-        ],
-        [
-          "thị_trường",
-          0.05516
-        ],
-        [
-          "năng_lượng",
-          0.05431
-        ],
-        [
-          "giao_dịch",
-          0.05328
-        ],
-        [
-          "việt_nam",
-          0.05319
-        ],
-        [
-          "tiền",
-          0.04982
-        ],
-        [
-          "eo_biển",
-          0.04933
-        ],
-        [
-          "giá",
-          0.04897
-        ],
-        [
-          "doanh_nghiệp",
-          0.04741
-        ]
-      ],
-      "top_articles": [
-        {
-          "rank": 1,
-          "title": "Giải mã lý do internet Việt Nam thuộc nhóm rẻ nhất thế giới",
-          "source": "thanhnien",
-          "url": "https://thanhnien.vn/giai-ma-ly-do-internet-viet-nam-thuoc-nhom-re-nhat-the-gioi-18526042220103818.htm",
-          "published_at": "2026-04-22 13:26:00+00:00",
-          "tech_score": 0.3699,
-          "content_snippet": "Trong một thực tế quen thuộc vào giờ cao điểm, một gia đình 4 người ở đô thị có thể đồng thời xem video 4K, học tập trực tuyến, họponline, chơi game và kết nối hàng chục thiết bị thông minh. Nhu cầu sử dụng tăng lên nhanh và hạ tầng internet cũng phải thay đổi để đáp ứng. Tuy nhiên, cùng với sự gia "
-        },
-        {
-          "rank": 2,
-          "title": "Khủng hoảng Hormuz phơi bày chuỗi cung ứng mong manh, Trung Quốc ứng phó ra sao?",
-          "source": "soha",
-          "url": "https://soha.vn/khung-hoang-hormuz-phoi-bay-chuoi-cung-ung-mong-manh-trung-quoc-ung-pho-ra-sao-198260422093100654.htm",
-          "published_at": "2026-04-22 07:00:00+00:00",
-          "tech_score": 0.2851,
-          "content_snippet": "Trước những gián đoạn tại eo biển Hormuz trong bối cảnh xung đột Mỹ - Israel với Iran, Trung Quốc đang đánh giá lại mức độ sẵn sàng của nền kinh tế và khẩn trương củng cố các “lá chắn” an ninh chiến lược, từ năng lượng đến chuỗi cung ứng, theoSouth China Morning Post. Ông Zheng Shanjie, Chủ nhiệm Ủy"
         }
       ]
     }
