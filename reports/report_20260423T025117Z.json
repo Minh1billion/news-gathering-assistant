@@ -1,0 +1,1055 @@
+{
+  "generated_at": "2026-04-23T02:51:17.466272+00:00",
+  "week_start": "16/04/2026",
+  "week_end": "23/04/2026",
+  "stats": {
+    "total_tech_articles": 243,
+    "sources": 8,
+    "dominant_topic": "Phần mềm / Dev",
+    "dominant_topic_pct": 28.0,
+    "n_clusters": 9,
+    "date_range": "16/04/2026 - 23/04/2026"
+  },
+  "executive_summary": {
+    "landscape": "243 bài viết công nghệ từ 8 nguồn trong tuần 16/04/2026 - 23/04/2026.",
+    "dominant_topic": "Phần mềm / Dev",
+    "dominant_topic_pct": 28.0,
+    "top_keywords": [
+      "hệ_thống",
+      "apple",
+      "thiết_bị"
+    ],
+    "highlight_count": 10
+  },
+  "trending_keywords": [
+    {
+      "rank": 1,
+      "keyword": "hệ_thống",
+      "tfidf_score": 0.04287,
+      "semantic_score": 0.41251,
+      "combined_score": 0.01768
+    },
+    {
+      "rank": 2,
+      "keyword": "apple",
+      "tfidf_score": 0.07944,
+      "semantic_score": 0.21121,
+      "combined_score": 0.01678
+    },
+    {
+      "rank": 3,
+      "keyword": "thiết_bị",
+      "tfidf_score": 0.04896,
+      "semantic_score": 0.33237,
+      "combined_score": 0.01627
+    },
+    {
+      "rank": 4,
+      "keyword": "iphone",
+      "tfidf_score": 0.04599,
+      "semantic_score": 0.30689,
+      "combined_score": 0.01411
+    },
+    {
+      "rank": 5,
+      "keyword": "ứng_dụng",
+      "tfidf_score": 0.03876,
+      "semantic_score": 0.33932,
+      "combined_score": 0.01315
+    },
+    {
+      "rank": 6,
+      "keyword": "máy",
+      "tfidf_score": 0.03188,
+      "semantic_score": 0.40269,
+      "combined_score": 0.01284
+    },
+    {
+      "rank": 7,
+      "keyword": "màn_hình",
+      "tfidf_score": 0.03193,
+      "semantic_score": 0.34473,
+      "combined_score": 0.01101
+    },
+    {
+      "rank": 8,
+      "keyword": "ai",
+      "tfidf_score": 0.07821,
+      "semantic_score": 0.13399,
+      "combined_score": 0.01048
+    },
+    {
+      "rank": 9,
+      "keyword": "năng_lượng",
+      "tfidf_score": 0.03099,
+      "semantic_score": 0.32186,
+      "combined_score": 0.00997
+    },
+    {
+      "rank": 10,
+      "keyword": "sản_phẩm",
+      "tfidf_score": 0.0465,
+      "semantic_score": 0.21332,
+      "combined_score": 0.00992
+    },
+    {
+      "rank": 11,
+      "keyword": "nhà_mạng",
+      "tfidf_score": 0.01864,
+      "semantic_score": 0.51502,
+      "combined_score": 0.0096
+    },
+    {
+      "rank": 12,
+      "keyword": "điện_thoại",
+      "tfidf_score": 0.04527,
+      "semantic_score": 0.20446,
+      "combined_score": 0.00926
+    },
+    {
+      "rank": 13,
+      "keyword": "chip",
+      "tfidf_score": 0.02435,
+      "semantic_score": 0.36954,
+      "combined_score": 0.009
+    },
+    {
+      "rank": 14,
+      "keyword": "công_ty",
+      "tfidf_score": 0.04122,
+      "semantic_score": 0.20424,
+      "combined_score": 0.00842
+    },
+    {
+      "rank": 15,
+      "keyword": "tính_năng",
+      "tfidf_score": 0.03375,
+      "semantic_score": 0.24496,
+      "combined_score": 0.00827
+    },
+    {
+      "rank": 16,
+      "keyword": "nền_tảng",
+      "tfidf_score": 0.02428,
+      "semantic_score": 0.3326,
+      "combined_score": 0.00808
+    },
+    {
+      "rank": 17,
+      "keyword": "máy_tính",
+      "tfidf_score": 0.01743,
+      "semantic_score": 0.45804,
+      "combined_score": 0.00798
+    },
+    {
+      "rank": 18,
+      "keyword": "thiết_kế",
+      "tfidf_score": 0.0379,
+      "semantic_score": 0.20944,
+      "combined_score": 0.00794
+    },
+    {
+      "rank": 19,
+      "keyword": "lên",
+      "tfidf_score": 0.03387,
+      "semantic_score": 0.23036,
+      "combined_score": 0.0078
+    },
+    {
+      "rank": 20,
+      "keyword": "dòng",
+      "tfidf_score": 0.03033,
+      "semantic_score": 0.249,
+      "combined_score": 0.00755
+    },
+    {
+      "rank": 21,
+      "keyword": "điện",
+      "tfidf_score": 0.02941,
+      "semantic_score": 0.2517,
+      "combined_score": 0.0074
+    },
+    {
+      "rank": 22,
+      "keyword": "thuê",
+      "tfidf_score": 0.03262,
+      "semantic_score": 0.22479,
+      "combined_score": 0.00733
+    },
+    {
+      "rank": 23,
+      "keyword": "hóa",
+      "tfidf_score": 0.02556,
+      "semantic_score": 0.28587,
+      "combined_score": 0.00731
+    },
+    {
+      "rank": 24,
+      "keyword": "doanh_nghiệp",
+      "tfidf_score": 0.03671,
+      "semantic_score": 0.19709,
+      "combined_score": 0.00724
+    },
+    {
+      "rank": 25,
+      "keyword": "sản_xuất",
+      "tfidf_score": 0.02781,
+      "semantic_score": 0.2543,
+      "combined_score": 0.00707
+    },
+    {
+      "rank": 26,
+      "keyword": "dữ_liệu",
+      "tfidf_score": 0.03543,
+      "semantic_score": 0.19753,
+      "combined_score": 0.007
+    },
+    {
+      "rank": 27,
+      "keyword": "trí_tuệ nhân_tạo",
+      "tfidf_score": 0.01428,
+      "semantic_score": 0.48495,
+      "combined_score": 0.00692
+    },
+    {
+      "rank": 28,
+      "keyword": "google",
+      "tfidf_score": 0.02626,
+      "semantic_score": 0.2621,
+      "combined_score": 0.00688
+    },
+    {
+      "rank": 29,
+      "keyword": "vận_hành",
+      "tfidf_score": 0.02205,
+      "semantic_score": 0.30993,
+      "combined_score": 0.00683
+    },
+    {
+      "rank": 30,
+      "keyword": "mô_hình",
+      "tfidf_score": 0.02639,
+      "semantic_score": 0.25432,
+      "combined_score": 0.00671
+    }
+  ],
+  "topic_distribution": [
+    {
+      "topic": "Phần mềm / Dev",
+      "count": 68,
+      "percentage": 28.0
+    },
+    {
+      "topic": "AI / ML",
+      "count": 63,
+      "percentage": 25.9
+    },
+    {
+      "topic": "An ninh mạng",
+      "count": 40,
+      "percentage": 16.5
+    },
+    {
+      "topic": "Thiết bị di động",
+      "count": 30,
+      "percentage": 12.3
+    },
+    {
+      "topic": "Phần cứng / Server",
+      "count": 23,
+      "percentage": 9.5
+    },
+    {
+      "topic": "Xe điện / Năng lượng",
+      "count": 8,
+      "percentage": 3.3
+    },
+    {
+      "topic": "Startup / Đầu tư",
+      "count": 6,
+      "percentage": 2.5
+    },
+    {
+      "topic": "Crypto / Blockchain",
+      "count": 4,
+      "percentage": 1.6
+    },
+    {
+      "topic": "Mạng xã hội",
+      "count": 1,
+      "percentage": 0.4
+    }
+  ],
+  "daily_counts": [
+    {
+      "date": "2026-04-15",
+      "count": 16
+    },
+    {
+      "date": "2026-04-16",
+      "count": 15
+    },
+    {
+      "date": "2026-04-17",
+      "count": 15
+    },
+    {
+      "date": "2026-04-18",
+      "count": 10
+    },
+    {
+      "date": "2026-04-19",
+      "count": 16
+    },
+    {
+      "date": "2026-04-20",
+      "count": 32
+    },
+    {
+      "date": "2026-04-21",
+      "count": 55
+    },
+    {
+      "date": "2026-04-22",
+      "count": 66
+    },
+    {
+      "date": "2026-04-23",
+      "count": 18
+    }
+  ],
+  "clusters": [
+    {
+      "cluster_id": 1,
+      "topic": "AI / ML",
+      "article_count": 38,
+      "avg_tech_score": 0.4646,
+      "cohesion_score": 0.7569,
+      "combined_score": 1.4671,
+      "top_keywords": [
+        [
+          "ai",
+          0.15366
+        ],
+        [
+          "gemini",
+          0.0824
+        ],
+        [
+          "google",
+          0.07872
+        ],
+        [
+          "ảnh",
+          0.0742
+        ],
+        [
+          "tính_năng",
+          0.06377
+        ],
+        [
+          "mô_hình",
+          0.06351
+        ],
+        [
+          "công_ty",
+          0.0594
+        ],
+        [
+          "dữ_liệu",
+          0.05891
+        ],
+        [
+          "công_cụ",
+          0.0523
+        ],
+        [
+          "hệ_thống",
+          0.0516
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "AI TOP 100 Z890 - Khi doanh nghiệp muốn làm chủ hạ tầng AI",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/ai-top-100-z890-khi-doanh-nghiep-muon-lam-chu-ha-tang-ai-185260421160043988.htm",
+          "published_at": "2026-04-22 01:00:00+00:00",
+          "tech_score": 0.537,
+          "content_snippet": "Trí tuệ nhân tạo (AI) không còn là câu chuyện thử nghiệm trong phòng lab. Với nhiều doanh nghiệp, AI đã trở thành công cụ sản xuất thực tế: phân tích dữ liệu khách hàng, tự động hóa quy trình, xây dựng mô hình ngôn ngữ nội bộ hay xử lý hình ảnh, video quy mô lớn. Khi khối lượng công việc tăng lên, b"
+        },
+        {
+          "rank": 2,
+          "title": "Facebook theo dõi chuột, bàn phím của nhân viên",
+          "source": "zingnews",
+          "url": "https://znews.vn/meta-gay-bao-noi-bo-post1645559.html",
+          "published_at": "2026-04-22 03:30:06+00:00",
+          "tech_score": 0.6082,
+          "content_snippet": "Meta dùng chính hành động thường ngày của nhân viên để huấn luyện mô hình AI. Ảnh:Reuters. TheoReuters, toàn bộ dữ liệu được Meta thu thập từ nhân viên sẽ được dùng để huấn luyện các mô hình AI của công ty. Phần mềm được đặt tên Sáng kiến Khả năng Mô hình, hoạt động trên các ứng dụng và trang web li"
+        }
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "topic": "Phần cứng / Server",
+      "article_count": 16,
+      "avg_tech_score": 0.3087,
+      "cohesion_score": 0.872,
+      "combined_score": 1.0019,
+      "top_keywords": [
+        [
+          "apple",
+          0.45964
+        ],
+        [
+          "sản_phẩm",
+          0.12327
+        ],
+        [
+          "công_ty",
+          0.10504
+        ],
+        [
+          "nhất",
+          0.0877
+        ],
+        [
+          "kỹ_thuật",
+          0.08278
+        ],
+        [
+          "chủ_tịch",
+          0.0716
+        ],
+        [
+          "iphone",
+          0.07124
+        ],
+        [
+          "phần_cứng",
+          0.06786
+        ],
+        [
+          "ai",
+          0.06338
+        ],
+        [
+          "lãnh_đạo",
+          0.06003
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Tim Cook làm được gì tại Apple",
+          "source": "zingnews",
+          "url": "https://znews.vn/tim-cook-lam-duoc-gi-tai-apple-post1645588.html",
+          "published_at": "2026-04-22 05:07:30+00:00",
+          "tech_score": 0.279,
+          "content_snippet": "Apple vừa xác nhận Tim Cook sẽ rời chức vụ CEO công ty vào ngày 1/9. Người thay thế ông là John Ternus, hiện là Phó chủ tịch cấp cao phụ trách kỹ thuật phần cứng. Tim Cook, 65 tuổi, sẽ tiếp tục giữ chức CEO cho đến cuối tháng 8 để hỗ trợ giai đoạn chuyển giao, diễn ra sau một \"quá trình lập kế hoạch"
+        },
+        {
+          "rank": 2,
+          "title": "CEO mới của Apple là ai?",
+          "source": "zingnews",
+          "url": "https://znews.vn/ceo-moi-cua-apple-la-ai-post1645407.html",
+          "published_at": "2026-04-21 05:15:09+00:00",
+          "tech_score": 0.3223,
+          "content_snippet": "John Ternus hiện 51 tuổi, bằng chính Tim Cook khi nhận chức CEO hồi 2011. Ảnh:Reuters. Applevừa chính thức công bố đợt chuyển giao lãnh đạo quan trọng nhất trong hơn một thập kỷ qua. John Ternus, Phó chủ tịch cấp cao phụ trách kỹ thuật phần cứng 51 tuổi, trở thành người kế nhiệm CEO Tim Cook. Quyết "
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "topic": "Thiết bị di động",
+      "article_count": 36,
+      "avg_tech_score": 0.3567,
+      "cohesion_score": 0.7168,
+      "combined_score": 0.5899,
+      "top_keywords": [
+        [
+          "iphone",
+          0.10658
+        ],
+        [
+          "apple",
+          0.08544
+        ],
+        [
+          "samsung",
+          0.0768
+        ],
+        [
+          "thiết_kế",
+          0.07199
+        ],
+        [
+          "điện_thoại",
+          0.07109
+        ],
+        [
+          "dòng",
+          0.06963
+        ],
+        [
+          "màn_hình",
+          0.06709
+        ],
+        [
+          "sản_phẩm",
+          0.06244
+        ],
+        [
+          "nhất",
+          0.0604
+        ],
+        [
+          "máy",
+          0.05864
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Mẫu điện thoại Android không ồn ào nhưng ‘được việc’",
+          "source": "zingnews",
+          "url": "https://znews.vn/mau-dien-thoai-android-khong-on-ao-nhung-duoc-viec-post1645817.html",
+          "published_at": "2026-04-22 15:15:27+00:00",
+          "tech_score": 0.2973,
+          "content_snippet": "Trong số những hãng công nghệ, Samsung     thường là người “mở hàng” đầu tiên trong năm với những mẫu Galaxy S. Tất nhiên,     áp lực từ việc ra mắt sớm nhất là hãng cần có sản phẩm đủ khác biệt, hấp dẫn để     thu hút người dùng. Nhưng việc tạo nên khác biệt cũng ngày     càng khó, khi thiết kế, tí"
+        },
+        {
+          "rank": 2,
+          "title": "Samsung mang tính năng chia sẻ dữ liệu 'chạm là xong' lên One UI 9",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/samsung-mang-tinh-nang-chia-se-du-lieu-cham-la-xong-len-one-ui-9-185260422090233671.htm",
+          "published_at": "2026-04-22 14:47:00+00:00",
+          "tech_score": 0.4108,
+          "content_snippet": "Từ trước đến nay, việc chia sẻ ảnh hay video giữa các máy Android thường bị coi là rườm rà hơn so với AirDrop của Apple. Tuy nhiên, sự xuất hiện củaOne UI 9(dựa trên Android 17) hứa hẹn sẽ thay đổi hoàn toàn định kiến này với sự góp mặt của tính năng Tap to Share. Theo báo cáo mới nhất từ các chuyên"
+        }
+      ]
+    },
+    {
+      "cluster_id": 0,
+      "topic": "An ninh mạng",
+      "article_count": 37,
+      "avg_tech_score": 0.336,
+      "cohesion_score": 0.7367,
+      "combined_score": 0.5503,
+      "top_keywords": [
+        [
+          "thuê",
+          0.11988
+        ],
+        [
+          "điện_thoại",
+          0.09224
+        ],
+        [
+          "ứng_dụng",
+          0.08008
+        ],
+        [
+          "xác_thực",
+          0.07604
+        ],
+        [
+          "nhà_mạng",
+          0.07068
+        ],
+        [
+          "xác_nhận",
+          0.06187
+        ],
+        [
+          "di_động",
+          0.05628
+        ],
+        [
+          "người_dân",
+          0.05264
+        ],
+        [
+          "chính",
+          0.04576
+        ],
+        [
+          "tặng",
+          0.04539
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Xác thực SIM qua VNeID: Bước ngoặt dẹp SIM rác, mở đường định danh số",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/xac-thuc-sim-qua-vneid-buoc-ngoat-dep-sim-rac-mo-duong-dinh-danh-so-20260417162756213.htm",
+          "published_at": "2026-04-18 15:44:42+00:00",
+          "tech_score": 0.318,
+          "content_snippet": "Giờ đây số điện thoại sẽ được xác minh thông qua VNeID để tránh tình trạng sử dụng sim rác. Trong nhiều năm, SIM rác không chỉ gây phiền toái mà còn trở thành điểm khởi phát cho các hành vi lừa đảo, mạo danh. Việc đưaVNeIDvào xác thực thuê bao phản ánh một cách tiếp cận mới, nơi danh tính số dần trở"
+        },
+        {
+          "rank": 2,
+          "title": "Kiểm tra ngay VNeID để tránh bị khóa SIM",
+          "source": "soha",
+          "url": "https://soha.vn/kiem-tra-ngay-vneid-de-tranh-bi-khoa-sim-198260418113402595.htm",
+          "published_at": "2026-04-22 23:26:00+00:00",
+          "tech_score": 0.3955,
+          "content_snippet": "Từ ngày 15/4, các nhà mạng lớn như Viettel, VinaPhone, MobiFone... triển khai xác thực thông tin thuê bao theo quy định tại Thông tư 08/2026/TT-BKHCN của Bộ Khoa học và Công nghệ. Theo quy định mới, người dùng di động lần đầu được phép tự xác nhận thông tin thuê bao trực tuyến thông qua ứng dụng VNe"
+        }
+      ]
+    },
+    {
+      "cluster_id": 5,
+      "topic": "Phần mềm / Dev",
+      "article_count": 20,
+      "avg_tech_score": 0.3463,
+      "cohesion_score": 0.7203,
+      "combined_score": 0.5398,
+      "top_keywords": [
+        [
+          "iphone",
+          0.08878
+        ],
+        [
+          "cập_nhật",
+          0.07227
+        ],
+        [
+          "thiết_bị",
+          0.06193
+        ],
+        [
+          "ios",
+          0.06053
+        ],
+        [
+          "tốc_độ",
+          0.05496
+        ],
+        [
+          "máy",
+          0.04798
+        ],
+        [
+          "cắm",
+          0.0464
+        ],
+        [
+          "kết_nối",
+          0.04482
+        ],
+        [
+          "chiếc",
+          0.04417
+        ],
+        [
+          "usb",
+          0.04278
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Nguyên nhân khiến SSD chậm chạp sau khi nâng cấp lên Windows 11",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/nguyen-nhan-khien-ssd-cham-chap-sau-khi-nang-cap-len-windows-11-185260420090740517.htm",
+          "published_at": "2026-04-20 04:54:00+00:00",
+          "tech_score": 0.4262,
+          "content_snippet": "Việc nâng cấp lên Windows 11 để nhận các bản vá bảo mật mới nhất là điềuMicrosoftluôn khuyến khích. Tuy nhiên, sau khi quá trình cài đặt hoàn tất, không ít người dùng đã phải đối mặt với tình trạng máy tính chạy chậm đi rõ rệt. Một phát hiện mới đây từ người dùng trên mạng xã hội Facebook đã chỉ ra "
+        },
+        {
+          "rank": 2,
+          "title": "Hai kiểu cập nhật thiết bị điện tử nhiều người vẫn nhầm lẫn",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/hai-kieu-cap-nhat-thiet-bi-dien-tu-nhieu-nguoi-van-nham-lan-185260419113518397.htm",
+          "published_at": "2026-04-19 08:07:00+00:00",
+          "tech_score": 0.4701,
+          "content_snippet": "Smartphone, laptop đến các thiết bị smarthome như công tắc hay bóng đèn thông minh,… đều cần đượccập nhậtthường xuyên. Tuy nhiên, nhiều người thường bỏ qua hoặc quên việc cập nhật cho thiết bị của mình, mở ra những cánh cửa bảo mật. Tùy thuộc thiết bị mà người dùng có thể nhận bản cập nhật phần mềm "
+        }
+      ]
+    },
+    {
+      "cluster_id": 6,
+      "topic": "Phần mềm / Dev",
+      "article_count": 39,
+      "avg_tech_score": 0.35,
+      "cohesion_score": 0.7011,
+      "combined_score": 0.4745,
+      "top_keywords": [
+        [
+          "ai",
+          0.09074
+        ],
+        [
+          "sáng_tạo",
+          0.08421
+        ],
+        [
+          "đổi_mới",
+          0.07965
+        ],
+        [
+          "việt_nam",
+          0.0756
+        ],
+        [
+          "doanh_nghiệp",
+          0.07278
+        ],
+        [
+          "đổi_mới sáng_tạo",
+          0.07179
+        ],
+        [
+          "sản_phẩm",
+          0.06741
+        ],
+        [
+          "tặng",
+          0.05756
+        ],
+        [
+          "khoa_học",
+          0.057
+        ],
+        [
+          "hệ_thống",
+          0.05085
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Lấy ý kiến Danh mục sản phẩm thúc đẩy thị trường chuyển đổi số",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/lay-y-kien-danh-muc-san-pham-thuc-day-thi-truong-chuyen-doi-so-5064824.html",
+          "published_at": "2026-04-20 12:41:39+00:00",
+          "tech_score": 0.4058,
+          "content_snippet": "Cục Chuyển đổi số quốc gia - Bộ Khoa học và Công nghệ, đang khảo sát, thu thập từ các cơ quan, tổ chức, doanh nghiệp về danh mục sản phẩm thúc đẩy thị trường chuyển đổi số. Hoạt động này nằm trong chương trình công tác năm 2026 của Ban Chỉ đạo Trung ương về phát triển khoa học, công nghệ, đổi mới sá"
+        },
+        {
+          "rank": 2,
+          "title": "Lấy ý kiến dự thảo danh mục 12 công nghệ chiến lược",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/lay-y-kien-du-thao-danh-muc-12-cong-nghe-chien-luoc-5063779.html",
+          "published_at": "2026-04-17 09:00:00+00:00",
+          "tech_score": 0.4371,
+          "content_snippet": "Theo dự thảo, danh mục được chia thành hai nhóm với định hướng rõ ràng: một nhóm là các công nghệ đã có thị trường, có thể triển khai và tạo giá trị ngay; nhóm còn lại là các công nghệ nền tảng, cần đầu tư dài hạn để tạo động lực phát triển mới. Nhóm thứ nhất gồm 7 công nghệ, gồm: Trí tuệ nhân tạo v"
+        }
+      ]
+    },
+    {
+      "cluster_id": 8,
+      "topic": "An ninh mạng",
+      "article_count": 6,
+      "avg_tech_score": 0.3291,
+      "cohesion_score": 0.7267,
+      "combined_score": 0.4594,
+      "top_keywords": [
+        [
+          "openai",
+          0.10237
+        ],
+        [
+          "samsung",
+          0.10208
+        ],
+        [
+          "súng",
+          0.10017
+        ],
+        [
+          "chatgpt",
+          0.08912
+        ],
+        [
+          "khu_vực",
+          0.08601
+        ],
+        [
+          "triệu",
+          0.08484
+        ],
+        [
+          "tấn_công",
+          0.08404
+        ],
+        [
+          "biết",
+          0.0809
+        ],
+        [
+          "rò_rỉ",
+          0.08002
+        ],
+        [
+          "hình_sự",
+          0.06977
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "OpenAI bị điều tra hình sự",
+          "source": "zingnews",
+          "url": "https://znews.vn/openai-bi-dieu-tra-hinh-su-post1645562.html",
+          "published_at": "2026-04-22 00:23:32+00:00",
+          "tech_score": 0.3544,
+          "content_snippet": "Tổng chưởng lý bang Florida James Uthmeier ngày 22/4 thông báo mở cuộc điều tra hình sự đối với OpenAI và ChatGPT, dựa trên các tin nhắn giữa chatbot này và Phoenix Ikner, nghi phạm vụ xả súng tại Đại học Bang Florida vào tháng 4/2025. Đây là lần đầu tiên một cơ quan công tố Mỹ khởi xướng điều tra h"
+        },
+        {
+          "rank": 2,
+          "title": "ChatGPT có thể bị coi là ‘đồng phạm’ trong vụ xả súng ở Florida",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/chatgpt-co-the-bi-coi-la-dong-pham-trong-vu-xa-sung-o-florida-20260422160213521.htm",
+          "published_at": "2026-04-22 23:12:26+00:00",
+          "tech_score": 0.3389,
+          "content_snippet": "Cảnh sát có mặt tại nơi xảy ra vụ xả súng - Ảnh: Wfmynews2 Ngày 21-4, chính quyền bang Florida (Mỹ) thông báo mở cuộc điều tra hình sự nhằm xác định liệu trí tuệ nhân tạo (AI) có đóng vai trò trong vụxả súnghàng loạt gây chết người tại Đại học bang Florida hồi năm ngoái hay không. Theo người đứng đầ"
+        }
+      ]
+    },
+    {
+      "cluster_id": 7,
+      "topic": "AI / ML",
+      "article_count": 24,
+      "avg_tech_score": 0.3084,
+      "cohesion_score": 0.7008,
+      "combined_score": 0.2072,
+      "top_keywords": [
+        [
+          "trung_quốc",
+          0.11809
+        ],
+        [
+          "năng_lượng",
+          0.07841
+        ],
+        [
+          "hệ_thống",
+          0.07614
+        ],
+        [
+          "điện",
+          0.06565
+        ],
+        [
+          "tên_lửa",
+          0.05968
+        ],
+        [
+          "thiết_bị",
+          0.05857
+        ],
+        [
+          "phóng",
+          0.05519
+        ],
+        [
+          "quỹ_đạo",
+          0.05113
+        ],
+        [
+          "công_ty",
+          0.05098
+        ],
+        [
+          "không_gian",
+          0.05033
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Tàu vũ trụ chở hàng Trung Quốc hoàn thành loạt thử nghiệm",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/tau-vu-tru-cho-hang-trung-quoc-hoan-thanh-loat-thu-nghiem-5064100.html",
+          "published_at": "2026-04-19 08:00:00+00:00",
+          "tech_score": 0.2888,
+          "content_snippet": "Viện Đổi mới Vệ tinh siêu nhỏ thuộc Viện hàn lâm Khoa học Trung Quốc (IAMCAS), đơn vị phát triển tàu, cho biết chuyến bay đã xác nhận những công nghệ then chốt cho các vụ phóng tương lai, đồng thời thúc đẩy chương trình không gian thương mại của nước này. \"Tàu vũ trụ chở hàng Khinh Châu sẽ tiếp tục "
+        },
+        {
+          "rank": 2,
+          "title": "Chưa từng có trên thế giới: Trung Quốc chế tạo cỗ máy hồi sinh công nghệ cách đây hơn 100 năm, làm rung chuyển ngành năng lượng toàn cầu",
+          "source": "soha",
+          "url": "https://soha.vn/chua-tung-co-tren-the-gioi-trung-quoc-che-tao-co-may-hoi-sinh-cong-nghe-cach-day-hon-100-nam-lam-rung-chuyen-nganh-nang-luong-toan-cau-198260422135350907.htm",
+          "published_at": "2026-04-22 08:00:00+00:00",
+          "tech_score": 0.3772,
+          "content_snippet": "Trung Quốc đã phát triển một thiết bị bù đồng bộ cao áp đầu tiên trênthế giới, đánh dấu sự hồi sinh công nghệ ổn định lưới điện có tuổi đời hàng thế kỷ để hỗ trợ quá trình chuyển đổi sang năng lượng tái tạo. Mới đây, hãng tin Electric Power News (Trung Quốc) đưa tin rằng một quay kết nối trực tiếp ở"
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "topic": "Phần mềm / Dev",
+      "article_count": 27,
+      "avg_tech_score": 0.3196,
+      "cohesion_score": 0.6561,
+      "combined_score": 0.0715,
+      "top_keywords": [
+        [
+          "ai",
+          0.06465
+        ],
+        [
+          "bitcoin",
+          0.06204
+        ],
+        [
+          "thị_trường",
+          0.05516
+        ],
+        [
+          "năng_lượng",
+          0.05431
+        ],
+        [
+          "giao_dịch",
+          0.05328
+        ],
+        [
+          "việt_nam",
+          0.05319
+        ],
+        [
+          "tiền",
+          0.04982
+        ],
+        [
+          "eo_biển",
+          0.04933
+        ],
+        [
+          "giá",
+          0.04897
+        ],
+        [
+          "doanh_nghiệp",
+          0.04741
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Giải mã lý do internet Việt Nam thuộc nhóm rẻ nhất thế giới",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/giai-ma-ly-do-internet-viet-nam-thuoc-nhom-re-nhat-the-gioi-18526042220103818.htm",
+          "published_at": "2026-04-22 13:26:00+00:00",
+          "tech_score": 0.3699,
+          "content_snippet": "Trong một thực tế quen thuộc vào giờ cao điểm, một gia đình 4 người ở đô thị có thể đồng thời xem video 4K, học tập trực tuyến, họponline, chơi game và kết nối hàng chục thiết bị thông minh. Nhu cầu sử dụng tăng lên nhanh và hạ tầng internet cũng phải thay đổi để đáp ứng. Tuy nhiên, cùng với sự gia "
+        },
+        {
+          "rank": 2,
+          "title": "Khủng hoảng Hormuz phơi bày chuỗi cung ứng mong manh, Trung Quốc ứng phó ra sao?",
+          "source": "soha",
+          "url": "https://soha.vn/khung-hoang-hormuz-phoi-bay-chuoi-cung-ung-mong-manh-trung-quoc-ung-pho-ra-sao-198260422093100654.htm",
+          "published_at": "2026-04-22 07:00:00+00:00",
+          "tech_score": 0.2851,
+          "content_snippet": "Trước những gián đoạn tại eo biển Hormuz trong bối cảnh xung đột Mỹ - Israel với Iran, Trung Quốc đang đánh giá lại mức độ sẵn sàng của nền kinh tế và khẩn trương củng cố các “lá chắn” an ninh chiến lược, từ năng lượng đến chuỗi cung ứng, theoSouth China Morning Post. Ông Zheng Shanjie, Chủ nhiệm Ủy"
+        }
+      ]
+    }
+  ],
+  "highlighted_articles": [
+    {
+      "rank": 1,
+      "title": "Facebook theo dõi chuột, bàn phím của nhân viên",
+      "source": "zingnews",
+      "url": "https://znews.vn/meta-gay-bao-noi-bo-post1645559.html",
+      "published_at": "2026-04-22 03:30:06+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.6082,
+      "content_snippet": "Meta dùng chính hành động thường ngày của nhân viên để huấn luyện mô hình AI. Ảnh:Reuters. TheoReuters, toàn bộ dữ liệu được Meta thu thập từ nhân viên sẽ được dùng để huấn luyện các mô hình AI của công ty. Phần mềm được đặt tên Sáng kiến Khả năng Mô hình, hoạt động trên các ứng dụng và trang web li"
+    },
+    {
+      "rank": 2,
+      "title": "Bài học từ \"siêu mã độc\" Flame: Google và Cloudflare phải \"chạy đua vũ trang\" để cứu vãn Internet trước năm 2029?",
+      "source": "soha",
+      "url": "https://soha.vn/bai-hoc-tu-sieu-ma-doc-flame-google-va-cloudflare-phai-chay-dua-vu-trang-de-cuu-van-internet-truoc-nam-2029-19826042114135358.htm",
+      "published_at": "2026-04-22 01:14:00+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.5924,
+      "content_snippet": "Theo Ars Technica, vào khoảng năm 2010, một mã độc tinh vi mang tên Flame đã chiếm quyền điều khiển hệ thống phân phối bản cập nhật Windows của Microsoft, nhắm vào mạng lưới nội bộ của chính phủ Iran. Mã độc này được cho là sản phẩm hợp tác giữa Mỹ và Israel. Trọng tâm của cuộc tấn công nằm ở việc k"
+    },
+    {
+      "rank": 3,
+      "title": "Microsoft chính thức vận hành trung tâm AI mạnh nhất thế giới",
+      "source": "dantri",
+      "url": "https://dantri.com.vn/cong-nghe/microsoft-chinh-thuc-van-hanh-trung-tam-ai-manh-nhat-the-gioi-20260420135803112.htm",
+      "published_at": "2026-04-20 14:57:35+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5746,
+      "content_snippet": "(Dân trí) - Một bước tiến mới trong cuộc đua trí tuệ nhân tạo vừa được xác lập khi Microsoft đưa vào vận hành siêu trung tâm dữ liệu Fairwater, nơi quy tụ hàng trăm nghìn GPU và dùng hoàn toàn năng lượng tái tạo."
+    },
+    {
+      "rank": 4,
+      "title": "ROG Flow Z13-KJP và TUF Gaming A14 2026 trang bị AMD Ryzen AI Max+ ra mắt tại Việt Nam",
+      "source": "trainghiemso",
+      "url": "https://trainghiemso.vn/rog-flow-z13-kjp-va-tuf-gaming-a14-2026-trang-bi-amd-ryzen-ai-max-ra-mat-tai-viet-nam/",
+      "published_at": "2026-04-15 03:40:43+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.568,
+      "content_snippet": "Điểm chung nổi bật của bộ đôi ROG Flow Z13-KJP và TUF Gaming A14 2026 (FA401EA) nằm ở vi xử lý AMD Ryzen AI Max+ – nền tảng xử lý thế hệ mới được AMD phát triển theo hướng hợp nhất, tích hợp CPU, GPU và NPU trong cùng một kiến trúc nhằm tối ưu hiệu năng tổng thể và thời lượng pin. Dựa trên thiết kế "
+    },
+    {
+      "rank": 5,
+      "title": "Meta thu thập thao tác chuột và bàn phím của nhân viên",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/meta-thu-thap-thao-tac-chuot-va-ban-phim-cua-nhan-vien-5065513.html",
+      "published_at": "2026-04-22 12:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5584,
+      "content_snippet": "TheoReuters, Meta cài đặt công cụ có tên Sáng kiến năng lực mô hình (Model Capability Initiative - MCI) trên máy tính nhân viên, cho phép ghi lại thao tác với chuột và bàn phím. Đây là một phần của trong chiến dịch lớn hơn của công ty Mark Zuckerberg nhằm xây dựng các tác nhân AI có thể thực hiện cô"
+    },
+    {
+      "rank": 6,
+      "title": "Lợi thế khi OpenClaw triển khai trên Cloud",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/loi-the-khi-openclaw-trien-khai-tren-cloud-5063333.html",
+      "published_at": "2026-04-20 07:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5572,
+      "content_snippet": "Trí tuệ nhân tạo đang dần thay đổi cách con người làm việc, nhưng việc đưa AI vào vận hành thực tế vẫn là bài toán khó với nhiều doanh nghiệp. TheoMcKinsey, phần lớn tổ chức mới dừng ở giai đoạn thử nghiệm và chưa tích hợp sâu vào quy trình, trong khi các nghiên cứu khác cho thấy rào cản chính không"
+    },
+    {
+      "rank": 7,
+      "title": "Microsoft Defender bị biến thành công cụ tiếp tay cho hacker",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/microsoft-defender-bi-bien-thanh-cong-cu-tiep-tay-cho-hacker-185260421103654325.htm",
+      "published_at": "2026-04-21 10:02:00+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.5507,
+      "content_snippet": "TheoTechSpot, Microsoft Defender Antivirus vốn được thiết kế là lớp phòng thủ đầu tiên cho máy tính chạy Windows. Thế nhưng, theo tiết lộ mới nhất từ nhà nghiên cứu bảo mật danh tiếng Chaotic Eclipse, công cụ này đang tồn tại mộtlỗ hổngnghiêm trọng khiến nó không những không hoàn thành nhiệm vụ bảo "
+    },
+    {
+      "rank": 8,
+      "title": "Google tích hợp AI vào Chrome, tìm kiếm không cần mở trang",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/google-tich-hop-ai-vao-chrome-tim-kiem-khong-can-mo-trang-20260418162644167.htm",
+      "published_at": "2026-04-19 17:40:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.55,
+      "content_snippet": "Google tích hợp AI vào thanh địa chỉ Chrome, biến trình duyệt thành trợ lý thông minh - Ảnh: Google Mới đây,Googletích hợp trí tuệ nhân tạo trực tiếp vào thanh địa chỉ Chrome, đánh dấu thay đổi đáng chú ý trong cách trình duyệt vận hành. Thanh địa chỉ không còn chỉ để nhập URL hay từ khóa mà trở thà"
+    },
+    {
+      "rank": 9,
+      "title": "Google hợp tác Marvell phát triển chip AI giải bài toán hiệu năng suy luận",
+      "source": "dantri",
+      "url": "https://dantri.com.vn/cong-nghe/google-hop-tac-marvell-phat-trien-chip-ai-giai-bai-toan-hieu-nang-suy-luan-20260420135948927.htm",
+      "published_at": "2026-04-20 14:51:47+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5486,
+      "content_snippet": "(Dân trí) - Động thái mới của Google cho thấy cuộc đua phần cứng AI đang bước sang giai đoạn tối ưu chuyên sâu, khi các tập đoàn công nghệ tìm cách tách riêng từng tác vụ để nâng cao hiệu suất toàn hệ thống."
+    },
+    {
+      "rank": 10,
+      "title": "AI TOP 100 Z890 - Khi doanh nghiệp muốn làm chủ hạ tầng AI",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/ai-top-100-z890-khi-doanh-nghiep-muon-lam-chu-ha-tang-ai-185260421160043988.htm",
+      "published_at": "2026-04-22 01:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.537,
+      "content_snippet": "Trí tuệ nhân tạo (AI) không còn là câu chuyện thử nghiệm trong phòng lab. Với nhiều doanh nghiệp, AI đã trở thành công cụ sản xuất thực tế: phân tích dữ liệu khách hàng, tự động hóa quy trình, xây dựng mô hình ngôn ngữ nội bộ hay xử lý hình ảnh, video quy mô lớn. Khi khối lượng công việc tăng lên, b"
+    }
+  ]
+}

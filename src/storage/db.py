@@ -49,7 +49,7 @@ def save_articles(articles: list[dict]) -> dict:
 
     with get_connection() as conn:
         with conn.cursor() as cur:
-            psycopg2.extras.execute_values(
+            results = psycopg2.extras.execute_values(
                 cur,
                 """
                 INSERT INTO articles (source, title, url, image, published_at, content)
@@ -60,7 +60,6 @@ def save_articles(articles: list[dict]) -> dict:
                 rows,
                 fetch=True,
             )
-            results = cur.fetchall()
             inserted = len(results)
             skipped = len(rows) - inserted
         conn.commit()

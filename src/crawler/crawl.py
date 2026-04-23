@@ -51,7 +51,7 @@ class Crawler:
             stats = save_articles(enriched)
             total_inserted += stats["inserted"]
             total_skipped += stats["skipped"]
-            print(f"  -> Saved: {stats['inserted']} inserted / {stats['skipped']} skipped")
+            print(f"  -> [{source_name}] Saved: {stats['inserted']} inserted / {stats['skipped']} skipped")
 
             time.sleep(random.uniform(*self.delay))
 
