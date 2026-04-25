@@ -2,10 +2,13 @@ import { useState, useMemo } from 'react'
 import { SectionRule, TopicTag } from './ui'
 import { fmtDate, topicColor } from '../lib/utils'
 
+const PAGE_SIZE = 10
+
 export function Highlights({ articles }) {
   const [selTopics, setSelTopics] = useState([])
   const [selSources, setSelSources] = useState([])
   const [minScore, setMinScore] = useState(0)
+  const [page, setPage] = useState(1)
 
   const allTopics = useMemo(() => [...new Set(articles.map(a => a.topic))].sort(), [articles])
   const allSources = useMemo(() => [...new Set(articles.map(a => a.source))].sort(), [articles])
@@ -16,11 +19,22 @@ export function Highlights({ articles }) {
     a.tech_score >= minScore
   ), [articles, selTopics, selSources, minScore])
 
+  const visible = useMemo(() => filtered.slice(0, page * PAGE_SIZE), [filtered, page])
+  const hasMore = visible.length < filtered.length
+
   function toggleTopic(t) {
     setSelTopics(p => p.includes(t) ? p.filter(x => x !== t) : [...p, t])
+    setPage(1)
   }
   function toggleSource(s) {
     setSelSources(p => p.includes(s) ? p.filter(x => x !== s) : [...p, s])
+    setPage(1)
+  }
+  function resetFilters() {
+    setSelTopics([])
+    setSelSources([])
+    setMinScore(0)
+    setPage(1)
   }
 
   return (
@@ -60,10 +74,10 @@ export function Highlights({ articles }) {
         <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
           <div style={{ flex: 1, maxWidth: 320 }}>
             <p style={{ fontFamily: 'var(--mono)', fontSize: '0.62rem', color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 6 }}>Min Tech Score: {minScore.toFixed(2)}</p>
-            <input type="range" min={0} max={1} step={0.05} value={minScore} onChange={e => setMinScore(+e.target.value)} style={{ width: '100%', accentColor: 'var(--ink)' }} />
+            <input type="range" min={0} max={1} step={0.05} value={minScore} onChange={e => { setMinScore(+e.target.value); setPage(1) }} style={{ width: '100%', accentColor: 'var(--ink)' }} />
           </div>
           {(selTopics.length > 0 || selSources.length > 0 || minScore > 0) && (
-            <button onClick={() => { setSelTopics([]); setSelSources([]); setMinScore(0) }}
+            <button onClick={resetFilters}
               style={{ fontFamily: 'var(--mono)', fontSize: '0.62rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', padding: '4px 10px', border: '1px solid var(--accent)', color: 'var(--accent)', background: 'transparent', borderRadius: 2, cursor: 'pointer', whiteSpace: 'nowrap', alignSelf: 'flex-end', marginBottom: 2, transition: 'all 0.15s' }}>
               × Reset Filters
             </button>
@@ -71,12 +85,12 @@ export function Highlights({ articles }) {
         </div>
 
         <p style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', color: 'var(--ink-3)' }}>
-          Showing {filtered.length} of {articles.length} articles
+          Showing {visible.length} of {filtered.length} articles
         </p>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {filtered.map(a => {
+        {visible.map(a => {
           const color = topicColor(a.topic)
           const pct = Math.min(100, Math.round(a.tech_score * 100))
           return (
@@ -102,6 +116,17 @@ export function Highlights({ articles }) {
           )
         })}
       </div>
+
+      {hasMore && (
+        <div
+          onClick={() => setPage(p => p + 1)}
+          style={{ fontFamily: 'var(--mono)', fontSize: '0.72rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', textAlign: 'center', marginTop: 16, padding: '12px 0', border: '1px solid var(--border-2)', color: 'var(--ink-3)', cursor: 'pointer', transition: 'all 0.15s', background: 'var(--surface)' }}
+          onMouseEnter={e => { e.currentTarget.style.color = 'var(--ink)'; e.currentTarget.style.borderColor = 'var(--ink)' }}
+          onMouseLeave={e => { e.currentTarget.style.color = 'var(--ink-3)'; e.currentTarget.style.borderColor = 'var(--border-2)' }}
+        >
+          + {filtered.length - visible.length} Left - Load 10 more
+        </div>
+      )}
     </div>
   )
 }

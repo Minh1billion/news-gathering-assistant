@@ -4,7 +4,7 @@ import { Sidebar } from './components/Sidebar'
 import { ExportBar } from './components/ExportBar'
 import { Clusters } from './components/Clusters'
 import { Highlights } from './components/Highlights'
-import { KeywordsChart, TopicBarChart, DailyChart } from './components/Charts'
+import { KeywordsChart, TopicBarChart, TopicPieChart, DailyChart } from './components/Charts'
 import { SectionRule, MetricCard, Spinner } from './components/ui'
 import { fmtDate } from './lib/utils'
 import { api } from './lib/api'
@@ -30,11 +30,12 @@ function ReportHeader({ report }) {
   )
 }
 
-function ExecutiveSummary({ es }) {
+function ExecutiveSummary({ es, topicDistribution, dailyCounts }) {
   return (
     <div>
       <SectionRule label="Executive Summary" />
-      <div style={{ background: 'var(--ink)', color: '#d4d0c8', padding: '20px 24px', lineHeight: 1.75, fontSize: '0.88rem' }}>
+
+      <div style={{ background: 'var(--ink)', color: '#d4d0c8', padding: '20px 24px', lineHeight: 1.75, fontSize: '0.88rem', marginBottom: 24 }}>
         <p><strong style={{ color: '#f0ede8' }}>Overview</strong><br />{es.landscape}</p>
         <p style={{ marginTop: 16 }}>
           <strong style={{ color: '#f0ede8' }}>Dominant Topic</strong>&nbsp;&nbsp;
@@ -47,6 +48,17 @@ function ExecutiveSummary({ es }) {
           ))}
         </p>
       </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: 32 }}>
+        <div>
+          <p style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>Daily Volume</p>
+          <DailyChart daily={dailyCounts} />
+        </div>
+        <div>
+          <p style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>Topic Distribution</p>
+          <TopicPieChart topics={topicDistribution} />
+        </div>
+      </div>
     </div>
   )
 }
@@ -57,7 +69,7 @@ function KeywordsTopics({ report, onExclude, excludedCount, onReset, excludedKey
       <SectionRule label="Trending Keywords & Topic Distribution" />
       <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: 32 }}>
         <div>
-          <p style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>Top 15 — TF-IDF / Semantic</p>
+          <p style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>TF-IDF / Semantic — click keyword để ẩn</p>
           <KeywordsChart
             keywords={report.trending_keywords}
             onExclude={onExclude}
@@ -71,15 +83,6 @@ function KeywordsTopics({ report, onExclude, excludedCount, onReset, excludedKey
           <TopicBarChart topics={report.topic_distribution} />
         </div>
       </div>
-    </div>
-  )
-}
-
-function DailyVolume({ daily }) {
-  return (
-    <div>
-      <SectionRule label="Daily Volume" />
-      <DailyChart daily={daily} />
     </div>
   )
 }
@@ -138,7 +141,11 @@ export default function App() {
 
             <div ref={printRef} style={{ marginTop: 16 }}>
               <hr style={{ border: 'none', borderTop: '1px solid var(--border)', margin: '24px 0' }} />
-              <ExecutiveSummary es={report.executive_summary} />
+              <ExecutiveSummary
+                es={report.executive_summary}
+                topicDistribution={report.topic_distribution}
+                dailyCounts={report.daily_counts}
+              />
               <hr style={{ border: 'none', borderTop: '1px solid var(--border)', margin: '24px 0' }} />
               <KeywordsTopics
                 report={report}
@@ -147,8 +154,6 @@ export default function App() {
                 onReset={resetExcluded}
                 excludedKeywords={excludedKeywords}
               />
-              <hr style={{ border: 'none', borderTop: '1px solid var(--border)', margin: '24px 0' }} />
-              <DailyVolume daily={report.daily_counts} />
               <hr style={{ border: 'none', borderTop: '1px solid var(--border)', margin: '24px 0' }} />
               <Clusters clusters={report.clusters} />
               <hr style={{ border: 'none', borderTop: '1px solid var(--border)', margin: '24px 0' }} />

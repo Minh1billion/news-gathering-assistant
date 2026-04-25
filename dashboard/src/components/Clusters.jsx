@@ -38,6 +38,8 @@ export function Clusters({ clusters }) {
     keywords: c.top_keywords.slice(0, 5).map(k => k.keyword).join(', '),
   }))
 
+  const cols = clusters.length <= 3 ? clusters.length : clusters.length <= 6 ? 3 : 4
+
   return (
     <div>
       <SectionRule label="Cluster Analysis" />
@@ -76,9 +78,11 @@ export function Clusters({ clusters }) {
         </div>
       </div>
 
-      <p style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>Top 3 Clusters — Representative Articles</p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
-        {clusters.slice(0, 3).map(c => <ClusterCard key={c.cluster_id} cluster={c} />)}
+      <p style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>
+        All {clusters.length} Clusters - Representative Articles
+      </p>
+      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: 16 }}>
+        {clusters.map(c => <ClusterCard key={c.cluster_id} cluster={c} />)}
       </div>
     </div>
   )

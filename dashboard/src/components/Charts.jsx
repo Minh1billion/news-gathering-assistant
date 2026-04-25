@@ -3,6 +3,7 @@ import {
   BarChart, Bar, XAxis, YAxis, Tooltip, Legend,
   Area, AreaChart,
   ScatterChart, Scatter, ZAxis,
+  PieChart, Pie, Cell as PieCell,
   ResponsiveContainer, Cell,
 } from 'recharts'
 import { topicColor } from '../lib/utils'
@@ -35,21 +36,103 @@ function ExcludableYTick({ x, y, payload, onExclude }) {
   )
 }
 
+const RADIAN = Math.PI / 180
+function PieLabel({ cx, cy, midAngle, innerRadius, outerRadius, percentage, topic }) {
+  if (percentage < 5) return null
+  const r = innerRadius + (outerRadius - innerRadius) * 0.55
+  const x = cx + r * Math.cos(-midAngle * RADIAN)
+  const y = cy + r * Math.sin(-midAngle * RADIAN)
+  return (
+    <text x={x} y={y} textAnchor="middle" dominantBaseline="central"
+      style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: 9, fill: '#fff', fontWeight: 700, pointerEvents: 'none' }}>
+      {percentage}%
+    </text>
+  )
+}
+
+export function TopicPieChart({ topics }) {
+  const [active, setActive] = useState(null)
+  const data = [...topics].sort((a, b) => b.count - a.count)
+
+  return (
+    <div style={{ display: 'flex', gap: 24, alignItems: 'center' }}>
+      <ResponsiveContainer width="50%" height={220}>
+        <PieChart>
+          <Pie
+            data={data}
+            dataKey="count"
+            nameKey="topic"
+            cx="50%"
+            cy="50%"
+            innerRadius={52}
+            outerRadius={88}
+            paddingAngle={2}
+            labelLine={false}
+            label={PieLabel}
+            onMouseEnter={(_, i) => setActive(i)}
+            onMouseLeave={() => setActive(null)}
+          >
+            {data.map((d, i) => (
+              <PieCell
+                key={d.topic}
+                fill={topicColor(d.topic)}
+                opacity={active === null || active === i ? 1 : 0.4}
+                stroke="var(--bg)"
+                strokeWidth={2}
+                style={{ cursor: 'pointer', transition: 'opacity 0.15s' }}
+              />
+            ))}
+          </Pie>
+          <Tooltip
+            contentStyle={tooltipStyle}
+            formatter={(v, n, p) => [`${v} bài (${p.payload.percentage}%)`, 'Số lượng']}
+          />
+        </PieChart>
+      </ResponsiveContainer>
+
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 7 }}>
+        {data.map((d, i) => (
+          <div
+            key={d.topic}
+            onMouseEnter={() => setActive(i)}
+            onMouseLeave={() => setActive(null)}
+            style={{
+              display: 'flex', alignItems: 'center', gap: 8,
+              opacity: active === null || active === i ? 1 : 0.4,
+              transition: 'opacity 0.15s', cursor: 'default',
+            }}
+          >
+            <div style={{ width: 8, height: 8, borderRadius: '50%', background: topicColor(d.topic), flexShrink: 0 }} />
+            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.65rem', color: 'var(--ink-2)', flex: 1 }}>{d.topic}</span>
+            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.65rem', color: 'var(--ink-3)' }}>{d.count}</span>
+            <span style={{ fontFamily: 'IBM Plex Mono, monospace', fontSize: '0.62rem', color: 'var(--ink-3)', width: 36, textAlign: 'right' }}>{d.percentage}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export function KeywordsChart({ keywords, onExclude, excludedCount, onReset, excludedKeywords = new Set() }) {
-  const data = [...keywords]
+  const [showAll, setShowAll] = useState(false)
+  const PAGE = 15
+
+  const filtered = [...keywords]
     .filter(k => !excludedKeywords.has(k.keyword))
     .sort((a, b) => b.combined_score - a.combined_score)
-    .slice(0, 15)
-    .sort((a, b) => a.combined_score - b.combined_score)
+
+  const visible = showAll ? filtered : filtered.slice(0, PAGE)
+  const data = [...visible].sort((a, b) => a.combined_score - b.combined_score)
 
   const barHeight = 28
   const chartHeight = data.length * barHeight + 40
+  const hiddenCount = filtered.length - PAGE
 
   return (
     <div>
       {excludedCount > 0 && (
         <div style={{ fontFamily: MONO, fontSize: 10, color: '#888', marginBottom: 6, textAlign: 'right' }}>
-          {excludedCount} keyword ẩn —{' '}
+          {excludedCount} keyword ẩn -{' '}
           <span onClick={onReset} style={{ color: '#c0392b', cursor: 'pointer', textDecoration: 'underline' }}>
             reset
           </span>
@@ -75,6 +158,26 @@ export function KeywordsChart({ keywords, onExclude, excludedCount, onReset, exc
           <Bar dataKey="semantic_score" name="Semantic" fill="#95a5a6" opacity={0.7} radius={0} barSize={10} />
         </BarChart>
       </ResponsiveContainer>
+      {!showAll && hiddenCount > 0 && (
+        <div
+          onClick={() => setShowAll(true)}
+          style={{ fontFamily: MONO, fontSize: '0.65rem', color: 'var(--ink-3)', textAlign: 'center', marginTop: 8, cursor: 'pointer', padding: '6px 0', borderTop: '1px solid var(--border)', transition: 'color 0.15s' }}
+          onMouseEnter={e => e.currentTarget.style.color = 'var(--ink)'}
+          onMouseLeave={e => e.currentTarget.style.color = 'var(--ink-3)'}
+        >
+          + {hiddenCount} more keywords
+        </div>
+      )}
+      {showAll && hiddenCount > 0 && (
+        <div
+          onClick={() => setShowAll(false)}
+          style={{ fontFamily: MONO, fontSize: '0.65rem', color: 'var(--ink-3)', textAlign: 'center', marginTop: 8, cursor: 'pointer', padding: '6px 0', borderTop: '1px solid var(--border)', transition: 'color 0.15s' }}
+          onMouseEnter={e => e.currentTarget.style.color = 'var(--ink)'}
+          onMouseLeave={e => e.currentTarget.style.color = 'var(--ink-3)'}
+        >
+          ↑ Show less
+        </div>
+      )}
     </div>
   )
 }
@@ -169,7 +272,7 @@ export function ClusterScatter({ clusters }) {
             const d = payload[0]?.payload
             return (
               <div style={{ ...tooltipStyle, padding: '8px 12px' }}>
-                <p style={{ fontWeight: 600, marginBottom: 4 }}>{d?.label} — {d?.topic}</p>
+                <p style={{ fontWeight: 600, marginBottom: 4 }}>{d?.label} - {d?.topic}</p>
                 <p>Cohesion: {d?.x?.toFixed(4)}</p>
                 <p>Tech score: {d?.y?.toFixed(4)}</p>
                 <p>Articles: {d?.z}</p>

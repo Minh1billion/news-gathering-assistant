@@ -1,0 +1,1405 @@
+{
+  "generated_at": "2026-04-25T08:33:51.458362+00:00",
+  "week_start": "18/04/2026",
+  "week_end": "25/04/2026",
+  "stats": {
+    "total_tech_articles": 354,
+    "sources": 7,
+    "dominant_topic": "Phần mềm / Dev",
+    "dominant_topic_pct": 31.9,
+    "n_clusters": 8,
+    "date_range": "18/04/2026 - 25/04/2026"
+  },
+  "executive_summary": {
+    "landscape": "354 bài viết công nghệ từ 7 nguồn trong tuần 18/04/2026 - 25/04/2026.",
+    "dominant_topic": "Phần mềm / Dev",
+    "dominant_topic_pct": 31.9,
+    "top_keywords": [
+      "hệ_thống",
+      "thiết_bị",
+      "apple"
+    ],
+    "highlight_count": 30
+  },
+  "trending_keywords": [
+    {
+      "rank": 1,
+      "keyword": "hệ_thống",
+      "tfidf_score": 0.04378,
+      "semantic_score": 0.41251,
+      "combined_score": 0.01806
+    },
+    {
+      "rank": 2,
+      "keyword": "thiết_bị",
+      "tfidf_score": 0.04751,
+      "semantic_score": 0.33237,
+      "combined_score": 0.01579
+    },
+    {
+      "rank": 3,
+      "keyword": "apple",
+      "tfidf_score": 0.07149,
+      "semantic_score": 0.21121,
+      "combined_score": 0.0151
+    },
+    {
+      "rank": 4,
+      "keyword": "iphone",
+      "tfidf_score": 0.04576,
+      "semantic_score": 0.30689,
+      "combined_score": 0.01404
+    },
+    {
+      "rank": 5,
+      "keyword": "máy",
+      "tfidf_score": 0.03279,
+      "semantic_score": 0.40269,
+      "combined_score": 0.0132
+    },
+    {
+      "rank": 6,
+      "keyword": "ứng_dụng",
+      "tfidf_score": 0.03223,
+      "semantic_score": 0.33932,
+      "combined_score": 0.01094
+    },
+    {
+      "rank": 7,
+      "keyword": "ai",
+      "tfidf_score": 0.07985,
+      "semantic_score": 0.13399,
+      "combined_score": 0.0107
+    },
+    {
+      "rank": 8,
+      "keyword": "màn_hình",
+      "tfidf_score": 0.02837,
+      "semantic_score": 0.34473,
+      "combined_score": 0.00978
+    },
+    {
+      "rank": 9,
+      "keyword": "điện_thoại",
+      "tfidf_score": 0.0469,
+      "semantic_score": 0.20446,
+      "combined_score": 0.00959
+    },
+    {
+      "rank": 10,
+      "keyword": "công_ty",
+      "tfidf_score": 0.04514,
+      "semantic_score": 0.20424,
+      "combined_score": 0.00922
+    },
+    {
+      "rank": 11,
+      "keyword": "mô_hình",
+      "tfidf_score": 0.03487,
+      "semantic_score": 0.25432,
+      "combined_score": 0.00887
+    },
+    {
+      "rank": 12,
+      "keyword": "lên",
+      "tfidf_score": 0.03698,
+      "semantic_score": 0.23036,
+      "combined_score": 0.00852
+    },
+    {
+      "rank": 13,
+      "keyword": "hóa",
+      "tfidf_score": 0.02907,
+      "semantic_score": 0.28587,
+      "combined_score": 0.00831
+    },
+    {
+      "rank": 14,
+      "keyword": "sản_phẩm",
+      "tfidf_score": 0.0389,
+      "semantic_score": 0.21332,
+      "combined_score": 0.0083
+    },
+    {
+      "rank": 15,
+      "keyword": "chip",
+      "tfidf_score": 0.02235,
+      "semantic_score": 0.36954,
+      "combined_score": 0.00826
+    },
+    {
+      "rank": 16,
+      "keyword": "nền_tảng",
+      "tfidf_score": 0.02472,
+      "semantic_score": 0.3326,
+      "combined_score": 0.00822
+    },
+    {
+      "rank": 17,
+      "keyword": "văn_hóa",
+      "tfidf_score": 0.02858,
+      "semantic_score": 0.28727,
+      "combined_score": 0.00821
+    },
+    {
+      "rank": 18,
+      "keyword": "tính_năng",
+      "tfidf_score": 0.03337,
+      "semantic_score": 0.24496,
+      "combined_score": 0.00817
+    },
+    {
+      "rank": 19,
+      "keyword": "việt_nam",
+      "tfidf_score": 0.06875,
+      "semantic_score": 0.11581,
+      "combined_score": 0.00796
+    },
+    {
+      "rank": 20,
+      "keyword": "dữ_liệu",
+      "tfidf_score": 0.04012,
+      "semantic_score": 0.19753,
+      "combined_score": 0.00793
+    },
+    {
+      "rank": 21,
+      "keyword": "năng_lượng",
+      "tfidf_score": 0.02432,
+      "semantic_score": 0.32186,
+      "combined_score": 0.00783
+    },
+    {
+      "rank": 22,
+      "keyword": "doanh_nghiệp",
+      "tfidf_score": 0.03609,
+      "semantic_score": 0.19709,
+      "combined_score": 0.00711
+    },
+    {
+      "rank": 23,
+      "keyword": "vận_hành",
+      "tfidf_score": 0.02284,
+      "semantic_score": 0.30993,
+      "combined_score": 0.00708
+    },
+    {
+      "rank": 24,
+      "keyword": "sản_xuất",
+      "tfidf_score": 0.02764,
+      "semantic_score": 0.2543,
+      "combined_score": 0.00703
+    },
+    {
+      "rank": 25,
+      "keyword": "tài_khoản",
+      "tfidf_score": 0.02419,
+      "semantic_score": 0.28852,
+      "combined_score": 0.00698
+    },
+    {
+      "rank": 26,
+      "keyword": "mạng",
+      "tfidf_score": 0.02591,
+      "semantic_score": 0.2615,
+      "combined_score": 0.00678
+    },
+    {
+      "rank": 27,
+      "keyword": "tăng",
+      "tfidf_score": 0.03672,
+      "semantic_score": 0.18003,
+      "combined_score": 0.00661
+    },
+    {
+      "rank": 28,
+      "keyword": "google",
+      "tfidf_score": 0.02457,
+      "semantic_score": 0.2621,
+      "combined_score": 0.00644
+    },
+    {
+      "rank": 29,
+      "keyword": "nhất",
+      "tfidf_score": 0.04724,
+      "semantic_score": 0.13547,
+      "combined_score": 0.0064
+    },
+    {
+      "rank": 30,
+      "keyword": "đổi_mới sáng_tạo",
+      "tfidf_score": 0.01682,
+      "semantic_score": 0.37193,
+      "combined_score": 0.00626
+    }
+  ],
+  "topic_distribution": [
+    {
+      "topic": "Phần mềm / Dev",
+      "count": 113,
+      "percentage": 31.9
+    },
+    {
+      "topic": "AI / ML",
+      "count": 97,
+      "percentage": 27.4
+    },
+    {
+      "topic": "An ninh mạng",
+      "count": 59,
+      "percentage": 16.7
+    },
+    {
+      "topic": "Thiết bị di động",
+      "count": 31,
+      "percentage": 8.8
+    },
+    {
+      "topic": "Phần cứng / Server",
+      "count": 22,
+      "percentage": 6.2
+    },
+    {
+      "topic": "Xe điện / Năng lượng",
+      "count": 15,
+      "percentage": 4.2
+    },
+    {
+      "topic": "Startup / Đầu tư",
+      "count": 10,
+      "percentage": 2.8
+    },
+    {
+      "topic": "Crypto / Blockchain",
+      "count": 5,
+      "percentage": 1.4
+    },
+    {
+      "topic": "Mạng xã hội",
+      "count": 2,
+      "percentage": 0.6
+    }
+  ],
+  "daily_counts": [
+    {
+      "date": "2026-04-16",
+      "count": 4
+    },
+    {
+      "date": "2026-04-17",
+      "count": 11
+    },
+    {
+      "date": "2026-04-18",
+      "count": 8
+    },
+    {
+      "date": "2026-04-19",
+      "count": 9
+    },
+    {
+      "date": "2026-04-20",
+      "count": 10
+    },
+    {
+      "date": "2026-04-21",
+      "count": 34
+    },
+    {
+      "date": "2026-04-22",
+      "count": 60
+    },
+    {
+      "date": "2026-04-23",
+      "count": 80
+    },
+    {
+      "date": "2026-04-24",
+      "count": 81
+    },
+    {
+      "date": "2026-04-25",
+      "count": 57
+    }
+  ],
+  "clusters": [
+    {
+      "cluster_id": 5,
+      "topic": "AI / ML",
+      "article_count": 50,
+      "avg_tech_score": 0.4393,
+      "cohesion_score": 0.742,
+      "combined_score": 1.5101,
+      "top_keywords": [
+        [
+          "ai",
+          0.13727
+        ],
+        [
+          "google",
+          0.07222
+        ],
+        [
+          "mô_hình",
+          0.07174
+        ],
+        [
+          "openai",
+          0.06029
+        ],
+        [
+          "ảnh",
+          0.0602
+        ],
+        [
+          "gemini",
+          0.05823
+        ],
+        [
+          "tính_năng",
+          0.0552
+        ],
+        [
+          "công_ty",
+          0.05374
+        ],
+        [
+          "dữ_liệu",
+          0.05097
+        ],
+        [
+          "hình_ảnh",
+          0.05071
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Facebook theo dõi chuột, bàn phím của nhân viên",
+          "source": "zingnews",
+          "url": "https://znews.vn/meta-gay-bao-noi-bo-post1645559.html",
+          "published_at": "2026-04-22 03:30:06+00:00",
+          "tech_score": 0.6082,
+          "content_snippet": "Meta dùng chính hành động thường ngày của nhân viên để huấn luyện mô hình AI. Ảnh:Reuters. TheoReuters, toàn bộ dữ liệu được Meta thu thập từ nhân viên sẽ được dùng để huấn luyện các mô hình AI của công ty. Phần mềm được đặt tên Sáng kiến Khả năng Mô hình, hoạt động trên các ứng dụng và trang web li"
+        },
+        {
+          "rank": 2,
+          "title": "Meta thu thập thao tác chuột và bàn phím của nhân viên",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/meta-thu-thap-thao-tac-chuot-va-ban-phim-cua-nhan-vien-5065513.html",
+          "published_at": "2026-04-22 12:00:00+00:00",
+          "tech_score": 0.5584,
+          "content_snippet": "TheoReuters, Meta cài đặt công cụ có tên Sáng kiến năng lực mô hình (Model Capability Initiative - MCI) trên máy tính nhân viên, cho phép ghi lại thao tác với chuột và bàn phím. Đây là một phần của trong chiến dịch lớn hơn của công ty Mark Zuckerberg nhằm xây dựng các tác nhân AI có thể thực hiện cô"
+        },
+        {
+          "rank": 3,
+          "title": "Tin vui cho người dùng AI Gemini tại Việt Nam: Có nhiều cải tiến đột phá từ hôm nay!",
+          "source": "soha",
+          "url": "https://soha.vn/tin-vui-cho-nguoi-dung-ai-gemini-tai-viet-nam-co-nhieu-cai-tien-dot-pha-tu-hom-nay-198260421143524353.htm",
+          "published_at": "2026-04-21 15:24:00+00:00",
+          "tech_score": 0.5056,
+          "content_snippet": "Trình duyệt chính là nơi chúng ta làm việc, học hỏi những điều mới và kết nối vớithế giới. Tuy nhiên, đôi khi những tác vụ trực tuyến như đọc một bài nghiên cứu hóa học dài hay tìm ý tưởng nhanh cho bữa tối có thể mang lại cảm giác tẻ nhạt và làm chậm tiến độ của bạn. Đó là lý do Google cải tiến Chr"
+        },
+        {
+          "rank": 4,
+          "title": "OpenAI ra mắt GPT-5.5, tham vọng biến AI thành 'siêu ứng dụng'",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/openai-ra-mat-gpt-5-5-tham-vong-bien-ai-thanh-sieu-ung-dung-20260424110824248.htm",
+          "published_at": "2026-04-24 21:07:58+00:00",
+          "tech_score": 0.562,
+          "content_snippet": "Ảnh minh họa người dùng tương tác với mô hình AI GPT-5.5 trên máy tính OpenAIvừa công bố GPT-5.5, phiên bản mới của mô hình trí tuệ nhân tạo với nhiều nâng cấp đáng chú ý về khả năng xử lý công việc thực tế. Theo hãng, đây là phiên bản \"thông minh và trực quan nhất\" từ trước đến nay, không chỉ dừng "
+        },
+        {
+          "rank": 5,
+          "title": "YouTube thử nghiệm tạo ‘bản sao AI’ người dùng, tiện lợi đi kèm rủi ro giả mạo",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/youtube-thu-nghiem-tao-ban-sao-ai-nguoi-dung-tien-loi-di-kem-rui-ro-gia-mao-20260415155015294.htm",
+          "published_at": "2026-04-16 15:16:10+00:00",
+          "tech_score": 0.4603,
+          "content_snippet": "Minh họa tính năng tạo avatar AI trên YouTube Shorts Trong bối cảnh trí tuệ nhân tạo ngày càng được tích hợp sâu vào các nền tảng số,YouTubeđang thử nghiệm tính năng tạo avatar AI có khả năng tái hiện khuôn mặt và giọng nói người dùng trong video Shorts. Công cụ này được xem là bước tiến trong tự độ"
+        }
+      ]
+    },
+    {
+      "cluster_id": 4,
+      "topic": "Phần cứng / Server",
+      "article_count": 22,
+      "avg_tech_score": 0.3258,
+      "cohesion_score": 0.8055,
+      "combined_score": 1.1424,
+      "top_keywords": [
+        [
+          "apple",
+          0.41582
+        ],
+        [
+          "công_ty",
+          0.10935
+        ],
+        [
+          "ai",
+          0.10055
+        ],
+        [
+          "sản_phẩm",
+          0.09546
+        ],
+        [
+          "nhất",
+          0.06812
+        ],
+        [
+          "iphone",
+          0.06091
+        ],
+        [
+          "chủ_tịch",
+          0.05455
+        ],
+        [
+          "kỹ_thuật",
+          0.054
+        ],
+        [
+          "tới",
+          0.0523
+        ],
+        [
+          "phần_cứng",
+          0.05171
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Kết thúc kỷ nguyên Tim Cook: 15 năm lẫy lừng và dấu chấm hỏi AI trị giá hàng nghìn tỷ USD",
+          "source": "soha",
+          "url": "https://soha.vn/ket-thuc-ky-nguyen-tim-cook-15-nam-lay-lung-va-dau-cham-hoi-ai-tri-gia-hang-nghin-ty-usd-198260423142827452.htm",
+          "published_at": "2026-04-24 01:00:00+00:00",
+          "tech_score": 0.331,
+          "content_snippet": "Tim Cook rời vị trí lãnh đạo cao nhất khi doanh thu của Apple đã tăng gấp bốn lần so với thời điểm ông tiếp quản. Theo tờ WSJ, Steve Jobs sẽ mãi mãi được ghi danh là người phát minh ra iPhone, nhưng chính Tim Cook mới là người dùng \"vũ khí\" đó để xây dựng nên một đế chế toàn cầu. Mới đây, Tim Cook ("
+        },
+        {
+          "rank": 2,
+          "title": "15 năm xây dựng đế chế nghìn tỉ của CEO Tim Cook",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/15-nam-xay-dung-de-che-nghin-ti-cua-ceo-tim-cook-20260421131947209.htm",
+          "published_at": "2026-04-21 21:10:00+00:00",
+          "tech_score": 0.3565,
+          "content_snippet": "Vision Pro, một kính thực tế hỗn hợp mới được Apple ra mắt vào tháng 6-2023 - Ảnh: APPLE Theo báoNew York Times, ngày 21-4, CEO Apple Tim Cook tuyên bố sẽ từ chức sau gần 15 năm lãnh đạo tập đoàn công nghệ giá trị hàng đầu thế giới. Sau khi rời ghế, ông sẽ đảm nhiệm vai trò chủ tịch điều hành. Khi t"
+        },
+        {
+          "rank": 3,
+          "title": "Tim Cook làm được gì tại Apple",
+          "source": "zingnews",
+          "url": "https://znews.vn/tim-cook-lam-duoc-gi-tai-apple-post1645588.html",
+          "published_at": "2026-04-22 05:07:30+00:00",
+          "tech_score": 0.269,
+          "content_snippet": "Applevừa xác nhận Tim Cook sẽ rời chức vụ CEO công ty vào ngày 1/9. Người thay thế ông là John Ternus, hiện là Phó chủ tịch cấp cao phụ trách kỹ thuật phần cứng. Tim Cook, 65 tuổi, sẽ tiếp tục giữ chức CEO cho đến cuối tháng 8 để hỗ trợ giai đoạn chuyển giao, diễn ra sau một \"quá trình lập kế hoạch "
+        },
+        {
+          "rank": 4,
+          "title": "Cựu kỹ sư cơ khí 51 tuổi sẽ thay Tim Cook điều hành đế chế Apple trị giá 4.000 tỷ USD",
+          "source": "soha",
+          "url": "https://soha.vn/cuu-ky-su-co-khi-51-tuoi-se-thay-tim-cook-dieu-hanh-de-che-apple-tri-gia-4000-ty-usd-198260421095854877.htm",
+          "published_at": "2026-04-21 05:00:00+00:00",
+          "tech_score": 0.2958,
+          "content_snippet": "John Ternus, Phó Chủ tịch cấp cao 51 tuổi phụ trách kỹ thuật phần cứng, chính thức được bổ nhiệm làm người kế nhiệm CEO Tim Cook. Tim Cook sẽ chuyển sang giữ chức Chủ tịch điều hành Hội đồng quản trị và vẫn tiếp tục đảm nhiệm vai trò CEO trong suốt mùa hè này để hỗ trợ quá trình chuyển giao. “Được d"
+        },
+        {
+          "rank": 5,
+          "title": "15 năm của Tim Cook tại Apple: Từ giữ cỗ máy vận hành đến người định hình một đế chế 4.000 tỷ USD",
+          "source": "soha",
+          "url": "https://soha.vn/15-nam-cua-tim-cook-tai-apple-tu-giu-co-may-van-hanh-den-nguoi-dinh-hinh-mot-de-che-4000-ty-usd-198260425090620628.htm",
+          "published_at": "2026-04-25 05:09:00+00:00",
+          "tech_score": 0.3459,
+          "content_snippet": "Năm 2011, ông Tim Cook đảm nhiệm vị trí CEO Apple sau khi nhà đồng sáng lập nổi tiếng Steve Jobs qua đời. Kế thừa một cỗ máy mang tính đầy tính sáng tạo và là hãng khởi xướng nên cuộc cách mạng smartphone kéo theo một sức nặng vô hình khổng lồ khi ông Cook liên tục bị so sánh với người tiền nhiệm củ"
+        }
+      ]
+    },
+    {
+      "cluster_id": 7,
+      "topic": "Thiết bị di động",
+      "article_count": 42,
+      "avg_tech_score": 0.3632,
+      "cohesion_score": 0.7114,
+      "combined_score": 0.6992,
+      "top_keywords": [
+        [
+          "iphone",
+          0.15075
+        ],
+        [
+          "apple",
+          0.1112
+        ],
+        [
+          "samsung",
+          0.07639
+        ],
+        [
+          "màn_hình",
+          0.06995
+        ],
+        [
+          "máy",
+          0.06484
+        ],
+        [
+          "ảnh",
+          0.06385
+        ],
+        [
+          "điện_thoại",
+          0.06331
+        ],
+        [
+          "nhất",
+          0.06223
+        ],
+        [
+          "giá",
+          0.06173
+        ],
+        [
+          "dòng",
+          0.06076
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "iPhone 18 Ultra màn hình gập lộ diện thiết kế",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/iphone-18-ultra-man-hinh-gap-lo-dien-thiet-ke-185260424130932449.htm",
+          "published_at": "2026-04-24 06:51:00+00:00",
+          "tech_score": 0.3431,
+          "content_snippet": "Những hình ảnh rò rỉ đầu tiên về bộ baiPhone 18 Pro, Pro Max và đặc biệt là biến thể màn hình gập iPhone 18 Ultra vừa xuất hiện. Tuy nhiên, siêu phẩm đắt giá nhất lịch sử Apple lại mang đến nhiều tranh cãi hơn là sự kỳ vọng. Loạt mô hình của thế hệ iPhone 18 đã lộ diện ẢNH: GSMARENA Theo các bản vẽ "
+        },
+        {
+          "rank": 2,
+          "title": "Mẫu điện thoại Android không ồn ào nhưng ‘được việc’",
+          "source": "zingnews",
+          "url": "https://znews.vn/mau-dien-thoai-android-khong-on-ao-nhung-duoc-viec-post1645817.html",
+          "published_at": "2026-04-22 15:15:27+00:00",
+          "tech_score": 0.2973,
+          "content_snippet": "Trong số những hãng công nghệ, Samsung     thường là người “mở hàng” đầu tiên trong năm với những mẫu Galaxy S. Tất nhiên,     áp lực từ việc ra mắt sớm nhất là hãng cần có sản phẩm đủ khác biệt, hấp dẫn để     thu hút người dùng. Nhưng việc tạo nên khác biệt cũng ngày     càng khó, khi thiết kế, tí"
+        },
+        {
+          "rank": 3,
+          "title": "'Nốt ruồi' trên Galaxy Z Fold8 thu nhỏ bất ngờ nhờ công nghệ mới",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/not-ruoi-tren-galaxy-z-fold8-thu-nho-bat-ngo-nho-cong-nghe-moi-185260425104327348.htm",
+          "published_at": "2026-04-25 07:12:00+00:00",
+          "tech_score": 0.374,
+          "content_snippet": "Những rò rỉ mới nhất từ chuỗi cung ứng cho thấy Samsung đang chuẩn bị một cuộc cách mạng về thẩm mỹ trên dòng smartphone màn hình gậpGalaxy Z Fold8thế hệ tiếp theo. Dù thiết kế tổng thể không có quá nhiều thay đổi đột phá, nhưng một chi tiết nhỏ ở mặt trước đang khiến giới công nghệ phải xôn xao. Th"
+        },
+        {
+          "rank": 4,
+          "title": "Mô hình iPhone gập so dáng cùng thiết bị Apple",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/mo-hinh-iphone-gap-so-dang-cung-thiet-bi-apple-5066904.html",
+          "published_at": "2026-04-25 08:00:00+00:00",
+          "tech_score": 0.3975,
+          "content_snippet": "Mô hình là sản phẩm mô phỏng không hoạt động (dummy) của thiết bị mới, được các nhà sản xuất ốp lưng sử dụng để tạo phụ kiện dựa trên thông số do hãng sở hữu thiết bị cung cấp, hoặc dựa trên các nguồn rò rỉ uy tín. Kênh YouTube nổi tiếngMax Techchia sẻ hình ảnh so sánh chi tiết giữa mô hình iPhone g"
+        },
+        {
+          "rank": 5,
+          "title": "Hãng Trung Quốc mất 5 năm để làm một chiếc camera",
+          "source": "zingnews",
+          "url": "https://znews.vn/hang-trung-quoc-mat-5-nam-de-lam-mot-chiec-camera-post1645663.html",
+          "published_at": "2026-04-23 00:06:21+00:00",
+          "tech_score": 0.2997,
+          "content_snippet": "Nằm trên định vị Pro đã được Apple thiết lập, các hãng Android có phân hạng “Ultra” dành cho sản phẩm tốt nhất năm của họ. Hậu tố này đánh dấu phiên bản đầu bảng, được dồn toàn bộ tinh túy ở camera. Đây là những mẫu máy giá rất cao, lượng bán ít, thường không ảnh hưởng đến doanh thu tổng thể. Tuy nh"
+        }
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "topic": "Phần mềm / Dev",
+      "article_count": 39,
+      "avg_tech_score": 0.387,
+      "cohesion_score": 0.6758,
+      "combined_score": 0.6052,
+      "top_keywords": [
+        [
+          "thiết_bị",
+          0.0697
+        ],
+        [
+          "điện_thoại",
+          0.0617
+        ],
+        [
+          "bitcoin",
+          0.04987
+        ],
+        [
+          "sạc",
+          0.04898
+        ],
+        [
+          "tính_năng",
+          0.044
+        ],
+        [
+          "dữ_liệu",
+          0.04267
+        ],
+        [
+          "khóa",
+          0.04216
+        ],
+        [
+          "giá",
+          0.04145
+        ],
+        [
+          "nhất",
+          0.04144
+        ],
+        [
+          "nước",
+          0.04114
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Lỗi nhỏ với khóa thông minh có thể khiến người dùng không thể vào nhà",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/loi-nho-voi-khoa-thong-minh-co-the-khien-nguoi-dung-khong-the-vao-nha-185260423091937744.htm",
+          "published_at": "2026-04-24 01:18:00+00:00",
+          "tech_score": 0.426,
+          "content_snippet": "Với khả năng lắp đặt nhanh chóng chỉ trong vài phút và kết nối Wi-Fi, người dùng có thể dễ dàng điều khiển và giám sát khóa từ xa. Tuy nhiên, một trong những tính năng nổi bật của nhiềukhóa thông minhhiện nay có tên geofencing (khoanh vùng địa lý) có thể trở thành cơn ác mộng nếu không hoạt động đún"
+        },
+        {
+          "rank": 2,
+          "title": "Chế độ ẩn danh có thực sự bảo mật?",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/che-do-an-danh-co-thuc-su-bao-mat-185260421132824696.htm",
+          "published_at": "2026-04-22 01:17:00+00:00",
+          "tech_score": 0.4158,
+          "content_snippet": "Chế độ ẩn danh (Incognito Mode) là tính năng quen thuộc trên mọi trình duyệt, từ Chrome, Safari cho đến Edge. Dù hữu ích trong việc che giấu lịch sửduyệt webvới người dùng chung máy tính, nhưng nó lại bị 'thần thánh hóa' quá mức về khả năng bảo mật. Dưới đây là 5 lầm tưởng kinh điển cần ngừng tin tư"
+        },
+        {
+          "rank": 3,
+          "title": "Thói quen trang trí laptop có thể khiến máy nhanh xuống cấp",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/thoi-quen-trang-tri-laptop-co-the-khien-may-nhanh-xuong-cap-185260424015719171.htm",
+          "published_at": "2026-04-24 00:17:00+00:00",
+          "tech_score": 0.4221,
+          "content_snippet": "Cho dù chọn thương hiệulaptopnào, sản phẩm cuối cùng vẫn thường chỉ là một chiếc máy tính hình chữ nhật màu xám hoặc đen. Một trong những cách phổ biến để làm nổi bật chiếc laptop đó là sử dụng các hình dán thời trang. Tuy nhiên, nhiều người lại không chú ý đến vị trí dán hình dán, vốn rất quan trọn"
+        },
+        {
+          "rank": 4,
+          "title": "Cách 'hồi sinh' smartphone Android bật không lên nguồn",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/cach-hoi-sinh-smartphone-android-bat-khong-len-nguon-185260420084229074.htm",
+          "published_at": "2026-04-23 01:50:00+00:00",
+          "tech_score": 0.3182,
+          "content_snippet": "Nhiều người dùng hoảng loạn khi chiếc smartphoneAndroidbỗng nhiên lăn ra 'chết giấc', không nhận sạc và cũng không thể khởi động. Tuy nhiên, sự thật có thể chỉ nằm ở cơ chế 'ngủ đông' của pin ít người biết tới. Trong quá trình sử dụng, người dùng có thể vô tình để điện thoại cạn sạch năng lượng đến "
+        },
+        {
+          "rank": 5,
+          "title": "Thói quen sạc pin phổ biến đang làm hỏng điện thoại",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/thoi-quen-sac-pin-pho-bien-dang-lam-hong-dien-thoai-185260419155544395.htm",
+          "published_at": "2026-04-23 04:01:00+00:00",
+          "tech_score": 0.4096,
+          "content_snippet": "Hầu hết mọi người đều có thói quen sạc đầy pin điện thoại mỗi đêm, nhưng việc này có thể gây hại chopin lithium-ion, loại pin phổ biến trong điện thoại Android và iPhone. Thực tế cho thấy, pin sẽ xuống cấp nhanh hơn nếu được sạc đầy hoặc cạn kiệt hoàn toàn trong thời gian dài. Nhiều điện thoại hiện "
+        }
+      ]
+    },
+    {
+      "cluster_id": 6,
+      "topic": "AI / ML",
+      "article_count": 33,
+      "avg_tech_score": 0.3353,
+      "cohesion_score": 0.7127,
+      "combined_score": 0.4982,
+      "top_keywords": [
+        [
+          "trung_quốc",
+          0.11205
+        ],
+        [
+          "ai",
+          0.086
+        ],
+        [
+          "robot_hình",
+          0.08092
+        ],
+        [
+          "hệ_thống",
+          0.065
+        ],
+        [
+          "việt_nam",
+          0.06223
+        ],
+        [
+          "vũ_trụ",
+          0.05768
+        ],
+        [
+          "thiết_bị",
+          0.05717
+        ],
+        [
+          "thị_trường",
+          0.0527
+        ],
+        [
+          "không_gian",
+          0.04932
+        ],
+        [
+          "hàng",
+          0.04857
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Tàu vũ trụ chở hàng Trung Quốc hoàn thành loạt thử nghiệm",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/tau-vu-tru-cho-hang-trung-quoc-hoan-thanh-loat-thu-nghiem-5064100.html",
+          "published_at": "2026-04-19 08:00:00+00:00",
+          "tech_score": 0.2888,
+          "content_snippet": "Viện Đổi mới Vệ tinh siêu nhỏ thuộc Viện hàn lâm Khoa học Trung Quốc (IAMCAS), đơn vị phát triển tàu, cho biết chuyến bay đã xác nhận những công nghệ then chốt cho các vụ phóng tương lai, đồng thời thúc đẩy chương trình không gian thương mại của nước này. \"Tàu vũ trụ chở hàng Khinh Châu sẽ tiếp tục "
+        },
+        {
+          "rank": 2,
+          "title": "90% đơn hàng robot hình người chỉ để… chụp ảnh? Sự thật ngã ngửa phía sau những bản hợp đồng robot “khủng” tại Trung Quốc",
+          "source": "soha",
+          "url": "https://soha.vn/90-don-hang-robot-hinh-nguoi-chi-de-chup-anh-su-that-nga-ngua-phia-sau-nhung-ban-hop-dong-robot-khung-tai-trung-quoc-198260424160144601.htm",
+          "published_at": "2026-04-25 02:30:00+00:00",
+          "tech_score": 0.3355,
+          "content_snippet": "Theo tờ Huxiu, năm 2026 sẽ đánh dấu một thời điểm bản lề của ngành robot hình người tại Trung Quốc, không phải bằng sự bùng nổ về quy mô như kỳ vọng, mà là bằng một cuộc sàng lọc khắc nghiệt. Đó là năm mà những kì vọng về nhu cầu thị trường bị gạt bỏ, nhường chỗ cho sự phân tầng thực tế của các kịch"
+        },
+        {
+          "rank": 3,
+          "title": "Trung Quốc tiếp tục đạt được thành tựu mới, nhắm vào vị trí thế mạnh mà Elon Musk đang làm \"bá chủ\"",
+          "source": "soha",
+          "url": "https://soha.vn/trung-quoc-tiep-tuc-dat-duoc-thanh-tuu-moi-nham-vao-vi-tri-the-manh-ma-elon-musk-dang-lam-ba-chu-198260424201536702.htm",
+          "published_at": "2026-04-24 13:15:00+00:00",
+          "tech_score": 0.3503,
+          "content_snippet": "Không gian đang nổi lên như một lĩnh vực chiến lược được định hình bởi nguồn tài nguyên khan hiếm và sự thay đổi công nghệ nhanh chóng. Sự phát triển của SpaceX đã thúc đẩy làn sóng đầu tư mạnh mẽ tại Trung Quốc. Theo Tập đoàn Khoa học và Công nghệ Hàng không Vũ trụ Trung Quốc, nhà thầu vũ trụ hàng "
+        },
+        {
+          "rank": 4,
+          "title": "AI 'phá băng' cho ngành thiết bị gia dụng",
+          "source": "thanhnien",
+          "url": "https://thanhnien.vn/ai-pha-bang-cho-nganh-thiet-bi-gia-dung-185260424090424923.htm",
+          "published_at": "2026-04-24 03:12:00+00:00",
+          "tech_score": 0.4492,
+          "content_snippet": "Trái với các dự báo về sự bão hòa của thị trường \"đồ trắng\" (nhóm thiết bị gia dụng cỡ lớn như tủ lạnh, máy giặt…), ngành công nghiệp này vẫn duy trì sức hút. Theo dữ liệu được công bố từ Hội nghị Đối tác toàn cầu TCL 2026 (GPC 2026 - diễn ra ở Thâm Quyến, Trung Quốc), AI đang định hình lại toàn bộ "
+        },
+        {
+          "rank": 5,
+          "title": "Chưa từng có trên thế giới: Trung Quốc chế tạo cỗ máy hồi sinh công nghệ cách đây hơn 100 năm, làm rung chuyển ngành năng lượng toàn cầu",
+          "source": "soha",
+          "url": "https://soha.vn/chua-tung-co-tren-the-gioi-trung-quoc-che-tao-co-may-hoi-sinh-cong-nghe-cach-day-hon-100-nam-lam-rung-chuyen-nganh-nang-luong-toan-cau-198260422135350907.htm",
+          "published_at": "2026-04-22 08:00:00+00:00",
+          "tech_score": 0.3772,
+          "content_snippet": "Trung Quốc đã phát triển một thiết bị bù đồng bộ cao áp đầu tiên trênthế giới, đánh dấu sự hồi sinh công nghệ ổn định lưới điện có tuổi đời hàng thế kỷ để hỗ trợ quá trình chuyển đổi sang năng lượng tái tạo. Mới đây, hãng tin Electric Power News (Trung Quốc) đưa tin rằng một quay kết nối trực tiếp ở"
+        }
+      ]
+    },
+    {
+      "cluster_id": 3,
+      "topic": "An ninh mạng",
+      "article_count": 49,
+      "avg_tech_score": 0.3228,
+      "cohesion_score": 0.6864,
+      "combined_score": 0.2014,
+      "top_keywords": [
+        [
+          "công_an",
+          0.08334
+        ],
+        [
+          "tiền",
+          0.07987
+        ],
+        [
+          "điện_thoại",
+          0.07863
+        ],
+        [
+          "thuê",
+          0.07271
+        ],
+        [
+          "ngân_hàng",
+          0.05982
+        ],
+        [
+          "đối_tượng",
+          0.05755
+        ],
+        [
+          "tài_khoản",
+          0.05376
+        ],
+        [
+          "tỉnh",
+          0.05215
+        ],
+        [
+          "việt_nam",
+          0.05073
+        ],
+        [
+          "giao_dịch",
+          0.05034
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Điện thoại hiện lên dòng chữ này là biểu hiện bị chiếm đoạt SIM để xâm nhập tài khoản ngân hàng",
+          "source": "soha",
+          "url": "https://soha.vn/dien-thoai-hien-len-dong-chu-nay-la-bieu-hien-bi-chiem-doat-sim-de-xam-nhap-tai-khoan-ngan-hang-198260424140849201.htm",
+          "published_at": "2026-04-24 14:00:00+00:00",
+          "tech_score": 0.3528,
+          "content_snippet": "Thời gian gần đây, nhiều người dân bất ngờ gặp tình trạng điện thoại mất sóng kéo dài, không thể thực hiện cuộc gọi, nhắn tin, trong khi khu vực xung quanh vẫn có tín hiệu bình thường. Đây có thể không chỉ là sự cố kỹ thuật thông thường mà còn là dấu hiệu cảnh báo SIM đã bị đối tượng xấu chiếm quyền"
+        },
+        {
+          "rank": 2,
+          "title": "Xác thực SIM qua VNeID: Bước ngoặt dẹp SIM rác, mở đường định danh số",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/xac-thuc-sim-qua-vneid-buoc-ngoat-dep-sim-rac-mo-duong-dinh-danh-so-20260417162756213.htm",
+          "published_at": "2026-04-18 15:44:42+00:00",
+          "tech_score": 0.318,
+          "content_snippet": "Giờ đây số điện thoại sẽ được xác minh thông qua VNeID để tránh tình trạng sử dụng sim rác. Trong nhiều năm, SIM rác không chỉ gây phiền toái mà còn trở thành điểm khởi phát cho các hành vi lừa đảo, mạo danh. Việc đưaVNeIDvào xác thực thuê bao phản ánh một cách tiếp cận mới, nơi danh tính số dần trở"
+        },
+        {
+          "rank": 3,
+          "title": "Thông tin quan trọng liên quan đến định danh điện tử trên VNeID, người dân chú ý",
+          "source": "soha",
+          "url": "https://soha.vn/thong-tin-quan-trong-lien-quan-den-dinh-danh-dien-tu-tren-vneid-nguoi-dan-chu-y-198260418113815315.htm",
+          "published_at": "2026-04-22 08:28:00+00:00",
+          "tech_score": 0.4025,
+          "content_snippet": "Mới đây, Công an xã Thanh Long, tỉnh Cao Bằng đã phát đi cảnh báo về thủ đoạn giả danh công an “hỗ trợ cập nhật định danh điện tử mức độ 2” trên VNeID để lừa đảo chiếm đoạt tài sản. Theo đó, bà T.T.K, trú tại xóm Ngọc Chung, xã Thanh Long nhận được cuộc gọi từ một đối tượng tự xưng là cán bộ Công an"
+        },
+        {
+          "rank": 4,
+          "title": "Công an có thông báo quan trọng về CCCD gắn chip, người dân cần nắm rõ",
+          "source": "soha",
+          "url": "https://soha.vn/cong-an-co-thong-bao-quan-trong-ve-cccd-gan-chip-nguoi-dan-can-nam-ro-198260418113511561.htm",
+          "published_at": "2026-04-22 13:38:00+00:00",
+          "tech_score": 0.4094,
+          "content_snippet": "Theo Công an TP Huế, qua công tác nắm tình hình trên không gian mạng, Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao phát hiện một phương thức lừa đảo mới hết sức tinh vi. Các đối tượng chủ động đăng tải bài viết trên mạng xã hội hoặc gọi điện trực tiếp, tự xưng là nhân viên chăm "
+        },
+        {
+          "rank": 5,
+          "title": "Chiêu lừa đảo mới liên quan đến thẻ CCCD gắn chip, mất sạch tiền chỉ sau một cuộc gọi",
+          "source": "soha",
+          "url": "https://soha.vn/chieu-lua-dao-moi-lien-quan-den-the-cccd-gan-chip-mat-sach-tien-chi-sau-mot-cuoc-goi-19826042409524589.htm",
+          "published_at": "2026-04-24 03:00:00+00:00",
+          "tech_score": 0.3908,
+          "content_snippet": "Mới đây, Công an TP Huế cho biết, qua công tác nắm tình hình trên không gian mạng, Phòng An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao phát hiện một phương thức lừa đảo mới hết sức tinh vi. Các đối tượng chủ động đăng tải bài viết trên mạng xã hội hoặc gọi điện trực tiếp, tự xưng là nh"
+        }
+      ]
+    },
+    {
+      "cluster_id": 0,
+      "topic": "Phần mềm / Dev",
+      "article_count": 68,
+      "avg_tech_score": 0.3188,
+      "cohesion_score": 0.6773,
+      "combined_score": 0.1014,
+      "top_keywords": [
+        [
+          "việt_nam",
+          0.12231
+        ],
+        [
+          "quốc_hội",
+          0.07552
+        ],
+        [
+          "văn_hóa",
+          0.05944
+        ],
+        [
+          "đổi_mới",
+          0.05864
+        ],
+        [
+          "sáng_tạo",
+          0.05707
+        ],
+        [
+          "doanh_nghiệp",
+          0.05615
+        ],
+        [
+          "tổ_chức",
+          0.05179
+        ],
+        [
+          "khoa_học",
+          0.05095
+        ],
+        [
+          "đổi_mới sáng_tạo",
+          0.04988
+        ],
+        [
+          "nhất",
+          0.04884
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Lấy ý kiến Danh mục sản phẩm thúc đẩy thị trường chuyển đổi số",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/lay-y-kien-danh-muc-san-pham-thuc-day-thi-truong-chuyen-doi-so-5064824.html",
+          "published_at": "2026-04-20 12:41:39+00:00",
+          "tech_score": 0.4058,
+          "content_snippet": "Cục Chuyển đổi số quốc gia - Bộ Khoa học và Công nghệ, đang khảo sát, thu thập từ các cơ quan, tổ chức, doanh nghiệp về danh mục sản phẩm thúc đẩy thị trường chuyển đổi số. Hoạt động này nằm trong chương trình công tác năm 2026 của Ban Chỉ đạo Trung ương về phát triển khoa học, công nghệ, đổi mới sá"
+        },
+        {
+          "rank": 2,
+          "title": "Lễ khai trương phiên bản mới Cơ sở dữ liệu quốc gia về pháp luật",
+          "source": "vietnamplus",
+          "url": "https://www.vietnamplus.vn/le-khai-truong-phien-ban-moi-co-so-du-lieu-quoc-gia-ve-phap-luat-post1106544.vnp",
+          "published_at": "2026-04-23 04:18:00+00:00",
+          "tech_score": 0.4253,
+          "content_snippet": "Từ ngày 23/4/2026, Cơ sở dữ liệu quốc gia về pháp luật (phiên bản mới) được vận hành tại địa chỉ: https://vbpl.vn, được tái cấu trúc toàn diện, quản lý chi tiết đến từng điều, khoản, điểm. Sáng 23/4, tại Bộ Tư pháp, Phó Chủ tịch Quốc hội Nguyễn Khắc Định, Phó Thủ tướng Chính phủ Lê Tiến Châu dự Lễ K"
+        },
+        {
+          "rank": 3,
+          "title": "Việt Nam cần sáng tạo để thoát khỏi bẫy tăng trưởng cũ",
+          "source": "zingnews",
+          "url": "https://znews.vn/viet-nam-can-sang-tao-de-thoat-khoi-bay-tang-truong-cu-post1645493.html",
+          "published_at": "2026-04-21 11:23:33+00:00",
+          "tech_score": 0.332,
+          "content_snippet": "Thứ trưởngBộ KH&CNLê Xuân Định phát biểu khai mạc. Ảnh:Bộ KH&CN. Sáng 21/4, Bộ Khoa học và Công nghệ (KH&CN) tổ chức Lễ hưởng ứng Ngày Sáng tạo và Đổi mới sáng tạo thế giới tại Hà Nội. Sự kiện do Liên hợp quốc phát động, diễn ra trong bối cảnh Việt Nam đang đặt mục tiêu tăng trưởng GDP hai con số. P"
+        },
+        {
+          "rank": 4,
+          "title": "Doanh nghiệp Việt cần vận hành theo cách khác: “Trong lúc ngồi đây, tôi có 5–6 bạn Agent AI đang làm việc cho mình\"",
+          "source": "soha",
+          "url": "https://soha.vn/doanh-nghiep-viet-can-van-hanh-theo-cach-khac-trong-luc-ngoi-day-toi-co-56-ban-agent-ai-dang-lam-viec-cho-minh-198260423102345645.htm",
+          "published_at": "2026-04-23 03:23:00+00:00",
+          "tech_score": 0.3617,
+          "content_snippet": "Ngày 22/4, Diễn đàn chiến lược kết hợp trải nghiệm giải pháp thực tếThe Innovation Insiders #3với chủ đề“Đổi mới cách doanh nghiệp thực sự vận hành cho cuộc chơi kế tiếp – Innovating How Business Really Works”đã diễn ra thành công với sự tham gia của hơn 500 lãnh đạo doanh nghiệp, bao gồm CEO, COO, "
+        },
+        {
+          "rank": 5,
+          "title": "Thủ tướng yêu cầu tăng tỷ trọng chi phát triển công nghệ lõi",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/thu-tuong-yeu-cau-tang-ty-trong-chi-phat-trien-cong-nghe-loi-5065878.html",
+          "published_at": "2026-04-22 12:43:42+00:00",
+          "tech_score": 0.3652,
+          "content_snippet": "Ngày 22/4,Thủ tướng Lê Minh Hưngchủ trì buổi làm việc với Bộ Khoa học và Công nghệ về thực hiện các nhiệm vụ khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số. Ông đánh giá cao nỗ lực của bộ trong tham mưu, triển khai Nghị quyết 57, hoàn thiện thể chế, cơ chế chính sách; thúc đẩy phát triển hạ "
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "topic": "Phần mềm / Dev",
+      "article_count": 51,
+      "avg_tech_score": 0.307,
+      "cohesion_score": 0.6815,
+      "combined_score": 0.0436,
+      "top_keywords": [
+        [
+          "việt_nam",
+          0.09557
+        ],
+        [
+          "ngân_hàng",
+          0.07574
+        ],
+        [
+          "giá",
+          0.07409
+        ],
+        [
+          "tăng",
+          0.0615
+        ],
+        [
+          "y_tế",
+          0.05718
+        ],
+        [
+          "văn_hóa",
+          0.05571
+        ],
+        [
+          "doanh_nghiệp",
+          0.05298
+        ],
+        [
+          "tài_chính",
+          0.0523
+        ],
+        [
+          "đồng",
+          0.05095
+        ],
+        [
+          "du_lịch",
+          0.04986
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Chiến lược phát triển đô thị dài hạn cho công nhân",
+          "source": "vietnamplus",
+          "url": "https://www.vietnamplus.vn/chien-luoc-phat-trien-do-thi-dai-han-cho-cong-nhan-post1106912.vnp",
+          "published_at": "2026-04-25 00:07:00+00:00",
+          "tech_score": 0.2735,
+          "content_snippet": "Sự vào cuộc của Công đoàn trong việc khảo sát nhu cầu, kết nối doanh nghiệp và đề xuất chính sách đang mở ra hướng đi hiệu quả, giúp Thành phố Hồ Chí Minh tháo gỡ nút thắt nhà ở cho công nhân. Trong bối cảnh áp lực nhà ở xã hội tại Thành phố Hồ Chí Minh ngày càng gia tăng, mô hình hợp tác đa chiều g"
+        },
+        {
+          "rank": 2,
+          "title": "Quốc hội khóa XVI: Quyết liệt kiện toàn bộ máy Nhà nước vì Nhân dân",
+          "source": "vietnamplus",
+          "url": "https://www.vietnamplus.vn/quoc-hoi-khoa-xvi-quyet-liet-kien-toan-bo-may-nha-nuoc-vi-nhan-dan-post1106549.vnp",
+          "published_at": "2026-04-25 01:16:23+00:00",
+          "tech_score": 0.3208,
+          "content_snippet": "\"Con tàu Việt Nam\" đang vươn ra biển lớn! Với bộ máy tinh gọn, nhân sự vững, thể chế mở theo hướng kiến tạo, nhân dân cả nước có cơ sở tin tưởng rằng chặng đường mới sẽ phát triển bền vững, phồn vinh. Nhiệm kỳ 2026-2031 mở ra trong một thời khắc đặc biệt của tiến trình phát triển đất nước, khi Việt "
+        },
+        {
+          "rank": 3,
+          "title": "Tăng cường thi đua yêu nước, nâng cao hiệu quả quản lý và phát triển đất nước",
+          "source": "vietnamplus",
+          "url": "https://www.vietnamplus.vn/tang-cuong-thi-dua-yeu-nuoc-nang-cao-hieu-qua-quan-ly-va-phat-trien-dat-nuoc-post1106956.vnp",
+          "published_at": "2026-04-25 01:18:29+00:00",
+          "tech_score": 0.3421,
+          "content_snippet": "Thủ tướng phát động thi đua vận hành hiệu quả hệ thống chính trị theo hướng tinh, gọn, mạnh, hiệu năng, hiệu lực, hiệu quả; thi đua đổi mới sáng tạo, phát triển khoa học-công nghệ và chuyển đổi số. ​ Thủ tướng Chính phủ Lê Minh Hưng ký Chỉ thị số 15/CT-TTg ngày 23/4/2026 về việc phát động thi đua th"
+        },
+        {
+          "rank": 4,
+          "title": "Tạo hành lang pháp lý với hoạt động tín ngưỡng, tôn giáo trên không gian mạng",
+          "source": "vietnamplus",
+          "url": "https://www.vietnamplus.vn/tao-hanh-lang-phap-ly-voi-hoat-dong-tin-nguong-ton-giao-tren-khong-gian-mang-post1106592.vnp",
+          "published_at": "2026-04-23 08:33:33+00:00",
+          "tech_score": 0.3648,
+          "content_snippet": "Dự thảo Luật Tín ngưỡng, tôn giáo (sửa đổi) thiết lập khuôn khổ pháp lý riêng để quản lý hoạt động tín ngưỡng, tôn giáo trên không gian mạng, đáp ứng yêu cầu thực tiễn trong bối cảnh chuyển đổi số. Trước yêu cầu cấp bách của việc sắp xếp, tinh gọn bộ máy nhà nước, cải cách mạnh mẽ thủ tục, phương th"
+        },
+        {
+          "rank": 5,
+          "title": "Thủ tướng: Thúc đẩy văn hóa thực sự là nguồn lực nội sinh, 'sức mạnh mềm'",
+          "source": "vietnamplus",
+          "url": "https://www.vietnamplus.vn/thu-tuong-thuc-day-van-hoa-thuc-su-la-nguon-luc-noi-sinh-suc-manh-mem-post1107010.vnp",
+          "published_at": "2026-04-25 07:17:08+00:00",
+          "tech_score": 0.3247,
+          "content_snippet": "Thủ tướng nhấn mạnh Bộ Văn hóa, Thể thao và Du lịch phải chủ động hơn, quyết liệt hơn trong thực hiện nhiệm vụ, thúc đẩy văn hóa thực sự là 'sức mạnh mềm' thúc đẩy tăng trưởng. Sáng 25/4, Thủ tướng Chính phủ Lê Minh Hưng chủ trì cuộc họp với Bộ Văn hóa, Thể thao và Du lịch về tình hình triển khai cá"
+        }
+      ]
+    }
+  ],
+  "highlighted_articles": [
+    {
+      "rank": 1,
+      "title": "Intel hé lộ laptop mới đối đầu MacBook Neo",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/intel-he-lo-laptop-moi-doi-dau-macbook-neo-185260424142839018.htm",
+      "published_at": "2026-04-24 07:51:00+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.6101,
+      "content_snippet": "Chiếc laptop sử dụng bộ xử lý Wildcat Lake thuộc dòng Intel Core i3 Series đã được Intel giới thiệu trong một sự kiện dành riêng cho báo chí. Sản phẩm gây ấn tượng với thiết kế bắt mắt, vỏ nhôm và nắp máy nhiều màu sắc như cách màMacBook Neomang lại. Mẫu laptop được Intel phát triển để cạnh tranh Ma"
+    },
+    {
+      "rank": 2,
+      "title": "Facebook theo dõi chuột, bàn phím của nhân viên",
+      "source": "zingnews",
+      "url": "https://znews.vn/meta-gay-bao-noi-bo-post1645559.html",
+      "published_at": "2026-04-22 03:30:06+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.6082,
+      "content_snippet": "Meta dùng chính hành động thường ngày của nhân viên để huấn luyện mô hình AI. Ảnh:Reuters. TheoReuters, toàn bộ dữ liệu được Meta thu thập từ nhân viên sẽ được dùng để huấn luyện các mô hình AI của công ty. Phần mềm được đặt tên Sáng kiến Khả năng Mô hình, hoạt động trên các ứng dụng và trang web li"
+    },
+    {
+      "rank": 3,
+      "title": "Bài học từ \"siêu mã độc\" Flame: Google và Cloudflare phải \"chạy đua vũ trang\" để cứu vãn Internet trước năm 2029?",
+      "source": "soha",
+      "url": "https://soha.vn/bai-hoc-tu-sieu-ma-doc-flame-google-va-cloudflare-phai-chay-dua-vu-trang-de-cuu-van-internet-truoc-nam-2029-19826042114135358.htm",
+      "published_at": "2026-04-22 01:14:00+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.5924,
+      "content_snippet": "Theo Ars Technica, vào khoảng năm 2010, một mã độc tinh vi mang tên Flame đã chiếm quyền điều khiển hệ thống phân phối bản cập nhật Windows của Microsoft, nhắm vào mạng lưới nội bộ của chính phủ Iran. Mã độc này được cho là sản phẩm hợp tác giữa Mỹ và Israel. Trọng tâm của cuộc tấn công nằm ở việc k"
+    },
+    {
+      "rank": 4,
+      "title": "OpenAI ra mắt GPT-5.5, tham vọng biến AI thành 'siêu ứng dụng'",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/openai-ra-mat-gpt-5-5-tham-vong-bien-ai-thanh-sieu-ung-dung-20260424110824248.htm",
+      "published_at": "2026-04-24 21:07:58+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.562,
+      "content_snippet": "Ảnh minh họa người dùng tương tác với mô hình AI GPT-5.5 trên máy tính OpenAIvừa công bố GPT-5.5, phiên bản mới của mô hình trí tuệ nhân tạo với nhiều nâng cấp đáng chú ý về khả năng xử lý công việc thực tế. Theo hãng, đây là phiên bản \"thông minh và trực quan nhất\" từ trước đến nay, không chỉ dừng "
+    },
+    {
+      "rank": 5,
+      "title": "Meta thu thập thao tác chuột và bàn phím của nhân viên",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/meta-thu-thap-thao-tac-chuot-va-ban-phim-cua-nhan-vien-5065513.html",
+      "published_at": "2026-04-22 12:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5584,
+      "content_snippet": "TheoReuters, Meta cài đặt công cụ có tên Sáng kiến năng lực mô hình (Model Capability Initiative - MCI) trên máy tính nhân viên, cho phép ghi lại thao tác với chuột và bàn phím. Đây là một phần của trong chiến dịch lớn hơn của công ty Mark Zuckerberg nhằm xây dựng các tác nhân AI có thể thực hiện cô"
+    },
+    {
+      "rank": 6,
+      "title": "Lợi thế khi OpenClaw triển khai trên Cloud",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/loi-the-khi-openclaw-trien-khai-tren-cloud-5063333.html",
+      "published_at": "2026-04-20 07:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5572,
+      "content_snippet": "Trí tuệ nhân tạo đang dần thay đổi cách con người làm việc, nhưng việc đưa AI vào vận hành thực tế vẫn là bài toán khó với nhiều doanh nghiệp. TheoMcKinsey, phần lớn tổ chức mới dừng ở giai đoạn thử nghiệm và chưa tích hợp sâu vào quy trình, trong khi các nghiên cứu khác cho thấy rào cản chính không"
+    },
+    {
+      "rank": 7,
+      "title": "Google tích hợp AI vào Chrome, tìm kiếm không cần mở trang",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/google-tich-hop-ai-vao-chrome-tim-kiem-khong-can-mo-trang-20260418162644167.htm",
+      "published_at": "2026-04-19 17:40:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.55,
+      "content_snippet": "Google tích hợp AI vào thanh địa chỉ Chrome, biến trình duyệt thành trợ lý thông minh - Ảnh: Google Mới đây,Googletích hợp trí tuệ nhân tạo trực tiếp vào thanh địa chỉ Chrome, đánh dấu thay đổi đáng chú ý trong cách trình duyệt vận hành. Thanh địa chỉ không còn chỉ để nhập URL hay từ khóa mà trở thà"
+    },
+    {
+      "rank": 8,
+      "title": "Xây dựng kho dữ liệu ngành Khoa học và Công nghệ",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/xay-dung-kho-du-lieu-nganh-khoa-hoc-va-cong-nghe-5064089.html",
+      "published_at": "2026-04-19 01:00:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.5331,
+      "content_snippet": "Theo Kế hoạch chuyển đổi số ban hành kèm Quyết định 2100, Bộ Khoa học và Công nghệ dự định hình thành một hạ tầng số đồng nhất, đảm bảo an toàn, tin cậy. Theo kế hoạch này Bộ sẽ nâng cấp trung tâm dữ liệu theo chuẩn Tier 3 hoặc tương đương, phát triển hạ tầng điện toán đám mây riêng và nâng cấp mạng"
+    },
+    {
+      "rank": 9,
+      "title": "Trí tuệ nhân tạo 'vận hành ngược' tại các nhà máy AI",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/tri-tue-nhan-tao-van-hanh-nguoc-tai-cac-nha-may-ai-185260423120940546.htm",
+      "published_at": "2026-04-23 07:18:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.531,
+      "content_snippet": "\"AI không chỉ là một công nghệ nữa mà trở thành năng lực sản xuất trong xã hội ngày nay. Nếu không có AI, năng lực cạnh tranh, khả năng sinh lời và tạo ra hiệu quả cho doanh nghiệp sẽ bị hạn chế rất nhiều\", ông Lê Bá Tân, CEO Viettel IDC, phát biểu khai mạc Hội nghị Thượng đỉnh về Trung tâm Dữ liệu "
+    },
+    {
+      "rank": 10,
+      "title": "Chuyên gia 'hiến kế' giúp đảm bảo an toàn dữ liệu tài chính trong kỷ nguyên AI",
+      "source": "vietnamplus",
+      "url": "https://www.vietnamplus.vn/chuyen-gia-hien-ke-giup-dam-bao-an-toan-du-lieu-tai-chinh-trong-ky-nguyen-ai-post1106562.vnp",
+      "published_at": "2026-04-23 06:51:57+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5293,
+      "content_snippet": "AI đang tái định hình tài chính nhưng cũng làm gia tăng rủi ro dữ liệu trước tội phạm công nghệ cao. Các chuyên gia đã đề xuất giải pháp công nghệ, pháp lý và nâng cao nhận thức để bảo vệ hệ thống. Khi trí tuệ nhân tạo (AI) ngày càng được ứng dụng sâu rộng trong ngân hàng, chứng khoán và ví điện tử,"
+    },
+    {
+      "rank": 11,
+      "title": "Microsoft cho đo tốc độ mạng chỉ với một cú click trên Windows 11",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/microsoft-cho-do-toc-do-mang-chi-voi-mot-cu-click-tren-windows-11-185260423085323477.htm",
+      "published_at": "2026-04-23 03:04:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.5149,
+      "content_snippet": "TheoNeowin, mong muốn tính năngđo tốc độ mạngnhanh gọn trên Windows cuối cùng đã được giải tỏa. Với bản cập nhật mới nhất mang mã hiệu KB5083769, Microsoft đã giúp Windows 11 trở nên đa năng hơn khi tích hợp trực tiếp công cụ Speedtest (đo tốc độ mạng) vào sâu trong hệ thống, áp dụng cho cả người dù"
+    },
+    {
+      "rank": 12,
+      "title": "ChatGPT 'phản đòn' Gemini với công cụ mới đầy sức mạnh",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/chatgpt-phan-don-gemini-voi-cong-cu-moi-day-suc-manh-185260422083951353.htm",
+      "published_at": "2026-04-22 02:11:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5134,
+      "content_snippet": "ChatGPT Images 2.0 không chỉ là một cải tiến kỹ thuật mà còn là bước tiến quan trọng trong việc tạo ra hình ảnh hữu ích từ AI (trí tuệ nhân tạo) nhằm cạnh tranh với các đối thủ trên thị trường, đặc biệt làNano Banana 2của Gemini. ChatGPT Images 2.0 cải thiện khả năng tạo ảnh và hiển thị văn bản ẢNH:"
+    },
+    {
+      "rank": 13,
+      "title": "Đột phá trong lĩnh vực robot",
+      "source": "zingnews",
+      "url": "https://znews.vn/dot-pha-lon-trong-linh-vuc-robot-post1644565.html",
+      "published_at": "2026-04-22 01:44:05+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5108,
+      "content_snippet": "Cánh tay robot tự học cách pha cà phê bằng mày. Ảnh:Physical Intelligence. Lĩnh vực robot vừa chứng kiến một bước tiến quan trọng khi Physical Intelligence - startup công nghệ tại San Francisco, công bố mô hình trí tuệ nhân tạo mới mang tên \"π0.7\". Điểm khác biệt lớn nhất của mô hình này nằm ở khả n"
+    },
+    {
+      "rank": 14,
+      "title": "Apple ra bản cập nhật iPhone chặn FBI trích xuất dữ liệu",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/apple-ra-ban-cap-nhat-iphone-chan-fbi-trich-xuat-du-lieu-5066043.html",
+      "published_at": "2026-04-23 05:00:00+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.5069,
+      "content_snippet": "Được công bố cuối ngày 22/4, iOS 26.4.2 khắc phục lỗi cho phép cơ quan thực thi pháp luật trích xuất các tin nhắn đã bị xóa hoặc tự động biến mất khỏi ứng dụng nhắn tin. Nguyên nhân liên quan đến tính năng Notification Services, khi các thông báo hiển thị nội dung tin nhắn cũng được lưu vào bộ nhớ đ"
+    },
+    {
+      "rank": 15,
+      "title": "Tin vui cho người dùng AI Gemini tại Việt Nam: Có nhiều cải tiến đột phá từ hôm nay!",
+      "source": "soha",
+      "url": "https://soha.vn/tin-vui-cho-nguoi-dung-ai-gemini-tai-viet-nam-co-nhieu-cai-tien-dot-pha-tu-hom-nay-198260421143524353.htm",
+      "published_at": "2026-04-21 15:24:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5056,
+      "content_snippet": "Trình duyệt chính là nơi chúng ta làm việc, học hỏi những điều mới và kết nối vớithế giới. Tuy nhiên, đôi khi những tác vụ trực tuyến như đọc một bài nghiên cứu hóa học dài hay tìm ý tưởng nhanh cho bữa tối có thể mang lại cảm giác tẻ nhạt và làm chậm tiến độ của bạn. Đó là lý do Google cải tiến Chr"
+    },
+    {
+      "rank": 16,
+      "title": "Cài đặt ẩn cần tắt để Windows 11 chạy mượt hơn",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/cai-dat-an-can-tat-de-windows-11-chay-muot-hon-185260424104848385.htm",
+      "published_at": "2026-04-25 03:09:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.5043,
+      "content_snippet": "Dù là hệ điều hành hiện đại nhất của Microsoft,Windows 11vẫn khiến không ít người dùng bực mình vì tốc độ phản hồi chậm chạp của File Explorer. Tuy nhiên, ít ai biết rằng một tính năng có từ thời Windows XP lại chính là thủ phạm gây ra sự trì trệ này. Nếu bạn từng gặp tình trạng File Explorer thường"
+    },
+    {
+      "rank": 17,
+      "title": "Hãng xe điện BYD phát triển pin sạc siêu tốc, thời gian sạc chỉ 12 phút",
+      "source": "vietnamplus",
+      "url": "https://www.vietnamplus.vn/hang-xe-dien-byd-phat-trien-pin-sac-sieu-toc-thoi-gian-sac-chi-12-phut-post1106945.vnp",
+      "published_at": "2026-04-24 23:35:56+00:00",
+      "topic": "Xe điện / Năng lượng",
+      "tech_score": 0.5008,
+      "content_snippet": "Pin thế hệ thứ hai của hãng xe điện Trung Quốc BYD có thể sạc từ 20% lên 97% trong chưa đầy 12 phút, ngay cả ở nhiệt độ -20°C, cho phép xe di chuyển tối đa 777 km. Hãng xe điện Trung Quốc BYD đang đẩy mạnh phát triển công nghệ sạc siêu nhanh nhằm thu hút nhóm khách hàng vẫn sử dụng xe chạy xăng, tro"
+    },
+    {
+      "rank": 18,
+      "title": "DeepSeek ra mắt mô hình AI V4, hướng tới định giá hơn 20 tỉ USD",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/deepseek-ra-mat-mo-hinh-ai-v4-huong-toi-dinh-gia-hon-20-ti-usd-20260424132015772.htm",
+      "published_at": "2026-04-24 22:32:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.4956,
+      "content_snippet": "Start-up AI DeepSeek của Trung Quốc tung ra phiên bản mới của mô hình AI mã nguồn mở V4 - Ảnh minh hoạ: REUTERS. Theo Đài CNBC ngày 24-4, Công ty trí tuệ nhân tạo (AI) Trung QuốcDeepSeekcông bố bản xem trước (preview) của mô hình ngôn ngữ lớn V4, cho phép người dùng thử nghiệm các tính năng mới. Tươ"
+    },
+    {
+      "rank": 19,
+      "title": "Google ra hai chip AI mới cạnh tranh với Nvidia",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/google-ra-hai-chip-ai-moi-canh-tranh-voi-nvidia-5065998.html",
+      "published_at": "2026-04-23 11:10:12+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.489,
+      "content_snippet": "Theo Google, TPU 8t là \"siêu chip huấn luyện mạnh mẽ\", được thiết kế đặc biệt cho việc xử lý khối lượng công việc AI thông lượng cao. Hiệu năng tính toán cũng cao hơn gần ba lần so với các thế hệ trước. Cụ thể, TPU 8t tích hợp 9.600 chip trong một siêu cụm duy nhất, cung cấp khả năng tính toán 121 e"
+    },
+    {
+      "rank": 20,
+      "title": "Google lo ngại khi Gemini không theo kịp Claude ở khả năng viết code",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/google-lo-ngai-khi-gemini-khong-theo-kip-claude-o-kha-nang-viet-code-18526042213104307.htm",
+      "published_at": "2026-04-22 06:47:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.4886,
+      "content_snippet": "TheoTechRadar,Google đã lập một nhóm chuyên trách nhằm cải thiện cácmô hình AIphục vụ lập trình. Trọng tâm của nỗ lực này là thu hẹp khoảng cách giữa Gemini và Claude, công cụ của Anthropic đang được xem là có lợi thế rõ hơn trong mảng viết mã và xử lý tác vụ nhiều bước. Theo nội dung trích dẫn, đồn"
+    },
+    {
+      "rank": 21,
+      "title": "Hãng Tesla bắt đầu sản xuất robotaxi tự hành Cybercab",
+      "source": "vietnamplus",
+      "url": "https://www.vietnamplus.vn/hang-tesla-bat-dau-san-xuat-robotaxi-tu-hanh-cybercab-post1106896.vnp",
+      "published_at": "2026-04-24 12:14:23+00:00",
+      "topic": "Xe điện / Năng lượng",
+      "tech_score": 0.4835,
+      "content_snippet": "Đoạn video, chủ yếu được quay từ bên trong một chiếc Cybercab không người lái, cho thấy hình ảnh phương tiện này rời khỏi dây chuyền nhà máy và bắt đầu di chuyển trên các tuyến phố. Ngày 24/4, Giám đốc điều hành (CEO) của Tesla, tỷ phú Elon Musk, thông báo hãng xe điện này chính thức sản xuất mẫu xe"
+    },
+    {
+      "rank": 22,
+      "title": "Đóng tab trình duyệt mỗi ngày có thực sự cần thiết?",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/dong-tab-trinh-duyet-moi-ngay-co-thuc-su-can-thiet-185260424004827758.htm",
+      "published_at": "2026-04-24 00:06:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.4828,
+      "content_snippet": "Nhiều người dùng internet thường xuyên mở hàng chục tab trang web trêntrình duyệt, từ những tab đã lưu lại từ nhiều ngày trước cho đến các trang liên quan đến công việc hay kế hoạch du lịch. Trong trường hợp này, không ít người có câu hỏi: \"Nên đóng những tab đó trong trình duyệt vào cuối ngày hay đ"
+    },
+    {
+      "rank": 23,
+      "title": "Thông tin mới nhất về nhắn tin qua iPhone, người dùng cần nắm rõ",
+      "source": "soha",
+      "url": "https://soha.vn/thong-tin-moi-nhat-ve-nhan-tin-qua-iphone-nguoi-dung-can-nam-ro-198260423205746317.htm",
+      "published_at": "2026-04-22 23:00:00+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.4824,
+      "content_snippet": "Apple vừa phát hành bản cập nhật iOS 26.4.2 nhằm khắc phục một lỗ hổng bảo mật trên iPhone, có thể khiến nội dung tin nhắn đã xóa vẫn còn tồn tại trong bộ nhớ thiết bị thông qua hệ thống thông báo. Theo hãng công nghệ Mỹ, lỗi này liên quan đến việc một số thông báo dù đã được người dùng xóa nhưng vẫ"
+    },
+    {
+      "rank": 24,
+      "title": "Trình duyệt Chrome ở Việt Nam được tích hợp chatbot Gemini",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/trinh-duyet-chrome-o-viet-nam-duoc-tich-hop-chatbot-gemini-5064827.html",
+      "published_at": "2026-04-21 08:00:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.4804,
+      "content_snippet": "Trong thông báo hôm 21/4, Google cho biết đã triển khai Gemini trên Chrome tới người dùng tại một số thị trường châu Á - Thái Bình Dương, gồm Việt Nam, Australia, Indonesia, Nhật Bản, Philippines, Singapore, Hàn Quốc. Tính năng này sẽ xuất hiện trên trình duyệt cả ở phiên bản máy tính Mac, Windows v"
+    },
+    {
+      "rank": 25,
+      "title": "5 mẫu CPU quá cũ để 'chiến' game hiện nay",
+      "source": "thanhnien",
+      "url": "https://thanhnien.vn/5-mau-cpu-qua-cu-de-chien-game-hien-nay-185260423142316791.htm",
+      "published_at": "2026-04-23 13:20:00+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.4802,
+      "content_snippet": "Trong giới công nghệ, có một quy luật là GPU quyết định độ đẹp của hình ảnh, nhưngCPUmới là thứ quyết định sự ổn định của trải nghiệm. Bước sang năm 2026, khi các công cụ làm game như Unreal Engine 5.x hay các công nghệ AI tích hợp sâu vào trò chơi dần trở nên phổ biến, những mẫu CPU dưới đây chính "
+    },
+    {
+      "rank": 26,
+      "title": "75% mã lập trình mới của Google do AI viết",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/75-ma-lap-trinh-moi-cua-google-do-ai-viet-5066205.html",
+      "published_at": "2026-04-23 12:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.4793,
+      "content_snippet": "\"Chúng tôi đã sử dụng AI để tạo code (mã) nội bộ được một thời gian. 75% tổng số mã mới đang được tạo và phê duyệt bởi AI, tăng từ 50% so với mùa thu năm ngoái\", CEO Google Sundar Pichai viết trên blog ngày 22/4. Thông tin này sau đó cũng được công bố tại sự kiện Cloud Next 2026 đang diễn ra tại Las"
+    },
+    {
+      "rank": 27,
+      "title": "Tin nhắn đã xóa vẫn có thể bị khôi phục, người dùng iPhone phải làm điều này ngay lập tức",
+      "source": "soha",
+      "url": "https://soha.vn/tin-nhan-da-xoa-van-co-the-bi-khoi-phuc-nguoi-dung-iphone-phai-lam-dieu-nay-ngay-lap-tuc-198260424100341169.htm",
+      "published_at": "2026-04-24 13:00:00+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.4772,
+      "content_snippet": "Tối muộn ngày 22/4, Apple đã bất ngờ phát hành bản cập nhật iOS 26.4.2 nhằm vá một lỗ hổng bảo mật nhạy cảm liên quan đến tính năng hiển thị thông báo. Trước đó, lỗi hệ thống này đã vô tình tạo ra một \"cửa hậu\" cho phép các cơ quan thực thipháp luật, điển hình là FBI, sử dụng các công cụ pháp y chuy"
+    },
+    {
+      "rank": 28,
+      "title": "Elon Musk 'khoe' chip AI Tesla AI5",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/elon-musk-khoe-chip-ai-tesla-ai5-5063022.html",
+      "published_at": "2026-04-16 12:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.4769,
+      "content_snippet": "\"Chúc mừng đội ngũ Tesla AI hoàn thành thiết kế chip AI5\", Musk viết trên X ngày 15/4. \"AI 6, Dojo 3 và các mẫu chip thú vị khác cũng đang được phát triển\". Ông cũng cảm ơn TSMC và Samsung đảm nhiệm việc sản xuất chip mới. \"Đây sẽ là một trong những chip AI được sản xuất nhiều nhất từ trước đến nay\""
+    },
+    {
+      "rank": 29,
+      "title": "Robot hình người lần đầu lắp ráp tablet trong nhà máy",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/robot-hinh-nguoi-lan-dau-lap-rap-tablet-trong-nha-may-5063536.html",
+      "published_at": "2026-04-17 17:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.476,
+      "content_snippet": "Theo Agibot, G2 hiện triển khai tại nhà máy sản xuất máy tính bảng của Longcheer Technology. Thay vì chỉ thử nghiệm có kiểm soát ở một bộ phận nhất định như trước đây, các robot đã được tích hợp trực tiếp vào quy trình sản xuất. Robot hoạt động chủ yếu tại các trạm Kiểm tra Tích hợp Đa phương tiện ("
+    },
+    {
+      "rank": 30,
+      "title": "Xiaomi 17 Ultra đọ camera với Galaxy S26 Ultra",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/xiaomi-17-ultra-do-camera-voi-galaxy-s26-ultra-5065882.html",
+      "published_at": "2026-04-23 22:00:00+00:00",
+      "topic": "Thiết bị di động",
+      "tech_score": 0.4729,
+      "content_snippet": "Cùng ra mắt vào tháng 2, Galaxy S26 Ultra (trái) và Xiaomi 17 Ultra là hai smartphone cao cấp đầu tiên bán ở Việt Nam đầu 2026. Điện thoại của Samsung nhấn mạnh vào tính năng AI, màn hình chống nhìn trộm và camera nâng cấp trong khi Xiaomi \"tất tay\" cho khả năng chụp ảnh với thông số phần cứng đầu b"
+    }
+  ]
+}
