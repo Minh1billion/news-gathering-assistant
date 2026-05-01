@@ -135,7 +135,7 @@ class ProcessRunner(PipelineStep):
         df_raw["title"] = df_raw["title"].fillna("")
         df_raw["url"] = df_raw["url"].fillna("")
 
-        cutoff = pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=WINDOW_DAYS)
+        cutoff = (pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=WINDOW_DAYS)).normalize()
         df_week = df_raw[df_raw["published_at"] >= cutoff].copy()
 
         df_clean = (

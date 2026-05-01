@@ -20,7 +20,7 @@ from src.models.report import (
     TopicDistribution,
 )
 from src.pipeline.base import PipelineStep
-from src.pipeline.processor.config import TECH_QUERIES, TOPIC_LABELS
+from src.pipeline.processor.config import TECH_QUERIES, TOPIC_LABELS, WINDOW_DAYS
 from src.storage.vector_db import QdrantStore
 from .clustering import build_cluster_keywords, build_clusters, pick_best_k
 from .config import (
@@ -84,7 +84,16 @@ class AnalyzeRunner(PipelineStep):
         embeddings = np.array(vectors, dtype=np.float32)
         df["published_at"] = pd.to_datetime(df["published_at"], utc=True, errors="coerce")
         df["tech_score"] = df["tech_score"].astype(float)
-        log.info("Loaded %d articles from Qdrant", len(df))
+
+        cutoff = (pd.Timestamp.now(tz="UTC") - pd.Timedelta(days=WINDOW_DAYS)).normalize()
+        valid_mask = df["published_at"] >= cutoff
+        df = df[valid_mask].reset_index(drop=True)
+        embeddings = embeddings[valid_mask.values]
+
+        log.info("Loaded %d articles from Qdrant (after window filter: %d)", len(valid_mask), len(df))
+
+        if df.empty:
+            raise RuntimeError("No articles within the current window after filtering. Run /preprocess first.")
 
         tfidf = TfidfVectorizer(
             max_features=TFIDF_MAX_FEATURES,
@@ -158,26 +167,27 @@ class AnalyzeRunner(PipelineStep):
         )
 
         topic_counts = df["tech_topic"].value_counts()
-        now = pd.Timestamp.now(tz="UTC")
-        week_start = (now - pd.Timedelta(days=7)).strftime("%d/%m/%Y")
-        week_end = now.strftime("%d/%m/%Y")
+        week_end = pd.Timestamp.now(tz="UTC").normalize()
+        week_start = week_end - pd.Timedelta(days=WINDOW_DAYS)
+        week_start_str = week_start.strftime("%d/%m/%Y")
+        week_end_str = week_end.strftime("%d/%m/%Y")
 
         report = AnalysisReport(
             generated_at=datetime.now(timezone.utc).isoformat(),
-            week_start=week_start,
-            week_end=week_end,
+            week_start=week_start_str,
+            week_end=week_end_str,
             stats={
                 "total_tech_articles": int(len(df)),
                 "sources": int(df["source"].nunique()),
                 "dominant_topic": topic_counts.index[0],
                 "dominant_topic_pct": round(float(topic_counts.iloc[0] / len(df) * 100), 1),
                 "n_clusters": best_k,
-                "date_range": f"{week_start} - {week_end}",
+                "date_range": f"{week_start_str} - {week_end_str}",
             },
             executive_summary={
                 "landscape": (
                     f"{len(df):,} bài viết công nghệ từ {df['source'].nunique()} nguồn"
-                    f" trong tuần {week_start} - {week_end}."
+                    f" trong tuần {week_start_str} - {week_end_str}."
                 ),
                 "dominant_topic": topic_counts.index[0],
                 "dominant_topic_pct": round(float(topic_counts.iloc[0] / len(df) * 100), 1),
