@@ -1,0 +1,1009 @@
+{
+  "generated_at": "2026-05-04T08:36:46.452008+00:00",
+  "week_start": "27/04/2026",
+  "week_end": "04/05/2026",
+  "stats": {
+    "total_tech_articles": 80,
+    "sources": 4,
+    "dominant_topic": "AI / ML",
+    "dominant_topic_pct": 33.8,
+    "n_clusters": 4,
+    "date_range": "27/04/2026 - 04/05/2026"
+  },
+  "executive_summary": {
+    "landscape": "80 bài viết công nghệ từ 4 nguồn trong tuần 27/04/2026 - 04/05/2026.",
+    "dominant_topic": "AI / ML",
+    "dominant_topic_pct": 33.8,
+    "top_keywords": [
+      "openai",
+      "apple",
+      "iphone"
+    ],
+    "highlight_count": 30
+  },
+  "trending_keywords": [
+    {
+      "rank": 1,
+      "keyword": "openai",
+      "tfidf_score": 0.06748,
+      "semantic_score": 0.33601,
+      "combined_score": 0.02267
+    },
+    {
+      "rank": 2,
+      "keyword": "apple",
+      "tfidf_score": 0.08128,
+      "semantic_score": 0.21121,
+      "combined_score": 0.01717
+    },
+    {
+      "rank": 3,
+      "keyword": "iphone",
+      "tfidf_score": 0.05504,
+      "semantic_score": 0.30689,
+      "combined_score": 0.01689
+    },
+    {
+      "rank": 4,
+      "keyword": "ai",
+      "tfidf_score": 0.12314,
+      "semantic_score": 0.13399,
+      "combined_score": 0.0165
+    },
+    {
+      "rank": 5,
+      "keyword": "hệ_thống",
+      "tfidf_score": 0.03948,
+      "semantic_score": 0.41251,
+      "combined_score": 0.01629
+    },
+    {
+      "rank": 6,
+      "keyword": "máy",
+      "tfidf_score": 0.03909,
+      "semantic_score": 0.40269,
+      "combined_score": 0.01574
+    },
+    {
+      "rank": 7,
+      "keyword": "thiết_bị",
+      "tfidf_score": 0.04301,
+      "semantic_score": 0.33237,
+      "combined_score": 0.0143
+    },
+    {
+      "rank": 8,
+      "keyword": "công_ty",
+      "tfidf_score": 0.06661,
+      "semantic_score": 0.20424,
+      "combined_score": 0.0136
+    },
+    {
+      "rank": 9,
+      "keyword": "ứng_dụng",
+      "tfidf_score": 0.03224,
+      "semantic_score": 0.33932,
+      "combined_score": 0.01094
+    },
+    {
+      "rank": 10,
+      "keyword": "trí_tuệ nhân_tạo",
+      "tfidf_score": 0.02046,
+      "semantic_score": 0.48495,
+      "combined_score": 0.00992
+    },
+    {
+      "rank": 11,
+      "keyword": "nền_tảng",
+      "tfidf_score": 0.02924,
+      "semantic_score": 0.3326,
+      "combined_score": 0.00972
+    },
+    {
+      "rank": 12,
+      "keyword": "năng_lượng",
+      "tfidf_score": 0.02801,
+      "semantic_score": 0.32186,
+      "combined_score": 0.00901
+    },
+    {
+      "rank": 13,
+      "keyword": "chip",
+      "tfidf_score": 0.02375,
+      "semantic_score": 0.36954,
+      "combined_score": 0.00878
+    },
+    {
+      "rank": 14,
+      "keyword": "hóa",
+      "tfidf_score": 0.03058,
+      "semantic_score": 0.28587,
+      "combined_score": 0.00874
+    },
+    {
+      "rank": 15,
+      "keyword": "doanh_nghiệp",
+      "tfidf_score": 0.04369,
+      "semantic_score": 0.19709,
+      "combined_score": 0.00861
+    },
+    {
+      "rank": 16,
+      "keyword": "sản_phẩm",
+      "tfidf_score": 0.03894,
+      "semantic_score": 0.21332,
+      "combined_score": 0.00831
+    },
+    {
+      "rank": 17,
+      "keyword": "mô_hình",
+      "tfidf_score": 0.03225,
+      "semantic_score": 0.25432,
+      "combined_score": 0.0082
+    },
+    {
+      "rank": 18,
+      "keyword": "biết",
+      "tfidf_score": 0.04362,
+      "semantic_score": 0.18053,
+      "combined_score": 0.00787
+    },
+    {
+      "rank": 19,
+      "keyword": "điện",
+      "tfidf_score": 0.0309,
+      "semantic_score": 0.2517,
+      "combined_score": 0.00778
+    },
+    {
+      "rank": 20,
+      "keyword": "dữ_liệu",
+      "tfidf_score": 0.03767,
+      "semantic_score": 0.19753,
+      "combined_score": 0.00744
+    },
+    {
+      "rank": 21,
+      "keyword": "google",
+      "tfidf_score": 0.02795,
+      "semantic_score": 0.2621,
+      "combined_score": 0.00733
+    },
+    {
+      "rank": 22,
+      "keyword": "lên",
+      "tfidf_score": 0.03169,
+      "semantic_score": 0.23036,
+      "combined_score": 0.0073
+    },
+    {
+      "rank": 23,
+      "keyword": "khu_vực",
+      "tfidf_score": 0.03617,
+      "semantic_score": 0.1993,
+      "combined_score": 0.00721
+    },
+    {
+      "rank": 24,
+      "keyword": "điện_thoại",
+      "tfidf_score": 0.03435,
+      "semantic_score": 0.20446,
+      "combined_score": 0.00702
+    },
+    {
+      "rank": 25,
+      "keyword": "mạng",
+      "tfidf_score": 0.02615,
+      "semantic_score": 0.2615,
+      "combined_score": 0.00684
+    },
+    {
+      "rank": 26,
+      "keyword": "tăng",
+      "tfidf_score": 0.0361,
+      "semantic_score": 0.18003,
+      "combined_score": 0.0065
+    },
+    {
+      "rank": 27,
+      "keyword": "màn_hình",
+      "tfidf_score": 0.01872,
+      "semantic_score": 0.34473,
+      "combined_score": 0.00645
+    },
+    {
+      "rank": 28,
+      "keyword": "lĩnh_vực",
+      "tfidf_score": 0.02502,
+      "semantic_score": 0.24994,
+      "combined_score": 0.00625
+    },
+    {
+      "rank": 29,
+      "keyword": "nhân_tạo",
+      "tfidf_score": 0.02073,
+      "semantic_score": 0.29531,
+      "combined_score": 0.00612
+    },
+    {
+      "rank": 30,
+      "keyword": "sản_xuất",
+      "tfidf_score": 0.02401,
+      "semantic_score": 0.2543,
+      "combined_score": 0.00611
+    }
+  ],
+  "topic_distribution": [
+    {
+      "topic": "AI / ML",
+      "count": 27,
+      "percentage": 33.8
+    },
+    {
+      "topic": "Phần mềm / Dev",
+      "count": 16,
+      "percentage": 20.0
+    },
+    {
+      "topic": "An ninh mạng",
+      "count": 15,
+      "percentage": 18.8
+    },
+    {
+      "topic": "Phần cứng / Server",
+      "count": 7,
+      "percentage": 8.8
+    },
+    {
+      "topic": "Startup / Đầu tư",
+      "count": 5,
+      "percentage": 6.2
+    },
+    {
+      "topic": "Thiết bị di động",
+      "count": 5,
+      "percentage": 6.2
+    },
+    {
+      "topic": "Xe điện / Năng lượng",
+      "count": 3,
+      "percentage": 3.8
+    },
+    {
+      "topic": "Mạng xã hội",
+      "count": 1,
+      "percentage": 1.2
+    },
+    {
+      "topic": "Crypto / Blockchain",
+      "count": 1,
+      "percentage": 1.2
+    }
+  ],
+  "daily_counts": [
+    {
+      "date": "2026-04-27",
+      "count": 4
+    },
+    {
+      "date": "2026-04-28",
+      "count": 8
+    },
+    {
+      "date": "2026-04-29",
+      "count": 9
+    },
+    {
+      "date": "2026-04-30",
+      "count": 6
+    },
+    {
+      "date": "2026-05-01",
+      "count": 5
+    },
+    {
+      "date": "2026-05-02",
+      "count": 10
+    },
+    {
+      "date": "2026-05-03",
+      "count": 16
+    },
+    {
+      "date": "2026-05-04",
+      "count": 22
+    }
+  ],
+  "clusters": [
+    {
+      "cluster_id": 3,
+      "topic": "AI / ML",
+      "article_count": 26,
+      "avg_tech_score": 0.3883,
+      "cohesion_score": 0.725,
+      "combined_score": 2.0,
+      "top_keywords": [
+        [
+          "ai",
+          0.1909
+        ],
+        [
+          "openai",
+          0.15401
+        ],
+        [
+          "công_ty",
+          0.08696
+        ],
+        [
+          "google",
+          0.05539
+        ],
+        [
+          "dữ_liệu",
+          0.05282
+        ],
+        [
+          "mô_hình",
+          0.05133
+        ],
+        [
+          "biết",
+          0.04923
+        ],
+        [
+          "ứng_dụng",
+          0.04813
+        ],
+        [
+          "nhân_viên",
+          0.04499
+        ],
+        [
+          "doanh_nghiệp",
+          0.04398
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Lầu Năm Góc bắt tay với loạt công ty AI, trừ Anthropic",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/lau-nam-goc-bat-tay-voi-loat-cong-ty-ai-tru-anthropic-5069061.html",
+          "published_at": "2026-05-02 05:14:01+00:00",
+          "tech_score": 0.3896,
+          "content_snippet": "Trong thông cáo ngày 1/5, Lầu Năm Góc khẳng định sản phẩm của SpaceX, OpenAI, Google, Nvidia, Reflection, Microsoft và Amazon Web Services sẽ được tích hợp vào các hệ thống mạng bí mật và tuyệt mật của quân đội Mỹ. Thông cáo không đề cập tới Anthropic. Startup AI này đang mâu thuẫn với Lầu Năm Góc s"
+        },
+        {
+          "rank": 2,
+          "title": "Claude bị ‘bỏ rơi’ trong cuộc đua quân sự",
+          "source": "zingnews",
+          "url": "https://znews.vn/anthropic-gap-bat-loi-post1648144.html",
+          "published_at": "2026-05-02 11:10:48+00:00",
+          "tech_score": 0.4207,
+          "content_snippet": "Ngày 2/5, Lầu Năm Góc thông báo đã ký thỏa thuận với OpenAI, Google, xAI, Amazon Web Services, Microsoft, Nvidia và Reflection AI, cho phép triển khai mô hình AI của các công ty này trên mạng lưới bảo mật của quân đội Mỹ. Thỏa thuận này mở đường để AI tham gia sâu hơn vào hoạt động quân sự, từ phân "
+        },
+        {
+          "rank": 3,
+          "title": "OpenAI phát triển smartphone AI thay thế ứng dụng",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/openai-phat-trien-smartphone-ai-thay-the-ung-dung-20260429113942097.htm",
+          "published_at": "2026-04-29 22:06:48+00:00",
+          "tech_score": 0.5321,
+          "content_snippet": "OpenAI phát triển smartphone AI thay thế ứng dụng truyền thống Sau khi làm thay đổi cách con người tương tác với công nghệ,OpenAIđược cho là chuẩn bị bước vào cuộc chơi mới: smartphone. Thiết bị này có thể loại bỏ hoàn toàn ứng dụng, thay bằng một AI trung tâm điều khiển mọi tác vụ. Theo tìm hiểu củ"
+        },
+        {
+          "rank": 4,
+          "title": "Sam Altman: AI giúp 'đổi vai' của người có ý tưởng",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/sam-altman-ai-giup-doi-vai-cua-nguoi-co-y-tuong-5069213.html",
+          "published_at": "2026-05-03 00:35:26+00:00",
+          "tech_score": 0.4559,
+          "content_snippet": "\"Trước khi có AI, không ít người ở Thung lũng Silicon thường cười cợt, đùa giỡn khi ai đó có ý tưởng nghe có vẻ đột phá, nhưng lại thiếu chuyên môn kỹ thuật để biến tầm nhìn thành hiện thực\", Sam Altman nói tại sự kiện Stripe Sessions ở San Francisco (Mỹ) ngày 30/4. Altman từng có thời gian lãnh đạo"
+        },
+        {
+          "rank": 5,
+          "title": "OpenAI có thể đang phát triển 'siêu điện thoại AI'",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/openai-co-the-dang-phat-trien-sieu-dien-thoai-ai-5067660.html",
+          "published_at": "2026-04-28 00:42:46+00:00",
+          "tech_score": 0.5227,
+          "content_snippet": "Theo nhà phân tích nổi tiếng Ming-Chi Kuo từ TF International Securities, công ty phát triển ChatGPT đang âm thầm xây dựng một hệ sinh thái phần cứng riêng. Thay vì chỉ là một ứng dụng trên nền tảng của Apple hay Google, OpenAI muốn nắm trong tay một thiết bị đầu cuối như smartphone để tối ưu hóa sứ"
+        }
+      ]
+    },
+    {
+      "cluster_id": 0,
+      "topic": "An ninh mạng",
+      "article_count": 10,
+      "avg_tech_score": 0.335,
+      "cohesion_score": 0.7241,
+      "combined_score": 1.1155,
+      "top_keywords": [
+        [
+          "thiết_bị",
+          0.07807
+        ],
+        [
+          "thuê",
+          0.06979
+        ],
+        [
+          "điện_thoại",
+          0.06348
+        ],
+        [
+          "tần_số",
+          0.06276
+        ],
+        [
+          "nhà_mạng",
+          0.05638
+        ],
+        [
+          "cơ_quan",
+          0.05607
+        ],
+        [
+          "cục",
+          0.05487
+        ],
+        [
+          "xác_thực",
+          0.0533
+        ],
+        [
+          "hóa",
+          0.05109
+        ],
+        [
+          "khiến",
+          0.04979
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Bộ báo cháy vô hiệu hóa hàng loạt khóa xe thông minh ở Hà Nội",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/bo-bao-chay-vo-hieu-hoa-loat-smartkey-o-ha-noi-5068516.html",
+          "published_at": "2026-04-29 17:00:00+00:00",
+          "tech_score": 0.3394,
+          "content_snippet": "Chiều 29/4, Cục Tần số vô tuyến điện, Bộ Khoa học và Công nghệ cho biết đã xử lý thành công một vụ can nhiễu sóng vô tuyến ảnh hưởng đến các thiết bị khóa thông minh (smartkey) của ôtô và xe máy tại khu vực phường Yên Hòa, Hà Nội. Trước đó, vào khoảng 16h cùng ngày, fanpage của Cục nhận phản ánh từ "
+        },
+        {
+          "rank": 2,
+          "title": "Tin nhắn mã hóa khiến cơ quan an ninh ngày càng khó truy dấu tội phạm",
+          "source": "tuoitre",
+          "url": "https://tuoitre.vn/tin-nhan-ma-hoa-khien-co-quan-an-ninh-ngay-cang-kho-truy-dau-toi-pham-20260430112557817.htm",
+          "published_at": "2026-04-30 18:40:32+00:00",
+          "tech_score": 0.4664,
+          "content_snippet": "‘Mặt tối’ của mã hóa: bảo vệ người dùng, nhưng làm khó cơ quan an ninh - Ảnh: euro-systems.co.uk Báo cáo năm 2025 của Cơ quan giám sát tình báo Pháp cho biết khoảng 60-80% các cuộc trao đổi trực tuyến hiện diễn ra qua các ứng dụng mã hóa đầu cuối. Trong khi đó các hình thức liên lạc truyền thống như"
+        },
+        {
+          "rank": 3,
+          "title": "900.000 số điện thoại bị xác nhận 'không chính chủ'",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/900-000-so-dien-thoai-bi-xac-nhan-khong-chinh-chu-5068347.html",
+          "published_at": "2026-04-29 08:11:39+00:00",
+          "tech_score": 0.2703,
+          "content_snippet": "Thông tư 08 lần đầu cho phép người dùng chủ động xác nhận SIM chính chủ thông qua ứng dụng VNeID, đồng thời loại bỏ số không còn sử dụng hoặc số điện thoại lạ. Tại họp báo thường kỳ tháng 4 của Bộ Khoa học và Công nghệ, chiều 29/4, ông Nguyễn Anh Cương, Phó cục trưởng Viễn thông, dẫn số liệu sơ bộ t"
+        },
+        {
+          "rank": 4,
+          "title": "Chiêu lừa 'phạt nguội 50.000 đồng' để chiếm thẻ ngân hàng",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/chieu-lua-phat-nguoi-50-000-dong-de-chiem-the-ngan-hang-5067461.html",
+          "published_at": "2026-04-27 02:00:31+00:00",
+          "tech_score": 0.4049,
+          "content_snippet": "Chị Ngọc Hà (Hà Nội) hôm 25/4 cho biết nhận được một tin nhắn từ một số di động trong nước thông báo \"xe bạn có vi phạm\", sau đó được yêu cầu truy cập một trang web để xử lý ngay. Thấy tên miền có chữ \"Dichvucong\", chị tưởng thật và truy cập. Lúc này, website với tên miền cùng giao diện \"Cổng dịch v"
+        },
+        {
+          "rank": 5,
+          "title": "Phát hiện, xử lý hơn 500 bộ thiết bị kích sóng di động",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/phat-hien-xu-ly-hon-500-bo-thiet-bi-kich-song-di-dong-5068650.html",
+          "published_at": "2026-05-01 05:16:53+00:00",
+          "tech_score": 0.3231,
+          "content_snippet": "Thiết bị kích sóng di động (repeater) là thiết bị thu và khuếch đại tín hiệu từ trạm phát sóng, giúp cải thiện chất lượng sóng trong nhà hoặc khu vực sóng yếu. Tuy nhiên, nếu lắp đặt tự phát hoặc sử dụng thiết bị không đạt chuẩn, chúng có thể gây nhiễu, ảnh hưởng đến chất lượng mạng di động xung qua"
+        }
+      ]
+    },
+    {
+      "cluster_id": 2,
+      "topic": "Phần cứng / Server",
+      "article_count": 18,
+      "avg_tech_score": 0.3457,
+      "cohesion_score": 0.6932,
+      "combined_score": 0.7678,
+      "top_keywords": [
+        [
+          "apple",
+          0.19916
+        ],
+        [
+          "iphone",
+          0.16098
+        ],
+        [
+          "giá",
+          0.09853
+        ],
+        [
+          "máy",
+          0.08527
+        ],
+        [
+          "samsung",
+          0.07686
+        ],
+        [
+          "đồng",
+          0.06137
+        ],
+        [
+          "nhất",
+          0.06012
+        ],
+        [
+          "sản_phẩm",
+          0.05796
+        ],
+        [
+          "mẫu",
+          0.05685
+        ],
+        [
+          "ai",
+          0.05633
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Tính năng quan trọng trên iPhone trước nguy cơ bị khai tử",
+          "source": "zingnews",
+          "url": "https://znews.vn/tinh-nang-quan-trong-tren-iphone-dung-truoc-nguy-co-bi-khai-tu-post1647897.html",
+          "published_at": "2026-05-03 04:04:24+00:00",
+          "tech_score": 0.3481,
+          "content_snippet": "Magsafe đã bị lược bỏ trên iPhone 16e sau đó ngay lập tức quay trở lại trên iPhone 17e. Ảnh:Apple. Kể từ khi ra mắt cùngiPhone12 vào năm 2020, MagSafe đã trở thành một phần không thể thiếu trên iPhone với hệ sinh thái phụ kiện đa dạng từ sạc không dây, ví da đến chân đế. Tuy vậy, các báo cáo mới nhấ"
+        },
+        {
+          "rank": 2,
+          "title": "Đòn chí mạng của Apple",
+          "source": "zingnews",
+          "url": "https://znews.vn/don-chi-mang-cua-apple-post1648281.html",
+          "published_at": "2026-05-03 00:08:41+00:00",
+          "tech_score": 0.3151,
+          "content_snippet": "Chiến lược giữ nguyên giá giúp Apple có lợi thế cạnh tranh đặc biệt. Ảnh:Bloomberg. Trong khi các hãng Android đang đau đầu với giá DRAM tăng mạnh,Applecó thể đi một nước cờ chí mạng khi giữ nguyên giá khởi điểm củaiPhone18 Pro để thu hút người dùng chuyển đổi. Đó là nhận định của Jeff Pu, nhà phân "
+        },
+        {
+          "rank": 3,
+          "title": "Mac mini tăng giá 37% sau một đêm",
+          "source": "zingnews",
+          "url": "https://znews.vn/mac-mini-tang-gia-37-sau-mot-dem-post1648395.html",
+          "published_at": "2026-05-03 08:52:25+00:00",
+          "tech_score": 0.3816,
+          "content_snippet": "Mẫu Mac mini M4. Ngày 3/5,Appleđã chính thức ngừng cung cấp tùy chọn lưu trữ 256 GB cho dòng Mac mini trên phạm vi toàn cầu. Do đó, mẫu máy tính để bàn này hiện có mức giá khởi điểm cao hơn trước 30-40% tùy thị trường. Tại Việt Nam, mức chênh lệch ở mức 5,5 triệu đồng, tương đương 37%. Ví dụ tại Mỹ,"
+        },
+        {
+          "rank": 4,
+          "title": "Mac Mini, Mac Studio 'cháy hàng' vì chạy được mô hình huấn luyện AI",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/mac-mini-mac-studio-chay-hang-vi-chay-duoc-mo-hinh-huan-luyen-ai-5069207.html",
+          "published_at": "2026-05-03 07:00:00+00:00",
+          "tech_score": 0.4325,
+          "content_snippet": "\"Mac Mini và Mac Studio đang là những nền tảng tuyệt vời cho trí tuệ nhân tạo và các công cụ tác nhân\", Cook cho biết trong báo cáo tài chính quý đầu năm. \"Khách hàng đang nhận ra điều đó nhanh hơn dự đoán của chúng tôi. Và vì vậy, chúng tôi ghi nhận nhu cầu cao hơn dự kiến\". Cũng theo CEO Apple, vi"
+        },
+        {
+          "rank": 5,
+          "title": "Thất bại lớn của Apple",
+          "source": "zingnews",
+          "url": "https://znews.vn/that-bai-lon-cua-apple-post1648195.html",
+          "published_at": "2026-05-03 03:26:03+00:00",
+          "tech_score": 0.3144,
+          "content_snippet": "Thiết kế của iPhone Air. Ảnh:The Verge. Trên Weibo, tài khoản của chuyên gia rò rỉ (leaker)Digital Chat Stationcho biếtiPhoneAir có thể là dòng smartphone siêu mỏng duy nhất được nâng cấp. TheoMacRumors, thông tin này xuất hiện sau khi dòng máy có doanh số kém, khiến các đối thủ từ bỏ kế hoạch trình"
+        }
+      ]
+    },
+    {
+      "cluster_id": 1,
+      "topic": "AI / ML",
+      "article_count": 26,
+      "avg_tech_score": 0.327,
+      "cohesion_score": 0.6656,
+      "combined_score": 0.0,
+      "top_keywords": [
+        [
+          "ai",
+          0.0922
+        ],
+        [
+          "dự_án",
+          0.07227
+        ],
+        [
+          "doanh_nghiệp",
+          0.0678
+        ],
+        [
+          "khoa_học",
+          0.06325
+        ],
+        [
+          "trung_quốc",
+          0.06131
+        ],
+        [
+          "việt_nam",
+          0.05873
+        ],
+        [
+          "nghiên_cứu",
+          0.05799
+        ],
+        [
+          "công_ty",
+          0.05673
+        ],
+        [
+          "ngắn",
+          0.05512
+        ],
+        [
+          "giá",
+          0.05251
+        ]
+      ],
+      "top_articles": [
+        {
+          "rank": 1,
+          "title": "Việt Nam đặt mục tiêu một triệu 'doanh nghiệp một người'",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/viet-nam-dat-muc-tieu-mot-trieu-doanh-nghiep-mot-nguoi-5068453.html",
+          "published_at": "2026-05-01 00:00:00+00:00",
+          "tech_score": 0.3183,
+          "content_snippet": "Tại họp báo thường kỳ Bộ Khoa học và Công nghệ cuối tháng 4, đại diện Cục Khởi nghiệp và doanh nghiệp công nghệ chia sẻ những điểm chính của Nghị quyết 86 về Chiến lược khởi nghiệp sáng tạo quốc gia. Nghị quyết nhấn mạnh mạnh vai trò của khởi nghiệp sáng tạo, coi đây là chiến lược quốc gia dài hạn v"
+        },
+        {
+          "rank": 2,
+          "title": "Công ty Trung Quốc dùng AI tạo gần 500 phim ngắn mỗi ngày",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/cong-ty-trung-quoc-dung-ai-tao-gan-500-phim-ngan-moi-ngay-5069291.html",
+          "published_at": "2026-05-03 07:58:42+00:00",
+          "tech_score": 0.3881,
+          "content_snippet": "Đầu năm nay, Vigloo, một công ty sản xuất phim ngắn chiếu mạng (microdrama) của Hàn Quốc, mạnh dạn đưa AI vào sản xuất nội dung, đặt cược rằng tự động hóa có thể định hình lại căn bản cách làm phim. Thực tế, với 30% ngân sách cho AI, Vigloo đã có thể tạo một chương trình chỉ một tháng thay vì ba thá"
+        },
+        {
+          "rank": 3,
+          "title": "Nhìn từ dự án điện gió tại Lào của Bầu Hiển: Tái định nghĩa lợi thế cạnh tranh",
+          "source": "vietnamplus",
+          "url": "https://www.vietnamplus.vn/nhin-tu-du-an-dien-gio-tai-lao-cua-bau-hien-tai-dinh-nghia-loi-the-canh-tranh-post1108427.vnp",
+          "published_at": "2026-05-04 04:51:42+00:00",
+          "tech_score": 0.4019,
+          "content_snippet": "Những dự án có thể rút ngắn thời gian triển khai và sớm đưa điện vào hệ thống đang trở thành điểm đáng chú ý của thị trường. Nhà máy điện gió Savan 1 của Bầu Hiển tại Lào là một ví dụ điển hình. Khi nhiều dự án năng lượng tái tạo vẫn loay hoay với bài toán pháp lý, hạ tầng, truyền tải và đấu nối, ti"
+        },
+        {
+          "rank": 4,
+          "title": "Tiêu chí chọn nghiên cứu sinh nhận tài trợ một tỷ đồng mỗi năm",
+          "source": "vnexpress",
+          "url": "https://vnexpress.net/tieu-chi-chon-nghien-cuu-sinh-nhan-tai-tro-mot-ty-dong-moi-nam-5067967.html",
+          "published_at": "2026-04-30 03:00:00+00:00",
+          "tech_score": 0.387,
+          "content_snippet": "Đây là nội dung chính của \"Chương trình hỗ trợ nghiên cứu sinh xuất sắc giai đoạn 2026-2030\" (VREF) do Bộ Khoa học và Công nghệ ban hành. Chia sẻ vớiVnExpress,ông Đào Ngọc Chiến, Giám đốc Quỹ Phát triển khoa học và công nghệ quốc gia, cho hay khái niệm \"nghiên cứu sinh xuất sắc\" được lượng hóa bằng "
+        },
+        {
+          "rank": 5,
+          "title": "Thủ tướng chủ trì cuộc họp tháo gỡ vướng mắc, thúc đẩy dự án sân bay Long Thành",
+          "source": "vietnamplus",
+          "url": "https://www.vietnamplus.vn/thu-tuong-chu-tri-cuoc-hop-thao-go-vuong-mac-thuc-day-du-an-san-bay-long-thanh-post1108438.vnp",
+          "published_at": "2026-05-04 06:07:21+00:00",
+          "tech_score": 0.3943,
+          "content_snippet": "Thủ tướng khẳng định dự án đầu tư xây dựng Cảng hàng không quốc tế Long Thành có quy mô rất lớn, là dự án trọng điểm quốc gia, hạ tầng giao thông chiến lược, có ý nghĩa đặc biệt quan trọng. Sáng 4/5, tại trụ sở Chính phủ, Thủ tướng Lê Minh Hưng chủ trì cuộc họp kiểm điểm tình hình, tháo gỡ các khó k"
+        }
+      ]
+    }
+  ],
+  "highlighted_articles": [
+    {
+      "rank": 1,
+      "title": "Quán cà phê AI ở châu Âu",
+      "source": "zingnews",
+      "url": "https://znews.vn/quan-ca-phe-van-hanh-hoan-toan-boi-ai-post1648073.html",
+      "published_at": "2026-05-02 09:14:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5362,
+      "content_snippet": "Quán cà phê giữa lòng thủ đô Stockholm được vận hành hoàn toàn bởi AI. Ảnh:Euronews. Tại trung tâm thủ đô Stockholm, Thụy Điển, một quán cà phê đang thu hút sự chú ý lớn từ giới công nghệ. Thay vì con người, nhân vật đứng sau điều hành toàn bộ hoạt động tại đây là Mona - một quản lý được vận hành ho"
+    },
+    {
+      "rank": 2,
+      "title": "OpenAI phát triển smartphone AI thay thế ứng dụng",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/openai-phat-trien-smartphone-ai-thay-the-ung-dung-20260429113942097.htm",
+      "published_at": "2026-04-29 22:06:48+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5321,
+      "content_snippet": "OpenAI phát triển smartphone AI thay thế ứng dụng truyền thống Sau khi làm thay đổi cách con người tương tác với công nghệ,OpenAIđược cho là chuẩn bị bước vào cuộc chơi mới: smartphone. Thiết bị này có thể loại bỏ hoàn toàn ứng dụng, thay bằng một AI trung tâm điều khiển mọi tác vụ. Theo tìm hiểu củ"
+    },
+    {
+      "rank": 3,
+      "title": "OpenAI có thể đang phát triển 'siêu điện thoại AI'",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/openai-co-the-dang-phat-trien-sieu-dien-thoai-ai-5067660.html",
+      "published_at": "2026-04-28 00:42:46+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.5227,
+      "content_snippet": "Theo nhà phân tích nổi tiếng Ming-Chi Kuo từ TF International Securities, công ty phát triển ChatGPT đang âm thầm xây dựng một hệ sinh thái phần cứng riêng. Thay vì chỉ là một ứng dụng trên nền tảng của Apple hay Google, OpenAI muốn nắm trong tay một thiết bị đầu cuối như smartphone để tối ưu hóa sứ"
+    },
+    {
+      "rank": 4,
+      "title": "Google đầu tư vào trung tâm nghiên cứu AI ở Việt Nam",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/google-dau-tu-vao-trung-tam-nghien-cuu-ai-o-viet-nam-5069650.html",
+      "published_at": "2026-05-04 07:54:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.4967,
+      "content_snippet": "Trong thông báo hôm 4/5, Google Labs cùng Saigon AI Hub công bố việc trở thành đối tác chiến lược, nhằm triển khai phòng thí nghiệm AI ứng dụng (Applied AI Lab) đầu tiên của Google Labs tại Việt Nam. Google Labs là nơi thử nghiệm các ý tưởng AI của Google, trong đó có quỹ AI Futures Fund là sáng kiế"
+    },
+    {
+      "rank": 5,
+      "title": "Cách Apple bảo mật với các sản phẩm mới",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/cach-apple-bao-mat-voi-cac-san-pham-moi-5066429.html",
+      "published_at": "2026-04-27 08:00:00+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.4797,
+      "content_snippet": "iPhone 17 Pro và 17 Pro Max tại lễ ra mắt ở Apple Park. Ảnh:Tuấn Hưng TheoApple Insider, trong khi các sơ đồ kỹ thuật (CAD) của iPhone thường xuyên bị rò rỉ từ các nhà sản xuất ốp lưng, thì hình ảnh bao bì và tư liệu marketing của Apple lại rất hiếm khi lọt ra ngoài. Điều này không phải ngẫu nhiên, "
+    },
+    {
+      "rank": 6,
+      "title": "Tin nhắn mã hóa khiến cơ quan an ninh ngày càng khó truy dấu tội phạm",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/tin-nhan-ma-hoa-khien-co-quan-an-ninh-ngay-cang-kho-truy-dau-toi-pham-20260430112557817.htm",
+      "published_at": "2026-04-30 18:40:32+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.4664,
+      "content_snippet": "‘Mặt tối’ của mã hóa: bảo vệ người dùng, nhưng làm khó cơ quan an ninh - Ảnh: euro-systems.co.uk Báo cáo năm 2025 của Cơ quan giám sát tình báo Pháp cho biết khoảng 60-80% các cuộc trao đổi trực tuyến hiện diễn ra qua các ứng dụng mã hóa đầu cuối. Trong khi đó các hình thức liên lạc truyền thống như"
+    },
+    {
+      "rank": 7,
+      "title": "Sam Altman: AI giúp 'đổi vai' của người có ý tưởng",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/sam-altman-ai-giup-doi-vai-cua-nguoi-co-y-tuong-5069213.html",
+      "published_at": "2026-05-03 00:35:26+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.4559,
+      "content_snippet": "\"Trước khi có AI, không ít người ở Thung lũng Silicon thường cười cợt, đùa giỡn khi ai đó có ý tưởng nghe có vẻ đột phá, nhưng lại thiếu chuyên môn kỹ thuật để biến tầm nhìn thành hiện thực\", Sam Altman nói tại sự kiện Stripe Sessions ở San Francisco (Mỹ) ngày 30/4. Altman từng có thời gian lãnh đạo"
+    },
+    {
+      "rank": 8,
+      "title": "Mac Mini, Mac Studio 'cháy hàng' vì chạy được mô hình huấn luyện AI",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/mac-mini-mac-studio-chay-hang-vi-chay-duoc-mo-hinh-huan-luyen-ai-5069207.html",
+      "published_at": "2026-05-03 07:00:00+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.4325,
+      "content_snippet": "\"Mac Mini và Mac Studio đang là những nền tảng tuyệt vời cho trí tuệ nhân tạo và các công cụ tác nhân\", Cook cho biết trong báo cáo tài chính quý đầu năm. \"Khách hàng đang nhận ra điều đó nhanh hơn dự đoán của chúng tôi. Và vì vậy, chúng tôi ghi nhận nhu cầu cao hơn dự kiến\". Cũng theo CEO Apple, vi"
+    },
+    {
+      "rank": 9,
+      "title": "Công cụ AI liên quan Anthropic tự ý xóa sạch dữ liệu của một doanh nghiệp trong 9 giây",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/cong-cu-ai-lien-quan-anthropic-tu-y-xoa-sach-du-lieu-cua-mot-doanh-nghiep-trong-9-giay-20260503191229087.htm",
+      "published_at": "2026-05-04 02:41:28+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.4315,
+      "content_snippet": "Hành động phá hoại của công cụ lập trình AI đã khiến khách hàng của Công ty PocketOS rơi vào tình thế khó khăn - Ảnh TED HSU BáoGuardianđưa tin một công cụ lập trình vận hành bằng trí tuệ nhân tạo (AIcoding agent) đã tự ý xóa toàn bộ cơ sở dữ liệu sản xuất và các bản sao lưu của công ty khởi nghiệp "
+    },
+    {
+      "rank": 10,
+      "title": "Apple Maps bắt đầu hiển thị địa giới hành chính mới ở Việt Nam",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/apple-maps-bat-dau-hien-thi-dia-gioi-hanh-chinh-moi-o-viet-nam-5068335.html",
+      "published_at": "2026-04-29 08:10:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.4279,
+      "content_snippet": "Sáng 29/4, một số người sử dụng dịch vụ bản đồ của Apple nhận thấy hệ thống hiển thị dữ liệu theo địa giới hành chính mới. Thông tin được đồng bộ và tự động cập nhật trên ứng dụng của iOS, iPadOS, macOS cũng như nền tảng web của Apple Maps và người dùng không cần nâng cấp phần mềm. Apple Maps cho ph"
+    },
+    {
+      "rank": 11,
+      "title": "Claude bị ‘bỏ rơi’ trong cuộc đua quân sự",
+      "source": "zingnews",
+      "url": "https://znews.vn/anthropic-gap-bat-loi-post1648144.html",
+      "published_at": "2026-05-02 11:10:48+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.4207,
+      "content_snippet": "Ngày 2/5, Lầu Năm Góc thông báo đã ký thỏa thuận với OpenAI, Google, xAI, Amazon Web Services, Microsoft, Nvidia và Reflection AI, cho phép triển khai mô hình AI của các công ty này trên mạng lưới bảo mật của quân đội Mỹ. Thỏa thuận này mở đường để AI tham gia sâu hơn vào hoạt động quân sự, từ phân "
+    },
+    {
+      "rank": 12,
+      "title": "AI đang giúp Trung Quốc đi đầu trong một ngành mới",
+      "source": "zingnews",
+      "url": "https://znews.vn/trung-quoc-bung-no-nganh-cong-nghiep-ai-moi-post1648211.html",
+      "published_at": "2026-05-03 01:21:34+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.4127,
+      "content_snippet": "Ngành phim ngắn tạo bằng AI đang bùng nổ nhanh chóng tại Trung Quốc. Ảnh:Caixin. Trong tháng 1, hơn 470 bộ phim truyền hình ngắn do AI tạo ra được phát hành mỗi ngày tại Trung Quốc, theo trang công nghệ 36kr. Đây là kết quả của một hệ sinh thái sản xuất nội dung đang hình thành với tốc độ chóng mặt,"
+    },
+    {
+      "rank": 13,
+      "title": "iPhone kỷ niệm 20 năm có thể dùng màn hình cong tràn bốn cạnh",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/iphone-ky-niem-20-nam-co-the-dung-man-hinh-cong-tran-bon-canh-5066902.html",
+      "published_at": "2026-04-27 00:00:00+00:00",
+      "topic": "Thiết bị di động",
+      "tech_score": 0.4075,
+      "content_snippet": "iPhone thế hệ đầu ra mắt năm 2007. Do đó, Apple được dự đoán sẽ đặt tên cho thế hệ smartphone trình làng năm 2027 là iPhone 20, tương tự việc hãng từng bỏ qua thế hệ iPhone 9 và đặt tên mẫu điện thoại kỷ niệm 10 năm là iPhone X. TheoDigital Chat Station, kênh từng chia sẻ nhiều thông tin chính xác v"
+    },
+    {
+      "rank": 14,
+      "title": "Chiêu lừa 'phạt nguội 50.000 đồng' để chiếm thẻ ngân hàng",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/chieu-lua-phat-nguoi-50-000-dong-de-chiem-the-ngan-hang-5067461.html",
+      "published_at": "2026-04-27 02:00:31+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.4049,
+      "content_snippet": "Chị Ngọc Hà (Hà Nội) hôm 25/4 cho biết nhận được một tin nhắn từ một số di động trong nước thông báo \"xe bạn có vi phạm\", sau đó được yêu cầu truy cập một trang web để xử lý ngay. Thấy tên miền có chữ \"Dichvucong\", chị tưởng thật và truy cập. Lúc này, website với tên miền cùng giao diện \"Cổng dịch v"
+    },
+    {
+      "rank": 15,
+      "title": "Nhìn từ dự án điện gió tại Lào của Bầu Hiển: Tái định nghĩa lợi thế cạnh tranh",
+      "source": "vietnamplus",
+      "url": "https://www.vietnamplus.vn/nhin-tu-du-an-dien-gio-tai-lao-cua-bau-hien-tai-dinh-nghia-loi-the-canh-tranh-post1108427.vnp",
+      "published_at": "2026-05-04 04:51:42+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.4019,
+      "content_snippet": "Những dự án có thể rút ngắn thời gian triển khai và sớm đưa điện vào hệ thống đang trở thành điểm đáng chú ý của thị trường. Nhà máy điện gió Savan 1 của Bầu Hiển tại Lào là một ví dụ điển hình. Khi nhiều dự án năng lượng tái tạo vẫn loay hoay với bài toán pháp lý, hạ tầng, truyền tải và đấu nối, ti"
+    },
+    {
+      "rank": 16,
+      "title": "Quyết định về AI gây chấn động Trung Quốc",
+      "source": "zingnews",
+      "url": "https://znews.vn/dung-ai-lam-ly-do-sa-thai-nhan-vien-post1648451.html",
+      "published_at": "2026-05-04 00:18:57+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.3989,
+      "content_snippet": "Nhiều công ty Trung Quốc dần thay thế lực lượng lao động bằng AI. Ảnh:Bloomberg. Một tòa án Trung Quốc vừa đưa ra phán quyết nhằm đặt ra giới hạn rõ ràng cho làn sóng tự động hóa bằng AI tại nơi làm việc. Theo đó, các công ty không được sa thải nhân viên chỉ để thay thế họ bằng AI. Tòa án Nhân dân T"
+    },
+    {
+      "rank": 17,
+      "title": "Mỹ cải tổ toàn diện FBI, áp dụng AI để tăng hiệu quả hoạt động",
+      "source": "vietnamplus",
+      "url": "https://www.vietnamplus.vn/my-cai-to-toan-dien-fbi-ap-dung-ai-de-tang-hieu-qua-hoat-dong-post1108444.vnp",
+      "published_at": "2026-05-04 06:44:23+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.396,
+      "content_snippet": "Cuộc cải tổ gồm việc điều chuyển hơn 1.000 nhân viên và đặc vụ FBI từ thủ đô Washington D.C đến các văn phòng địa phương, bố trí hàng trăm nhân sự tình báo tiếp cận các cuộc điều tra đang diễn ra. Ngày 3/5, Giám đốc Cục Điều tra Liên bang Mỹ (FBI) Kash Patel cho biết trong vòng 14 tháng qua, cơ quan"
+    },
+    {
+      "rank": 18,
+      "title": "Điều tôi nhận ra khi dùng chiếc MacBook rẻ hơn điện thoại",
+      "source": "zingnews",
+      "url": "https://znews.vn/dieu-toi-nhan-ra-khi-dung-chiec-macbook-re-hon-dien-thoai-post1648411.html",
+      "published_at": "2026-05-03 10:28:19+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.3952,
+      "content_snippet": "Thiết kếlà thứ sẽ khiến MacBook Neo được để ý, vì vì vỏ nhôm và độ hoàn thiện đều ở mức tốt, nhất là khi so với laptop Windows cùng tầm giá. Khi so trực tiếp với MacBook Air, Neo cho cảm giác không mỏng bằng, nhưng bù lại là độ vừa tay, chắc chắn. Hồng hay xanh đều là những màu nổi bật, trẻ trung. T"
+    },
+    {
+      "rank": 19,
+      "title": "Robot hình người Trung Quốc có lớp da 18.000 điểm cảm biến",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/robot-hinh-nguoi-trung-quoc-co-lop-da-18-000-diem-cam-bien-5069216.html",
+      "published_at": "2026-05-03 02:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.3946,
+      "content_snippet": "Được phát triển bởi Kinetix AI có trụ sở tại Thâm Quyến (Trung Quốc), KAI cao 173 cm và nặng khoảng 70 kg, chứa hệ thống 115 bậc tự do (DoF), gồm 72 bậc tự do ở hai bàn tay (mỗi bên 36 bậc). TheoInteresting Engineering, thông số này vượt trội so với hầu hết robot hình người hiện nay. Điểm đặc biệt c"
+    },
+    {
+      "rank": 20,
+      "title": "Thủ tướng chủ trì cuộc họp tháo gỡ vướng mắc, thúc đẩy dự án sân bay Long Thành",
+      "source": "vietnamplus",
+      "url": "https://www.vietnamplus.vn/thu-tuong-chu-tri-cuoc-hop-thao-go-vuong-mac-thuc-day-du-an-san-bay-long-thanh-post1108438.vnp",
+      "published_at": "2026-05-04 06:07:21+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.3943,
+      "content_snippet": "Thủ tướng khẳng định dự án đầu tư xây dựng Cảng hàng không quốc tế Long Thành có quy mô rất lớn, là dự án trọng điểm quốc gia, hạ tầng giao thông chiến lược, có ý nghĩa đặc biệt quan trọng. Sáng 4/5, tại trụ sở Chính phủ, Thủ tướng Lê Minh Hưng chủ trì cuộc họp kiểm điểm tình hình, tháo gỡ các khó k"
+    },
+    {
+      "rank": 21,
+      "title": "Trải nghiệm hiệu năng MacBook Neo",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/trai-nghiem-hieu-nang-macbook-neo-5069171.html",
+      "published_at": "2026-05-04 00:00:00+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.3935,
+      "content_snippet": "Neo là mẫu MacBook rẻ nhất của Apple, với giá từ 599 USD tại Mỹ và từ 16,5 triệu đồng tại Việt Nam hoặc từ 14 triệu đồng nếu người mua là học sinh, sinh viên, người làm trong ngành giáo dục. Đây là mẫulaptop tốt dành cho sinh viên, người mới bắt đầu hoặc nhà sáng tạo nội dung mạng xã hội có nhu cầu "
+    },
+    {
+      "rank": 22,
+      "title": "Lầu Năm Góc bắt tay với loạt công ty AI, trừ Anthropic",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/lau-nam-goc-bat-tay-voi-loat-cong-ty-ai-tru-anthropic-5069061.html",
+      "published_at": "2026-05-02 05:14:01+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.3896,
+      "content_snippet": "Trong thông cáo ngày 1/5, Lầu Năm Góc khẳng định sản phẩm của SpaceX, OpenAI, Google, Nvidia, Reflection, Microsoft và Amazon Web Services sẽ được tích hợp vào các hệ thống mạng bí mật và tuyệt mật của quân đội Mỹ. Thông cáo không đề cập tới Anthropic. Startup AI này đang mâu thuẫn với Lầu Năm Góc s"
+    },
+    {
+      "rank": 23,
+      "title": "Công ty Trung Quốc dùng AI tạo gần 500 phim ngắn mỗi ngày",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/cong-ty-trung-quoc-dung-ai-tao-gan-500-phim-ngan-moi-ngay-5069291.html",
+      "published_at": "2026-05-03 07:58:42+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.3881,
+      "content_snippet": "Đầu năm nay, Vigloo, một công ty sản xuất phim ngắn chiếu mạng (microdrama) của Hàn Quốc, mạnh dạn đưa AI vào sản xuất nội dung, đặt cược rằng tự động hóa có thể định hình lại căn bản cách làm phim. Thực tế, với 30% ngân sách cho AI, Vigloo đã có thể tạo một chương trình chỉ một tháng thay vì ba thá"
+    },
+    {
+      "rank": 24,
+      "title": "Tiêu chí chọn nghiên cứu sinh nhận tài trợ một tỷ đồng mỗi năm",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/tieu-chi-chon-nghien-cuu-sinh-nhan-tai-tro-mot-ty-dong-moi-nam-5067967.html",
+      "published_at": "2026-04-30 03:00:00+00:00",
+      "topic": "Phần mềm / Dev",
+      "tech_score": 0.387,
+      "content_snippet": "Đây là nội dung chính của \"Chương trình hỗ trợ nghiên cứu sinh xuất sắc giai đoạn 2026-2030\" (VREF) do Bộ Khoa học và Công nghệ ban hành. Chia sẻ vớiVnExpress,ông Đào Ngọc Chiến, Giám đốc Quỹ Phát triển khoa học và công nghệ quốc gia, cho hay khái niệm \"nghiên cứu sinh xuất sắc\" được lượng hóa bằng "
+    },
+    {
+      "rank": 25,
+      "title": "Elon Musk cảnh báo kịch bản AI trở thành 'kẻ hủy diệt'",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/elon-musk-canh-bao-kich-ban-ai-tro-thanh-ke-huy-diet-5068949.html",
+      "published_at": "2026-05-01 12:18:15+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.3855,
+      "content_snippet": "TheoReuters, Musk quay lại bục nhân chứng trong ngày thứ ba diễn ra phiên xử tại tòa án liên bang California, liên quan đến tranh chấp giữa ông và CEO OpenAI Sam Altman cùng các bên liên quan. Tại đây, Elon Musk, CEO của Tesla và SpaceX, trả lời các câu hỏi liên quan đến những phát biểu trước đây củ"
+    },
+    {
+      "rank": 26,
+      "title": "Mark Zuckerberg lý giải nguyên do đẩy Meta vào '28 ngày địa ngục'",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/mark-zuckerberg-ly-giai-nguyen-do-day-meta-vao-28-ngay-dia-nguc-5068854.html",
+      "published_at": "2026-05-01 06:17:14+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.3841,
+      "content_snippet": "Meta dự kiến sa thải khoảng 10% nhân sự vào ngày 20/5. TheoReuters, trong một cuộc họp nội bộ mới đây, CEO Meta Mark Zuckerberg cho biết nguyên nhân chính là do chi tiêu của công ty dành cho AI tăng mạnh, dẫn đến việc buộc phải cắt giảm nhân sự. Meta hiện có hai nhóm chi phí lớn nhất là hạ tầng tính"
+    },
+    {
+      "rank": 27,
+      "title": "Mac mini tăng giá 37% sau một đêm",
+      "source": "zingnews",
+      "url": "https://znews.vn/mac-mini-tang-gia-37-sau-mot-dem-post1648395.html",
+      "published_at": "2026-05-03 08:52:25+00:00",
+      "topic": "Phần cứng / Server",
+      "tech_score": 0.3816,
+      "content_snippet": "Mẫu Mac mini M4. Ngày 3/5,Appleđã chính thức ngừng cung cấp tùy chọn lưu trữ 256 GB cho dòng Mac mini trên phạm vi toàn cầu. Do đó, mẫu máy tính để bàn này hiện có mức giá khởi điểm cao hơn trước 30-40% tùy thị trường. Tại Việt Nam, mức chênh lệch ở mức 5,5 triệu đồng, tương đương 37%. Ví dụ tại Mỹ,"
+    },
+    {
+      "rank": 28,
+      "title": "Triển khai 5 nhiệm vụ nghiên cứu bán dẫn Việt Nam - Nhật Bản",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/trien-khai-5-nhiem-vu-nghien-cuu-ban-dan-viet-nam-nhat-ban-5068758.html",
+      "published_at": "2026-05-02 03:00:00+00:00",
+      "topic": "AI / ML",
+      "tech_score": 0.3808,
+      "content_snippet": "Sự hợp tác nằm trong khuôn khổ NEXUS - sáng kiến chiến lược về khoa học và công nghệ của Nhật Bản với các nước ASEAN, do Cơ quan Khoa học và Công nghệ Nhật Bản khởi xướng. Với tổng ngân sách khoảng 100 triệu USD cho giai đoạn 2024-2029, sáng kiến đặt mục tiêu thúc đẩy đổi mới sáng tạo thông qua hợp "
+    },
+    {
+      "rank": 29,
+      "title": "Công ty Việt trên lộ trình làm chủ công nghệ hydrogen",
+      "source": "vnexpress",
+      "url": "https://vnexpress.net/cong-ty-viet-tren-lo-trinh-lam-chu-cong-nghe-hydrogen-5066894.html",
+      "published_at": "2026-04-28 00:00:00+00:00",
+      "topic": "Xe điện / Năng lượng",
+      "tech_score": 0.3797,
+      "content_snippet": "Trong bức tranh năng lượng tái tạo, điện mặt trời, điện gió và thủy điện đang có những ưu nhược riêng. Điện mặt trời và điện gió có chi phí sản xuất ngày càng rẻ nhưng mang tính gián đoạn, đòi hỏi hệ thống lưu trữ như pin để cân bằng phụ tải, còn thủy điện phụ thuộc địa hình và nguồn nước. Hydrogen "
+    },
+    {
+      "rank": 30,
+      "title": "Mỗi ngày 3 vụ rò rỉ dữ liệu, Pháp chi 200 triệu euro 'vá' an ninh mạng",
+      "source": "tuoitre",
+      "url": "https://tuoitre.vn/moi-ngay-3-vu-ro-ri-du-lieu-phap-chi-200-trieu-euro-va-an-ninh-mang-20260501090532451.htm",
+      "published_at": "2026-05-02 14:51:28+00:00",
+      "topic": "An ninh mạng",
+      "tech_score": 0.3783,
+      "content_snippet": "Mỗi ngày 3 vụ rò rỉ dữ liệu, Pháp chi 200 triệu euro ứng phó - Ảnh: FREEPIK Thủ tướng Pháp Sébastien Lecornu vừa công bố gói ngân sách 200 triệu euro (216 triệu USD) nhằm tăng cườngan ninh mạngvà khắc phục những yếu kém trong hệ thống số của Nhà nước, trong bối cảnh các cuộc tấn công mạng gia tăng m"
+    }
+  ]
+}

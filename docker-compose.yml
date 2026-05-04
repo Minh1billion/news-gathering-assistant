@@ -17,9 +17,9 @@ services:
     healthcheck:
       test: ["CMD-SHELL", "curl -sf http://localhost:8000/health | python3 -c \"import sys,json; d=json.load(sys.stdin); sys.exit(0 if d.get('ready') else 1)\""]
       interval: 10s
-      timeout: 5s
-      retries: 12
-      start_period: 60s
+      timeout: 30s
+      retries: 20
+      start_period: 120s
     restart: unless-stopped
 
   dashboard:
